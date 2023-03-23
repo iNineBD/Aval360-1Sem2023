@@ -24,14 +24,9 @@
 
 | **USUARIO** |  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
 |-----------------------|-------------------------|---------------------|----------------|-------------------------|
-| ------- | Login | Baixa | 1 | **Em andamento** |
-| ------- | Login | Baixa | 1 | **Em andamento** |
-| ------- | Login | Baixa | 1 | **Em andamento** |
-| ------- | Login | Baixa | 1 | **Em andamento** |
-| ------- | Login | Baixa | 1 | **Em andamento** |
-| ------- | Login | Baixa | 1 | **Em andamento** |
-| ------- | Login | Baixa | 1 | **Em andamento** |
-| ------- | Login | Baixa | 1 | **Em andamento** |
+| ------- | Fluxograma do programa | Baixa | 1 | **Em andamento** |
+| ------- | Perguntas que irão aparecer no sistema | 1 | **Em andamento** |
+| ------- | Controle de usuário | Baixa | 1 | **Em andamento** |
 | ------- | Login | Baixa | 1 | **Em andamento** |
 | ------- | Login | Baixa | 1 | **Em andamento** |
 | ------- | Login | Baixa | 1 | **Em andamento** |
