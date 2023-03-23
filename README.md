@@ -24,7 +24,7 @@
 
 | **USUARIO** |  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
 |-----------------------|-------------------------|---------------------|----------------|-------------------------|
-| ------- | Fluxograma do programa | Alta | 1 | Finalizado |
+| ------- | Fluxograma do programa | Alta | 1 | **Em andamento** |
 | ------- | Perguntas que irão aparecer no sistema| Baixa | 1 | **Em andamento** |
 | ------- | Controle de usuário | Baixa | 1 | **Em andamento** |
 | ------- | Login | Baixa | 1 | **Em andamento** |
