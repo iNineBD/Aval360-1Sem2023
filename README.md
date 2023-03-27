@@ -46,6 +46,14 @@
 | Sprint 3 | 01/05/23 a 21/05/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
 | Sprint 4 | 22/05/22 a 11/06/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
 
+<span id="Tecnologias">
+    
+##  :white_medium_square: Tecnologias Utilizadas
+    
+![image](https://user-images.githubusercontent.com/117841950/227837466-a78c52b6-6c19-4425-af12-fca776bd1350.png)
+
+
+
 
 <h4 align = "center">
     🚧 Projeto API Avaliação 360° 🚀 Em construção... 🚧
