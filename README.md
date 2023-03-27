@@ -9,7 +9,7 @@
     <a href="#backlogs">Backlogs do produto</a>  |
     <a href="#entrega">Entrega de Sprints</a>  |
     <a href="#tecnologias">Tecnologias</a>  |
-    <a href="#equipe">Integrantes da Equipe</a>
+    <a href="#equipe">Equipe</a>
 </p>
 
 <span id="sobre">
