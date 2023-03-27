@@ -36,7 +36,16 @@
 | ------- | Login | Baixa | 1 | **Em andamento** |
 | ------- | Login | Baixa | 1 | **Em andamento** |
 
+<span id="Entrega">
+
 ##  :white_medium_square: Entrega de Sprints
+
+| SPRINTS | PERÍODOS | DESCRIÇÃO | STATUS |
+|:-------:|:-----:|:---------:|:------:|
+| Sprint 1 | 13/03/23 a 03/04/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
+| Sprint 2 | 04/04/23 a 30/04/23 | ARRUMAS AS DATAS | EM ANDAMENTO |
+| Sprint 3 | 01/05/23 a 21/05/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
+| Sprint 4 | 22/05/22 a 11/06/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
 
 
 <h4 align = "center">
