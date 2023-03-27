@@ -8,7 +8,6 @@
     <a href="#sobre">Projeto</a>  |
     <a href="#backlogs">Backlogs do produto</a>  |
     <a href="#entrega">Entrega de Sprints</a>  |
-    <a href="#configurando">Configurando o ambiente</a>  |
     <a href="#tecnologias">Tecnologias</a>  |
     <a href="#equipe">Integrantes da Equipe</a>
 </p>
