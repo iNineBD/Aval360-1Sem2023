@@ -41,26 +41,29 @@
 
 | SPRINTS | PERÍODOS | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
-| [Sprint 1] | 13/03/23 a 02/04/23 | ---------------- | EM ANDAMENTO |
-| Sprint 2 | 03/04/23 a 23/04/23 | ---------------- | EM ANDAMENTO |
-| Sprint 3 | 24/04/23 a 14/05/23 | ---------------- | EM ANDAMENTO |
-| Sprint 4 | 15/05/23 a 04/06/23 | ---------------- | EM ANDAMENTO |
+| [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1) | 13/03/23 a 02/04/23 | ---------------- | EM ANDAMENTO |
+| [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2) | 03/04/23 a 23/04/23 | ---------------- | EM ANDAMENTO |
+| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3) | 24/04/23 a 14/05/23 | ---------------- | EM ANDAMENTO |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4) | 15/05/23 a 04/06/23 | ---------------- | EM ANDAMENTO |
 
 <span id="equipe">
 
 ##  :white_medium_square: Equipe
     
-![image](https://user-images.githubusercontent.com/127276103/228319395-4f63ed1b-feea-4943-beb2-854fc850385c.png)
+![image](https://user-images.githubusercontent.com/117841950/228338847-223cf959-ee19-4c34-9919-7ece6ed8260a.png)
 
 
-
-| FUNÇÃO | NOME | DESCRIÇÃO | STATUS |
-|:-------:|:-----:|:---------:|:------:|
-| [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1) | 13/03/23 a 03/04/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
-| [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2) | 04/04/23 a 30/04/23 | ARRUMAS AS DATAS | EM ANDAMENTO |
-| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3) | 01/05/23 a 21/05/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
-| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4) | 22/05/22 a 11/06/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
-
+| FUNÇÃO | NOME | REDES SOCIAIS |
+|:-------:|:-----:|:---------:|
+| Scrum Master | Naiara Santos | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto)  |  
+| Product Owner | Beatriz Akemi | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto) |  
+| Developer | João Matheus | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto) |  
+| Developer | Paulo Henrique | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto) |  
+| Developer | Eduardo Farias | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/eduardofariasp/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/eduardofpaula) |  
+| Developer | André Luiz | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto) |  
+| Developer | Jaqueline Fermino | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto) |
+| Developer | Ana Raquel | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto) |      
+| Developer | Davidson Souza | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/davidson-sousa-77858ba3) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/DavidsonSous) |  
 
 <span id="Tecnologias">
     
