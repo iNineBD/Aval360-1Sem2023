@@ -5,10 +5,10 @@
 ##  :white_medium_square: Sumário de Conteudos 
 <br id="topo">
 <p align="center">
-    <a href="#sobre">Projeto</a>  |
-    <a href="#backlogs">Backlogs do produto</a>  |
-    <a href="#entrega">Entrega de Sprints</a>  |
-    <a href="#tecnologias">Tecnologias</a>  |
+    <a href="#sobre">Projeto</a>  •
+    <a href="#backlogs">Backlogs do produto</a>  •
+    <a href="#entrega">Entrega de Sprints</a>  •
+    <a href="#tecnologias">Tecnologias</a>  •
     <a href="#equipe">Equipe</a>
 </p>
 
