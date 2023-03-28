@@ -50,7 +50,9 @@
 
 ##  :white_medium_square: Equipe
     
-![image](https://user-images.githubusercontent.com/117841950/227990754-af5ca132-af26-4619-b00f-e8ed2c46498d.png)
+![image](https://user-images.githubusercontent.com/127276103/228319395-4f63ed1b-feea-4943-beb2-854fc850385c.png)
+
+
 
 | FUNÇÃO | NOME | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
