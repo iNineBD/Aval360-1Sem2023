@@ -41,7 +41,7 @@
 
 | SPRINTS | PERÍODOS | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
-| Sprint 1 | 13/03/23 a 02/04/23 | ---------------- | EM ANDAMENTO |
+| [Sprint 1] | 13/03/23 a 02/04/23 | ---------------- | EM ANDAMENTO |
 | Sprint 2 | 03/04/23 a 23/04/23 | ---------------- | EM ANDAMENTO |
 | Sprint 3 | 24/04/23 a 14/05/23 | ---------------- | EM ANDAMENTO |
 | Sprint 4 | 15/05/23 a 04/06/23 | ---------------- | EM ANDAMENTO |
@@ -56,10 +56,10 @@
 
 | FUNÇÃO | NOME | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
-| Sprint 1 | 13/03/23 a 03/04/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
-| Sprint 2 | 04/04/23 a 30/04/23 | ARRUMAS AS DATAS | EM ANDAMENTO |
-| Sprint 3 | 01/05/23 a 21/05/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
-| Sprint 4 | 22/05/22 a 11/06/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
+| [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1) | 13/03/23 a 03/04/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
+| [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2) | 04/04/23 a 30/04/23 | ARRUMAS AS DATAS | EM ANDAMENTO |
+| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3) | 01/05/23 a 21/05/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4) | 22/05/22 a 11/06/23 | ARRUMAR AS DATAS | EM ANDAMENTO |
 
 
 <span id="Tecnologias">
