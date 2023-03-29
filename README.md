@@ -25,7 +25,7 @@
 
 | **USUARIO** |  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
 |-----------------------|-------------------------|---------------------|----------------|-------------------------|
-| ------- | Apresentação Backlog | Alta | 1 | **Em andamento** |
+| ------- | Planejamento Backlog | Alta | 1 | **Em andamento** |
 | ------- | Fluxograma do Projeto | Média | 1 | **Realizado** |
 | ------- | Criação Layout Git | Baixa | 1 | **Em andamento** |
 | ------- | Criação de uma Base de Dados | Média | 2 | **Em andamento** |
