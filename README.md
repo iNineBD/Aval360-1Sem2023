@@ -15,7 +15,9 @@
 <span id="sobre">
   
 ##  :white_medium_square: Projeto
-![image](https://user-images.githubusercontent.com/117841950/227311492-1cd27ad9-9c6b-43ba-8ff0-8df8f892f3df.png)
+![image](https://user-images.githubusercontent.com/127355284/228393600-18d89b72-0631-4e04-be23-4f14fd5bc29c.png)
+
+
 
 <span id="backlogs">
   
