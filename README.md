@@ -23,20 +23,20 @@
   
 ##  :white_medium_square: Backlog do produto
 
-| **USUARIO** |  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
-|-----------------------|-------------------------|---------------------|----------------|-------------------------|
-| ------- | Planejamento Backlog | Alta | 1 | **Em andamento** |
-| ------- | Fluxograma do Projeto | Média | 1 | **Realizado** |
-| ------- | Criação Layout Git | Baixa | 1 | **Em andamento** |
-| ------- | Criação de uma Base de Dados | Média | 2 | **Em andamento** |
-| ------- | Login dos Usuarios | Alta | 2 | **Em andamento** |
-| ------- | Cadastro dos Usuarios | Alta | 2 | **Em andamento** |
-| ------- | Controle de Turmas | Média | 2 | **Em andamento** |
-| ------- | Controle de Times | Média | 2 | **Em andamento** |
-| ------- | Controle de Sprints | Alta | 3 | **Em andamento** |
-| ------- | Resolução da Avaliação | Baixa | 3 | **Em andamento** |
-| ------- | Resultados pelos Dashboard's | Alta | 4 | **Em andamento** |
-| ------- | Finalização Visual | Baixa | 4 | **Em andamento** |
+|  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
+|-------------------------|---------------------|----------------|-------------------------|
+| Planejamento Backlog | Alta | 1 | **Realizado** |
+| Fluxograma do Projeto | Média | 1 | **Realizado** |
+| Criação Layout Git | Baixa | 1 | **Realizado** |
+| Criação de uma Base de Dados | Média | 2 | **Em andamento** |
+| Login dos Usuarios | Alta | 2 | **Em andamento** |
+| Cadastro dos Usuarios | Alta | 2 | **Em andamento** |
+| Controle de Turmas | Média | 2 | **Em andamento** |
+| Controle de Times | Média | 2 | **Em andamento** |
+| Controle de Sprints | Alta | 3 | **Em andamento** |
+| Resolução da Avaliação | Baixa | 3 | **Em andamento** |
+| Resultados pelos Dashboard's | Alta | 4 | **Em andamento** |
+
 
 <span id="Entrega">
 
@@ -57,7 +57,7 @@
 
 
 | FUNÇÃO | NOME | REDES SOCIAIS |
-|:-------:|:-----:|:---------:|
+|-------|-----|---------|
 | Scrum Master | Beatriz Akemi | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/naiara-santos-73b83a186) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/NaiaraSantos3)  |  
 | Product Owner | Naiara Santos | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/beatriz-bonatto-263530156) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/BeatrizBonatto) |  
 | Developer | João Matheus | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/joaomatheuslamao) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/JoaoMatheusLamao) |  
