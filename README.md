@@ -24,7 +24,7 @@
 ##  :white_medium_square: Backlog do produto
 
 | **USUARIO** |  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
-|-----------------------|-------------------------|---------------------|----------------|-------------------------|------------------|
+|-----------------------|-------------------------|---------------------|----------------|-------------------------|
 | ------- | Apresentação Backlog | Alta | 1 | **Em andamento** |
 | ------- | Fluxograma do Projeto | Média | 1 | **Realizado** |
 | ------- | Criação Layout Git | Baixa | 1 | **Em andamento** |
