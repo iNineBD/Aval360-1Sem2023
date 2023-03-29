@@ -33,7 +33,7 @@
 | ------- | Cadastro dos Usuarios | Alta | 2 | **Em andamento** |
 | ------- | Controle de Turmas | Média | 2 | **Em andamento** |
 | ------- | Controle de Times | Média | 2 | **Em andamento** |
-| ------- | Copntrole de Sprints | Alta | 3 | **Em andamento** |
+| ------- | Controle de Sprints | Alta | 3 | **Em andamento** |
 | ------- | Resolução da Avaliação | Baixa | 3 | **Em andamento** |
 | ------- | Resultados pelos Dashboard's | Alta | 4 | **Em andamento** |
 | ------- | Finalização Visual | Baixa | 4 | **Em andamento** |
