@@ -40,6 +40,8 @@
 
 <span id="Entrega">
 
+<span id="Entrega">
+
 ##  :white_medium_square: Entrega de Sprints
 
 | SPRINTS | PERÍODOS | DESCRIÇÃO | STATUS |
