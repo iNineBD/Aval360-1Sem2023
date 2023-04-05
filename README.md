@@ -27,13 +27,14 @@
 |-------------------------|---------------------|----------------|-------------------------|
 | Planejamento Backlog | Alta | 1 | **Realizado** |
 | Fluxograma do Projeto | Média | 1 | **Realizado** |
-| Criação Layout Git | Baixa | 1 | **Realizado** |
+| Criação Layout GitHub | Baixa | 1 | **Realizado** |
 | Criação de uma Base de Dados | Média | 2 | **Em andamento** |
-| Login dos Usuarios | Alta | 2 | **Em andamento** |
-| Cadastro dos Usuarios | Alta | 2 | **Em andamento** |
+| Avaliação 360° | Alta | 2 | **Em andamento** |
 | Controle de Turmas | Média | 2 | **Em andamento** |
 | Controle de Times | Média | 2 | **Em andamento** |
+| Login dos Usuarios | Alta | 3 | **Em andamento** |
 | Controle de Sprints | Alta | 3 | **Em andamento** |
+| Cadastro dos Usuarios | Alta | 3 | **Em andamento** |
 | Resolução da Avaliação | Baixa | 3 | **Em andamento** |
 | Resultados pelos Dashboard's | Alta | 4 | **Em andamento** |
 
@@ -47,9 +48,9 @@
 | SPRINTS | PERÍODOS | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
 | [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1) | 13/03/23 a 02/04/23 | Planejamento do Projeto | **REALIZADO** |
-| [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2) | 03/04/23 a 23/04/23 | Cadastros/Base de Dados | EM ANDAMENTO |
-| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3) | 24/04/23 a 14/05/23 | Controles de Turmas/Sprints | EM ANDAMENTO |
-| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4) | 15/05/23 a 04/06/23 | Construção Dashboard's | EM ANDAMENTO |
+| [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2) | 03/04/23 a 23/04/23 | Controle Turmas/Times e Avaliação 360° | EM ANDAMENTO |
+| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3) | 24/04/23 a 14/05/23 | Cadastros/Controle de Sprints | EM ANDAMENTO |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | EM ANDAMENTO |
 
 <span id="equipe">
 
