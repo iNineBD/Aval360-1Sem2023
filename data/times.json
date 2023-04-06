@@ -1,0 +1,26 @@
+[
+    {
+        "id_time": "0",
+        "identificacao": "Time 0",
+        "max": "5",
+        "id_turma": "0"
+    },
+    {
+        "id_time": "1'",
+        "identificacao": "Time 1",
+        "max": "5",
+        "id_turma": "0"
+    },
+    {
+        "id_time": "2",
+        "identificacao": "Time 0",
+        "max": "6",
+        "id_turma": "1"
+    },
+    {
+        "id_time": "3'",
+        "identificacao": "Time 1",
+        "max": "5",
+        "id_turma": "1"
+    }
+]

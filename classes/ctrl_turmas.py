@@ -9,7 +9,7 @@ class Turmas:
     
 
     #método para cadastrar uma turma
-    def setDataTurmas(identificacao):
+    def createTurmas(identificacao):
 
         # busca os dados das turmas ja existentes
         turmas = Turmas.getDataTurmas() 
@@ -54,8 +54,10 @@ class Turmas:
     
     
     #metodo para printar a identificacao de todas as turmas
-    def getAllTurmas():
+    def getNameAllTurmas():
         x = 1
+        name_turmas = []
         for turma in Turmas.getDataTurmas():
-            print(x, " - ", turma["identificacao"])
-            x = x+1
+            name_turmas.append(turma["identificacao"])
+        return name_turmas
+        

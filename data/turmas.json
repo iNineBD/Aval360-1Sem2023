@@ -1,26 +1,15 @@
 [
     {
-        "id": "0",
+        "id_turma": "0",
         "identificacao": "Turma 0"
     },
     {
-        "id": "1",
+        "id_turma": "1",
         "identificacao": "Turma 1"
     },
     {
-        "id": "2",
+        "id_turma": "2",
         "identificacao": "Turma 3"
-    },
-    {
-        "id": "3",
-        "identificacao": "Turma 4"
-    },
-    {
-        "id": "4",
-        "identificacao": "Turma de testes"
-    },
-    {
-        "id": "5",
-        "identificacao": "Turma do Jo\u00e3o"
     }
+    
 ]
