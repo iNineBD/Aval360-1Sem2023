@@ -1,15 +1,1 @@
-[
-    {
-        "id_turma": "0",
-        "identificacao": "Turma 0"
-    },
-    {
-        "id_turma": "1",
-        "identificacao": "Turma 1"
-    },
-    {
-        "id_turma": "2",
-        "identificacao": "Turma 3"
-    }
-    
-]
+[{"id_turma": "0", "identificacao": "Turma 0"}, {"id_turma": "1", "identificacao": "Turma 1"}, {"id_turma": "2", "identificacao": "Turma 3"}]

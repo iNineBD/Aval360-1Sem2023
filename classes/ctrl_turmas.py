@@ -18,7 +18,7 @@ class Turmas:
         new_id = int(Turmas.getIdTurma(-1)) + 1
         
         # Cria um dicionário com os dados da turma
-        turma = {"id": str(new_id),
+        turma = {"id_turma": str(new_id),
                 "identificacao": identificacao}
         
         # Adiciona a turma à lista
@@ -37,7 +37,7 @@ class Turmas:
     def getIdTurma(posi):
         turmas = Turmas.getDataTurmas()
         ultimaTurma = turmas[posi]
-        return ultimaTurma['id']
+        return ultimaTurma['id_turma']
     
     
     #método para pegar as informações das demais turmas existentes

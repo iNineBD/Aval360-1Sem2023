@@ -19,6 +19,8 @@ while True:
         pass
     elif op == 4:
         pass
+    elif op == 0:
+        exit()
     else:
-        print('Opção inválida! Tente novamente!')
+        print('\nOpção inválida! Tente novamente!')
     print("----------------------------------------------------")
