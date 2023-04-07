@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\joaom\Documents\API\1Sem2023\venv"
+VIRTUAL_ENV="C:\Users\joaom\Desktop\Fatec\API\1Sem2023\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
