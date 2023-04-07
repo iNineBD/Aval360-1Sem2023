@@ -113,5 +113,26 @@ class Turmas:
              # Escreve a lista de usuários no arquivo
              json.dump(turmas, arquivo)
         return "Turma editada!!!"
+    
+    def delTurma():
+        #busca os dados de todas as turmas
+        turmas = Turmas.getDataTurmas()
         
+        #pede ao usuário que entre com a turma que ele deseja excluir
+        print('\nEscolha uma turma para excluir:\n')
+        x = 1
+        for turma in turmas:
+            print(f"{x} - {turma['identificacao']}")
+            x=x+1
+        op = int(input("\nDigite aqui: "))
         
+        #apaga os dados antigos da turma
+        del(turmas[op-1])
+        
+        #salva no json os dados
+        jls_extract_var = 'w'
+        with open(Turmas.local_data_turma,  jls_extract_var) as arquivo:
+             # Escreve a lista de usuários no arquivo
+             json.dump(turmas, arquivo)
+        
+        return "Turma excluída!!!"
