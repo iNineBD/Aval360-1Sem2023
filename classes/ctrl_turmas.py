@@ -27,11 +27,8 @@ class Turmas:
         # # Adiciona a turma à lista
         turmas.append(turma)
         
-        # Abre o arquivo JSON em modo de escrita
-        jls_extract_var = 'w'
-        with open(Turmas.local_data_turma,  jls_extract_var) as arquivo:
-            # Escreve a lista de usuários no arquivo
-            json.dump(turmas, arquivo)
+        # salvando os dados no json
+        Turmas.setDataTurmas(turmas)
         
         return "Turma Cadastrada!!!"
     
@@ -57,6 +54,14 @@ class Turmas:
             turmas = []
         return turmas
     
+    
+    #salva os dados da turma no json
+    def setDataTurmas(turmas):    
+        jls_extract_var = 'w'
+        with open(Turmas.local_data_turma,  jls_extract_var) as arquivo:
+            # Escreve a lista de usuários no arquivo
+            json.dump(turmas, arquivo)
+        
     
     #metodo para printar a identificacao de todas as turmas
     def getNameAllTurmas():
@@ -107,11 +112,9 @@ class Turmas:
         #concatena os dados editados da turma com os dados de todas as outras turmas
         turmas.append(new_turma)
         
-        #salva no json os dados
-        jls_extract_var = 'w'
-        with open(Turmas.local_data_turma,  jls_extract_var) as arquivo:
-             # Escreve a lista de usuários no arquivo
-             json.dump(turmas, arquivo)
+        # salvando os dados no json
+        Turmas.setDataTurmas(turmas)
+        
         return "Turma editada!!!"
     
     def delTurma():
@@ -129,10 +132,7 @@ class Turmas:
         #apaga os dados antigos da turma
         del(turmas[op-1])
         
-        #salva no json os dados
-        jls_extract_var = 'w'
-        with open(Turmas.local_data_turma,  jls_extract_var) as arquivo:
-             # Escreve a lista de usuários no arquivo
-             json.dump(turmas, arquivo)
+        # salvando os dados no json
+        Turmas.setDataTurmas(turmas)
         
         return "Turma excluída!!!"
