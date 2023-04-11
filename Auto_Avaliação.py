@@ -15,8 +15,8 @@ if entrada_avaliacao == '1':
     print("Opção 1 selecionada. Responder avaliação.")
 
 # Definindo as perguntas como uma lista de dicionários
-    
-#Verifica se o arquivo JSON já existe
+
+# Verifica se o arquivo JSON já existe
     if os.path.exists(local_perguntas):
         # Se existir, carrega os usuários existentes
         with open(local_perguntas, 'r') as arquivo:
@@ -36,8 +36,7 @@ if entrada_avaliacao == '1':
             except ValueError:
                 print("Por favor, insira um número inteiro entre 1 e 5.")
         return resposta
-    
-    
+
     # Loop para obter as respostas do participante
     x = 1
     for pergunta in perguntas:
@@ -53,37 +52,14 @@ if entrada_avaliacao == '1':
             # Se não existir, cria uma lista vazia
             respostas = []
         respostas.append(resposta)
-        
+
     # Salvar as respostas em um arquivo JSON
         with open(local_resposta, "w") as arquivo:
             json.dump(respostas, arquivo, indent=5)
 
         print("Respostas salvas em respostas_avaliacao.json.")
-        
-    
 
-    # Exibindo os resultados
-    # print("Resultado da Avaliação:")
-    # for pergunta in perguntas:
-    #     print(f"Pergunta: {pergunta['pergunta']}")
-    #     print(f"Descrição: {pergunta['descricao']}")
-    #     print(f"Resposta: {pergunta['resposta']}")
-    #     print("-" * 30)
-                 
-     
-    
 elif entrada_avaliacao == '2':
     print("Opção 2 selecionada. Sair.")
 else:
     print("Opção inválida. Por favor, escolha uma opção válida.")
-
-
-    
-
-
-
-
-
-
-
-
