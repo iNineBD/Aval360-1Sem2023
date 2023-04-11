@@ -1,6 +1,9 @@
 import json
 import os
 
+local_perguntas = 'data/perguntas.json'
+local_resposta = 'data/respostas.json'
+
 entrada_avaliacao = input("1-Responder Avaliação"
                           "\n"
                           "2-Sair"
@@ -10,6 +13,17 @@ entrada_avaliacao = input("1-Responder Avaliação"
 
 if entrada_avaliacao == '1':
     print("Opção 1 selecionada. Responder avaliação.")
+
+# Definindo as perguntas como uma lista de dicionários
+    
+#Verifica se o arquivo JSON já existe
+    if os.path.exists(local_perguntas):
+        # Se existir, carrega os usuários existentes
+        with open(local_perguntas, 'r') as arquivo:
+            perguntas = json.load(arquivo)
+    else:
+        # Se não existir, cria uma lista vazia
+        perguntas = []
 
     # Função para obter a resposta do usuário como um número inteiro entre 1 e 5
     def obter_resposta():
@@ -22,54 +36,40 @@ if entrada_avaliacao == '1':
             except ValueError:
                 print("Por favor, insira um número inteiro entre 1 e 5.")
         return resposta
-
-    # Definindo as perguntas como uma lista de dicionários
-    perguntas = [
-        {
-            "pergunta": "Comunicacao e Trabalho em Equipe",
-            "descricao": "Em uma escala de 1 a 5, como voce avalia sua propria capacidade de se comunicar efetivamente e colaborar com outros membros da equipe para alcancar objetivos em projetos de trabalho em equipe?",
-            "resposta": None
-        },
-        {
-            "pergunta": "Engajamento e Proatividade",
-            "descricao": "Em uma escala de 1 a 5, como voce avalia o seu proprio nivel de engajamento e proatividade no ambiente de trabalho?",
-            "resposta": None
-        },
-        {
-            "pergunta": "Conhecimento e Aplicabilidade",
-            "descricao": "Em uma escala de 1 a 5, como voce avalia seu proprio nivel de conhecimento tecnico em relacao as tecnologias e ferramentas usadas no trabalho e sua capacidade de aplica-lo em projetos e tarefas especiificas relacionadas ao trabalho?",
-            "resposta": None
-        },
-        {
-            "pergunta": "Entrega de Resultados com Valor Agregado",
-            "descricao": "Em uma escala de 1 a 5, como voce avalia sua propria capacidade de entregar resultados com valor agregado em projetos e tarefas relacionadas ao trabalho?",
-            "resposta": None
-        },
-        {
-            "pergunta": "Autogestao de Atividades",
-            "descricao": "Em uma escala de 1 a 5, como voce avalia sua propria capacidade de gerenciar suas proprias atividades e prazos para atingir as metas do projeto?",
-            "resposta": None
-        }
-    ]
-
+    
+    
     # Loop para obter as respostas do participante
+    x = 1
     for pergunta in perguntas:
         print(pergunta["descricao"])
-        pergunta["resposta"] = obter_resposta()
-
-    # Exibindo os resultados
-    print("Resultado da Avaliação:")
-    for pergunta in perguntas:
-        print(f"Pergunta: {pergunta['pergunta']}")
-        print(f"Descrição: {pergunta['descricao']}")
-        print(f"Resposta: {pergunta['resposta']}")
-        print("-" * 30)
-                 
+        resposta = {'ip': str(x),
+                    'resp': str(obter_resposta())}
+        x = x + 1
+        if os.path.exists(local_resposta):
+            # Se existir, carrega os usuários existentes
+            with open(local_resposta, 'r') as arquivo:
+                respostas = json.load(arquivo)
+        else:
+            # Se não existir, cria uma lista vazia
+            respostas = []
+        respostas.append(resposta)
+        
     # Salvar as respostas em um arquivo JSON
-    with open("respostas_avaliacao.json", "w") as arquivo:
-        json.dump(perguntas, arquivo, indent=5)
+        with open(local_resposta, "w") as arquivo:
+            json.dump(respostas, arquivo, indent=5)
 
         print("Respostas salvas em respostas_avaliacao.json.")
+        
+    
+
+    # Exibindo os resultados
+    # print("Resultado da Avaliação:")
+    # for pergunta in perguntas:
+    #     print(f"Pergunta: {pergunta['pergunta']}")
+    #     print(f"Descrição: {pergunta['descricao']}")
+    #     print(f"Resposta: {pergunta['resposta']}")
+    #     print("-" * 30)
+                 
      
     
 elif entrada_avaliacao == '2':
