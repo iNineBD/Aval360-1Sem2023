@@ -1,5 +1,5 @@
 from classes.ctrl_turmas import Turmas
-from prompt_times import *
+from prompt_times import ctrl_times
 
 def ctrl_turmas():
     while True:
@@ -29,7 +29,7 @@ def ctrl_turmas():
             ctrl_times()
         
         elif op == 0:
-            output.close()
+            exit()
             
         else:
             print('\nOpção inválida! Tente novamente!')

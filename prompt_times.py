@@ -1,7 +1,8 @@
 from classes.ctrl_times import Times
 
 def ctrl_times():
-    while True:
+    condicao = True
+    while condicao:
         print('')
         print("Controle de Times!!!")
         print('')
@@ -25,7 +26,7 @@ def ctrl_times():
             pass
         
         elif op == 0:
-            output.close()
+            condicao = False
             
         else:
             print('\nOpção inválida! Tente novamente!')
