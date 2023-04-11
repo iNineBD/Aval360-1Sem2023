@@ -12,7 +12,7 @@ entrada_avaliacao = input("1-Responder Avaliação"
                           "Escolha sua opção: ")
 
 if entrada_avaliacao == '1':
-    print("Opção 1 selecionada. Responder avaliação.")
+    print("Opção 1 selecionada: 'Responder avaliação'")
 
 # Definindo as perguntas como uma lista de dicionários
 
