@@ -10,7 +10,7 @@ def ctrl_times():
         op = int(input("Digite aqui: "))
         
         if op == 1:
-            pass
+            Times.createTime()
             
         elif op == 2:
             pass
