@@ -29,14 +29,4 @@ for usuario in usuarios:
      if usuario.get ('id_time') == entrada_time:
           print(usuario.get('identificacao'), "-", usuario.get('id_usuario'))
 print("")
-# entrada_usuario = int(input(str("integrantes: ")))
-# print(usuarios[entrada_usuario].get('identificacao'))
-# print("")
-# if time.get ('id_turma') == entrada_time:
-        
-        # print(time.get('id_turma'), "-", time.get('identificacao'))
 
-# print("")
-#         print(time.get('id_time'), "-", time.get('identificacao'))
-# entrada_time = int(input(str("Digite qual time deseja visualizar: ")))
-# print(times[entrada_time].get('identificacao'))
