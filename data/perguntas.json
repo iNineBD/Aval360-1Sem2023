@@ -2,22 +2,22 @@
     {
         "ip": "1",
         "pergunta": "Comunicacao e Trabalho em Equipe",
-        "descricao": "Em uma escala de 1 a 5, como voce avalia sua propria capacidade de se comunicar efetivamente e colaborar com outros membros da equipe para alcancar objetivos em projetos de trabalho em equipe?"
+        "descricao": "\nEm uma escala de 1 a 5, como voce avalia sua propria capacidade de se comunicar efetivamente e colaborar com outros membros da equipe para alcancar objetivos em projetos de trabalho em equipe?"
     },
     {   "ip": "2",
         "pergunta": "Engajamento e Proatividade",
-        "descricao": "Em uma escala de 1 a 5, como voce avalia o seu proprio nivel de engajamento e proatividade no ambiente de trabalho?"
+        "descricao": "\nEm uma escala de 1 a 5, como voce avalia o seu proprio nivel de engajamento e proatividade no ambiente de trabalho?"
     },
     {   "ip": "3",
         "pergunta": "Conhecimento e Aplicabilidade",
-        "descricao": "Em uma escala de 1 a 5, como voce avalia seu proprio nivel de conhecimento tecnico em relacao as tecnologias e ferramentas usadas no trabalho e sua capacidade de aplica-lo em projetos e tarefas especiificas relacionadas ao trabalho?"
+        "descricao": "\nEm uma escala de 1 a 5, como voce avalia seu proprio nivel de conhecimento tecnico em relacao as tecnologias e ferramentas usadas no trabalho e sua capacidade de aplica-lo em projetos e tarefas especiificas relacionadas ao trabalho?"
     },
     {   "ip": "4",
         "pergunta": "Entrega de Resultados com Valor Agregado",
-        "descricao": "Em uma escala de 1 a 5, como voce avalia sua propria capacidade de entregar resultados com valor agregado em projetos e tarefas relacionadas ao trabalho?"
+        "descricao": "\nEm uma escala de 1 a 5, como voce avalia sua propria capacidade de entregar resultados com valor agregado em projetos e tarefas relacionadas ao trabalho?"
     },
     {   "ip": "5",
         "pergunta": "Autogestao de Atividades",
-        "descricao": "Em uma escala de 1 a 5, como voce avalia sua propria capacidade de gerenciar suas proprias atividades e prazos para atingir as metas do projeto?"
+        "descricao": "\nEm uma escala de 1 a 5, como voce avalia sua propria capacidade de gerenciar suas proprias atividades e prazos para atingir as metas do projeto?"
     }
 ]
