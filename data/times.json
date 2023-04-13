@@ -1,27 +1,27 @@
 [
     {
-        "id_time": "0",
-        "identificacao": "Time 0 editado",
-        "nr_integrantes": "18",
-        "id_turma": "0"
+        "id_time": 0,
+        "identificacao": "Time 0",
+        "nr_integrantes": "13",
+        "id_turma": 0
     },
     {
-        "id_time": "1",
+        "id_time": 1,
         "identificacao": "Time 1",
         "nr_integrantes": "9",
-        "id_turma": "0"
+        "id_turma": 0
     },
     {
-        "id_time": "2",
+        "id_time": 2,
         "identificacao": "Time 2",
         "nr_integrantes": "6",
-        "id_turma": "1"
+        "id_turma": 1
     },
     {
-        "id_time": "3",
+        "id_time": 3,
         "identificacao": "Time 3",
         "nr_integrantes": "5",
-        "id_turma": "1"
+        "id_turma": 1
     },
     {
         "id_time": 4,
@@ -34,5 +34,11 @@
         "identificacao": "Time BD novo",
         "nr_integrantes": "8",
         "id_turma": 3
+    },
+    {
+        "id_time": 6,
+        "identificacao": "Time dhd de pea",
+        "nr_integrantes": "9",
+        "id_turma": 0
     }
 ]

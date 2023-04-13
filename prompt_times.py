@@ -21,9 +21,10 @@ def ctrl_times():
             
         elif op == 4:
             pass
+            #bea ta fazendo
         
         elif op == 5:
-            pass
+            Times.getIntegrantes() 
         
         elif op == 0:
             condicao = False

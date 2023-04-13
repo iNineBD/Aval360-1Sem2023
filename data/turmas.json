@@ -1,18 +1,18 @@
 [
     {
-        "id_turma": "0",
+        "id_turma": 0,
         "identificacao": "1\u00ba Semestre PEA"
     },
     {
-        "id_turma": "1",
+        "id_turma": 1,
         "identificacao": "1\u00ba Semestre Log\u00edstica"
     },
     {
-        "id_turma": "2",
+        "id_turma": 2,
         "identificacao": "1\u00ba Semestre GPI"
     },
     {
-        "id_turma": "3",
+        "id_turma": 3,
         "identificacao": "1\u00ba Semestre BD"
     }
 ]
