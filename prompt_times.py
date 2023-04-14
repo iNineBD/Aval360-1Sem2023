@@ -10,20 +10,20 @@ def ctrl_times():
         op = int(input("Digite aqui: "))
         
         if op == 1:
-            pass
+            Times.createTime()
             
         elif op == 2:
-            pass
+            Times.visualizarTimes()
             
         elif op == 3:
             print('\nEdição de Times')
             Times.editTime()
             
         elif op == 4:
-            pass
+            Times.delTime()
         
         elif op == 5:
-            pass
+            Times.getIntegrantes() 
         
         elif op == 0:
             condicao = False
