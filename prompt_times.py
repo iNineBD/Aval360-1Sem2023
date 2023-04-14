@@ -14,6 +14,7 @@ def ctrl_times():
             
         elif op == 2:
             pass
+        #pegar agora
             
         elif op == 3:
             print('\nEdição de Times')
