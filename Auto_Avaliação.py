@@ -7,15 +7,15 @@ local_resposta = 'data/respostas.json'
 local_identificacao = 'data/usuarios'
 
 # abre o arquivo JSON
-with open('usuarios.json') as usuarios:
-    usuarios = json.load(usuarios)
+with open('usuarios.json', 'r', encoding="UTF-8") as arquivo:
+    usuarios = json.load(arquivo)
 
 for usuario in usuarios:
     if usuario["id_usuario"] == '0/0':
         nome = usuario['identificacao']
 
 # exibe o nome escolhido
-print("Bem-vindo, {}!".format(nome))
+print("Olá, seja muito bem-vindo, {}!".format(nome))
 
 
 y = True
@@ -25,7 +25,7 @@ while y:
                               "\n2 - Sair"
                               "\n"
                               "\n"
-                              "Escolha sua opção: ")
+                              "O que deseja fazer? Escolha sua opção: ")
 
     if entrada_avaliacao == '1':
         print("\nOpção 1 selecionada: 'Responder avaliação'")
@@ -33,7 +33,7 @@ while y:
         # Verifica se o arquivo JSON já existe
         if os.path.exists(local_perguntas):
             # Se existir, carrega as perguntas existentes
-            with open(local_perguntas, 'r') as arquivo:
+            with open(local_perguntas, 'r', encoding="UTF-8") as arquivo:
                 perguntas = json.load(arquivo)
         else:
             # Se não existir, cria uma lista vazia
@@ -75,4 +75,4 @@ while y:
     else:
         print("\nOpção inválida.\nPor favor, escolha uma opção válida.\n")
 
-print("Fim da Avaliação\n")
+print("Fim da Avaliação, agradeçemos sua participação.\n")
