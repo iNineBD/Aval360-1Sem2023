@@ -113,13 +113,12 @@ class Times:
                 print(time.get('id_time'), "-", time.get('identificacao'))
         print("")        
         entrada_time = int(input(str("Digite qual time deseja visualizar: ")))
-        print(times[entrada_time].get('identificacao'))
         print("")
 
         x = 1
         for usuario in usuarios:
             if usuario.get ('id_time') == entrada_time:
-                print(x, "-", usuario.get('id_usuario'))
+                print(x, "-", usuario.get('identificacao'))
             x = x + 1
         print("")
 
