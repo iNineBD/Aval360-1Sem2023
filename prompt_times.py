@@ -13,8 +13,7 @@ def ctrl_times():
             Times.createTime()
             
         elif op == 2:
-            pass
-        #pegar agora
+            Times.visualizarTimes()
             
         elif op == 3:
             print('\nEdição de Times')
