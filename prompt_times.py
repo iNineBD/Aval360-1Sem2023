@@ -20,8 +20,7 @@ def ctrl_times():
             Times.editTime()
             
         elif op == 4:
-            pass
-            #bea ta fazendo
+            Times.delTime()
         
         elif op == 5:
             Times.getIntegrantes() 
