@@ -1,20 +1,34 @@
 import json
 import os
+import random
 
 local_perguntas = 'data/perguntas.json'
 local_resposta = 'data/respostas.json'
+local_identificacao = 'data/usuarios'
+
+# abre o arquivo JSON
+with open('usuarios.json') as usuarios:
+    usuarios = json.load(usuarios)
+
+for usuario in usuarios:
+    if usuario["id_usuario"] == '0/0':
+        nome = usuario['identificacao']
+
+# exibe o nome escolhido
+print("Bem-vindo, {}!".format(nome))
+
 
 y = True
 while y:
-    entrada_avaliacao = input("\n1-Responder Avaliação"
+    entrada_avaliacao = input("\n1 - Responder Avaliação"
                               "\n"
-                              "\n2-Sair"
+                              "\n2 - Sair"
                               "\n"
                               "\n"
                               "Escolha sua opção: ")
 
     if entrada_avaliacao == '1':
-        print("\nOpção 1 selecionada: Responder avaliação.")
+        print("\nOpção 1 selecionada: 'Responder avaliação'")
 
         # Verifica se o arquivo JSON já existe
         if os.path.exists(local_perguntas):
@@ -37,7 +51,8 @@ while y:
                         raise ValueError
                     break
                 except ValueError:
-                    print("\nNúmero Invalido\nPor favor, insira um número inteiro entre 1 e 5.")
+                    print(
+                        "\nNúmero Invalido\nPor favor, insira um número inteiro entre 1 e 5.")
             return resposta
 
         # Loop para obter as respostas do participante
@@ -60,4 +75,4 @@ while y:
     else:
         print("\nOpção inválida.\nPor favor, escolha uma opção válida.\n")
 
-print("Fim do programa.\n")
+print("Fim da Avaliação\n")
