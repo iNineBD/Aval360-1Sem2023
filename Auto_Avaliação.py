@@ -15,7 +15,7 @@ for usuario in usuarios:
         nome = usuario['identificacao']
 
 # exibe o nome escolhido
-print("Olá, {}!\nSeja muito bem vindo ao nosso sistema de avaliação 360º! O que deseja fazer?".format(nome))
+print("Olá, {}!\nSeja muito bem vindo ao nosso Sistema de Avaliação 360º! O que deseja fazer?".format(nome))
 
 
 y = True
@@ -70,9 +70,9 @@ while y:
         y = False
 
     elif entrada_avaliacao == '2':
-        print("\nOpção 2 selecionada: 'Sair'.\n\nSaindo...\n")
+        print("\nOpção 2 selecionada: 'Sair'\n\nSaindo...\n")
         y = False
     else:
         print("\nOpção inválida.\nPor favor, escolha uma opção válida.\n")
 
-print("Fim da Avaliação, agradeçemos sua participação.\n")
+print("Fim da Avaliação, agradeçemos a sua participação.\n")
