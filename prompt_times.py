@@ -1,4 +1,8 @@
-from classes.ctrl_times import Times
+from times.createTime import createTime
+from times.visualizarTimes import visualizarTimes
+from times.editTime import editTime
+from times.getIntegrantes import getIntegrantes
+from times.delTime import delTime
 
 def ctrl_times():
     condicao = True
@@ -10,20 +14,20 @@ def ctrl_times():
         op = int(input("Digite aqui: "))
         
         if op == 1:
-            Times.createTime()
+            createTime()
             
         elif op == 2:
-            Times.visualizarTimes()
+            visualizarTimes()
             
         elif op == 3:
             print('\nEdição de Times')
-            Times.editTime()
+            editTime()
             
         elif op == 4:
-            Times.delTime()
+            delTime()
         
         elif op == 5:
-            Times.getIntegrantes() 
+            getIntegrantes() 
         
         elif op == 0:
             condicao = False

@@ -13,7 +13,7 @@
     },
     {
         "id_time": 4,
-        "identificacao": "TIme novo de GPI",
+        "identificacao": "Time novo GPI",
         "nr_integrantes": "10",
         "id_turma": 2
     },
@@ -24,21 +24,15 @@
         "id_turma": 3
     },
     {
-        "id_time": 6,
-        "identificacao": "The Walking Dead",
-        "nr_integrantes": "2",
-        "id_turma": 0
-    },
-    {
         "id_time": 7,
         "identificacao": "Turma nova de BD",
         "nr_integrantes": "10",
         "id_turma": 3
     },
     {
-        "id_time": 8,
-        "identificacao": "The Whitcher",
-        "nr_integrantes": "4",
+        "id_time": 9,
+        "identificacao": "Time área 21",
+        "nr_integrantes": "12",
         "id_turma": 0
     }
 ]
