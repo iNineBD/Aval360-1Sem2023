@@ -1,0 +1,32 @@
+[
+     {
+          "id_resposta": 0,
+          "ip": "1",
+          "resp": "3",
+          "id_usuario": 0
+     },
+     {
+          "id_resposta": 1,
+          "ip": "2",
+          "resp": "4",
+          "id_usuario": 0
+     },
+     {
+          "id_resposta": 2,
+          "ip": "3",
+          "resp": "5",
+          "id_usuario": 0
+     },
+     {
+          "id_resposta": 3,
+          "ip": "4",
+          "resp": "3",
+          "id_usuario": 0
+     },
+     {
+          "id_resposta": 4,
+          "ip": "5",
+          "resp": "2",
+          "id_usuario": 0
+     }
+]

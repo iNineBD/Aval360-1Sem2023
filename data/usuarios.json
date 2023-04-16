@@ -1,0 +1,42 @@
+[
+    {
+        "id_usuario": 0,
+        "identificacao": "João",
+        "id_time": 0
+    },
+    {
+        "id_usuario": 1,
+        "identificacao": "Paulo",
+        "id_time": 0
+    },
+    {
+        "id_usuario": 2,
+        "identificacao": "Ana",
+        "id_time": 0
+    },
+    {
+        "id_usuario": 3,
+        "identificacao": "Naiara",
+        "id_time": 0
+    },
+    {
+        "id_usuario": 4,
+        "identificacao": "Jaqueline",
+        "id_time": 0
+    },
+    {
+        "id_usuario": 5,
+        "identificacao": "André",
+        "id_time": 0
+    },
+    {
+        "id_usuario": 6,
+        "identificacao": "Eduardo",
+        "id_time": 0
+    },
+    {
+        "id_usuario": 7,
+        "identificacao": "Davidson",
+        "id_time": 0
+    }
+]

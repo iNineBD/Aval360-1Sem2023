@@ -1,0 +1,27 @@
+[
+    {
+        "ip": "1",
+        "pergunta": "Comunicacão e Trabalho em Equipe",
+        "descricao": "\n 1ª Pergunta - Em uma escala de 1 a 5, como você avalia a capacidade do seu colega de equipe em se comunicar efetivamente e colaborar com outros membros da equipe para alcançar objetivos em projetos de trabalho em equipe?"
+    },
+    {
+        "ip": "2",
+        "pergunta": "Engajamento e Proatividade",
+        "descricao": "\n 2ª Pergunta - Em uma escala de 1 a 5, como você avalia o impacto do engajamento e proatividade de seu colega de equipe no sucesso do projeto em que vocês trabalharam juntos?"
+    },
+    {
+        "ip": "3",
+        "pergunta": "Conhecimento e Aplicabilidade",
+        "descricao": "\n 3ª Pergunta - Em uma escala de 1 a 5, como você avalia o nível de conhecimento técnico de seu colega de equipe em relação às tecnologias e ferramentas utilizadas no trabalho?"
+    },
+    {
+        "ip": "4",
+        "pergunta": "Entrega de Resultados com Valor Agregado",
+        "descricao": "\n 4ª Pergunta - Em uma escala de 1 a 5, como você avalia a capacidade de seus colegas de equipe em entregar resultados com valor agregado em projetos e tarefas relacionadas ao trabalho?"
+    },
+    {
+        "ip": "5",
+        "pergunta": "Autogestão de Atividades",
+        "descricao": "\n 5ª Pergunta - Em uma escala de 1 a 5, como você avalia a capacidade de seu colega de equipe em gerenciar suas próprias atividades e prazos para atingir as metas do projeto?"
+    }
+]
