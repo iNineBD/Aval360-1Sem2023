@@ -2,6 +2,8 @@ import json
 import os
 
 def autoAvaliacao(id_usuario):
+    
+    print('Autoavaliação:')
 
     local_perguntas = '1Sem2023/data/perguntas_autoAvaliacao.json'
     local_resposta = '1Sem2023/data/respostas_autoAvaliacao.json'
@@ -120,6 +122,8 @@ def avaliacao(id_usuario, id_time):
     
     #para cada usuario pertencente ao time
     for usuario in time_usuarios:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print('Avaliação do grupo:')
         
         print('\n Em relação a(ao) integrante {}, responda: \n'.format(usuario['identificacao']))
     
