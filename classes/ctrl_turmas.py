@@ -5,7 +5,7 @@ import os
 #claase que contem os metodos relacionados a turma
 class Turmas:
     #variaveis globais
-    local_data_turma = ".\\data\\turmas.json"
+    local_data_turma = "1Sem2023/data/turmas.json"
     
 
     #método para cadastrar uma turma
@@ -91,11 +91,18 @@ class Turmas:
         for turma in turmas:
             print(f"{x} - {turma['identificacao']}")
             x=x+1
-        op = int(input("\nDigite aqui: "))
-        
+            
+        while True:
+            try:
+                op = int(input("\nDigite aqui: "))
+                if op > x:
+                    raise ValueError
+                break
+            except ValueError:
+                print('Valor inválido')
         #calcula o index da turma selecionada no dicionário com todas as turmas
         turma_selecionada = turmas[op - 1]
-        
+                    
         #salva o id da turma
         id_turma = turma_selecionada['id_turma']
         
@@ -127,7 +134,17 @@ class Turmas:
         for turma in turmas:
             print(f"{x} - {turma['identificacao']}")
             x=x+1
-        op = int(input("\nDigite aqui: "))
+    
+        while True:
+            try:
+                op = int(input("\nDigite aqui: "))
+                if op > x:
+                    raise ValueError
+                break
+            except ValueError:
+                print('Valor inválido')
+        #calcula o index da turma selecionada no dicionário com todas as turmas
+        turma_selecionada = turmas[op - 1]
         
         #apaga os dados antigos da turma
         del(turmas[op-1])
