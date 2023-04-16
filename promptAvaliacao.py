@@ -3,9 +3,9 @@ import os
 import random
 import avaliacoes
 
-local_perguntas = 'data/perguntas_autoAvaliacao.json'
-local_resposta = 'data/respostas_autoAvaliacao.json'
-local_identificacao = 'data/usuarios.json'
+local_perguntas = '1Sem2023/data/perguntas_autoAvaliacao.json'
+local_resposta = '1Sem2023/data/respostas_autoAvaliacao.json'
+local_identificacao = '1Sem2023/data/usuarios.json'
 
 # abre o arquivo JSON
 with open(local_identificacao, 'r', encoding="UTF-8") as arquivo:
