@@ -3,9 +3,9 @@ import os
 
 def autoAvaliacao(id_usuario):
 
-    local_perguntas = 'data/perguntas_autoAvaliacao.json'
-    local_resposta = 'data/respostas_autoAvaliacao.json'
-    local_identificacao = 'data/usuarios.json'
+    local_perguntas = '1Sem2023/data/perguntas_autoAvaliacao.json'
+    local_resposta = '1Sem2023/data/respostas_autoAvaliacao.json'
+    local_identificacao = '1Sem2023/data/usuarios.json'
 
     #loop prompt
 
@@ -71,9 +71,9 @@ def autoAvaliacao(id_usuario):
     y = False
     
 def avaliacao(id_usuario, id_time):
-    local_perguntas = 'data/perguntas_grupo_avaliacao.json'
-    local_resposta = 'data/respostas_grupoAvaliacao.json'
-    local_identificacao = 'data/usuarios.json'
+    local_perguntas = '1Sem2023/data/perguntas_grupo_avaliacao.json'
+    local_resposta = '1Sem2023/data/respostas_grupoAvaliacao.json'
+    local_identificacao = '1Sem2023/data/usuarios.json'
 
             
     # Função para obter a resposta do usuário como um número inteiro entre 1 e 5
