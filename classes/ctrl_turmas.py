@@ -95,7 +95,7 @@ class Turmas:
         while True:
             try:
                 op = int(input("\nDigite aqui: "))
-                if op > x:
+                if op > x or op == 0:
                     raise ValueError
                 break
             except ValueError:
@@ -138,7 +138,7 @@ class Turmas:
         while True:
             try:
                 op = int(input("\nDigite aqui: "))
-                if op > x:
+                if op > x or op == 0:
                     raise ValueError
                 break
             except ValueError:
