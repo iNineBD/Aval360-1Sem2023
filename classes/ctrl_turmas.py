@@ -5,7 +5,7 @@ import os
 #claase que contem os metodos relacionados a turma
 class Turmas:
     #variaveis globais
-    local_data_turma = "1Sem2023/data/turmas.json"
+    local_data_turma = "data/turmas.json"
     
 
     #método para cadastrar uma turma

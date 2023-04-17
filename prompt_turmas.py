@@ -17,7 +17,7 @@ def ctrl_turmas():
             print(Turmas.createTurmas())
             
         elif op == 2:
-            os.system('cls' if os.name == 'nt' else 'clear')
+            
             print("\nVisualizando turmas!!!")
             Turmas.listAllTurmas()
             
