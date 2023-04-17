@@ -3,8 +3,8 @@ import os
 import random
 import avaliacoes
 
-local_perguntas = '1Sem2023/data/perguntas_autoAvaliacao.json'
-local_resposta = '1Sem2023/data/respostas_autoAvaliacao.json'
+os.system('cls' if os.name == 'nt' else 'clear')
+
 local_identificacao = '1Sem2023/data/usuarios.json'
 
 # abre o arquivo JSON
@@ -31,6 +31,7 @@ entrada_avaliacao = input("\n1 - Responder Avaliação"
 
 if entrada_avaliacao == '1':
     print("\nOpção 1 selecionada: 'Responder avaliação'")
+    os.system('cls' if os.name == 'nt' else 'clear')
     
     avaliacoes.autoAvaliacao(id_usuario)
     avaliacoes.avaliacao(id_usuario, id_time)
