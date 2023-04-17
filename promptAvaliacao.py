@@ -5,7 +5,7 @@ import avaliacoes
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
-local_identificacao = '1Sem2023/data/usuarios.json'
+local_identificacao = 'data/usuarios.json'
 
 # abre o arquivo JSON
 with open(local_identificacao, 'r', encoding="UTF-8") as arquivo:

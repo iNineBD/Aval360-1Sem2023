@@ -1,11 +1,11 @@
 import json
 import os
 
-local_perguntas = '1Sem2023/data/perguntas_autoAvaliacao.json'
-local_perguntas_grupo = '1Sem2023/data/perguntas_grupo_avaliacao.json'
-local_resposta = '1Sem2023/data/respostas_autoAvaliacao.json'
-local_resposta_grupo = '1Sem2023/data/respostas_grupoAvaliacao.json'
-local_identificacao = '1Sem2023/data/usuarios.json'
+local_perguntas = 'data/perguntas_autoAvaliacao.json'
+local_perguntas_grupo = 'data/perguntas_grupo_avaliacao.json'
+local_resposta = 'data/respostas_autoAvaliacao.json'
+local_resposta_grupo = 'data/respostas_grupoAvaliacao.json'
+local_identificacao = 'data/usuarios.json'
 
 def autoAvaliacao(id_usuario):
     
