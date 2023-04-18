@@ -1,0 +1,14 @@
+[
+    {
+        "id_turma": 1,
+        "identificacao": "Semestre Log\u00edstica"
+    },
+    {
+        "id_turma": 2,
+        "identificacao": "Semestre GPI"
+    },
+    {
+        "id_turma": 3,
+        "identificacao": "Semestre BD"
+    }
+]
