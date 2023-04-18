@@ -1,5 +1,9 @@
 [
     {
+        "id_turma": 0,
+        "identificacao": "Semestre FDS"
+    },
+    {
         "id_turma": 1,
         "identificacao": "Semestre Log\u00edstica"
     },
