@@ -8,8 +8,13 @@ def ctrl_turmas():
         print('')
         print("Controle de Turmas!!!")
         print('')
-        print("Escolha uma opção: \n1 - Criar nova turma\n2 - Visualizar turmas\n3 - Editar turma\n4 - Excluir turma\n5 - Controle de times\n0 - Voltar\n")
-        op = int(input("Digite aqui: "))
+        while True:
+            try:
+                print("Escolha uma opção: \n1 - Criar nova turma\n2 - Visualizar turmas\n3 - Editar turma\n4 - Excluir turma\n5 - Controle de times\n0 - Voltar\n")
+                op = int(input("Digite aqui: "))
+                break
+            except ValueError:
+                print('\nOpção inválida! Tente novamente!\n')   
         
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')

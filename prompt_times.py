@@ -10,9 +10,14 @@ def ctrl_times():
         print('')
         print("Controle de Times!!!")
         print('')
-        print("Escolha uma opção: \n1 - Criar novo time\n2 - Visualizar times\n3 - Editar times\n4 - Excluir times\n5 - Visualizar integrantes\n0 - Voltar\n")
-        op = int(input("Digite aqui: "))
-        
+        while True:
+            try:
+                print("Escolha uma opção: \n1 - Criar novo time\n2 - Visualizar times\n3 - Editar times\n4 - Excluir times\n5 - Visualizar integrantes\n0 - Voltar\n")
+                op = int(input("Digite aqui: "))
+                break
+            except ValueError:
+                print('\nOpção inválida! Tente novamente!\n')
+                
         if op == 1:
             createTime()
             
