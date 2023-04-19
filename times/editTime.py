@@ -3,15 +3,24 @@ import json
 
 # funcao para editar time
 def editTime():
-    arqv_turma = open("./data/turmas.json")
+    arqv_turma = open("./data/turmas.json", encoding="UTF-8")
     ler_arqv_turma = json.load(arqv_turma)
 
     print("\nTurmas:")
 
-    for turma in ler_arqv_turma:
-        print(turma.get("id_turma"), "-", turma.get("identificacao"))
-
-    id_turma = int(input("\nDigite qual turma deseja visualizar os times: "))
+    # for turma in ler_arqv_turma:
+    #     print(turma.get("id_turma"), "-", turma.get("identificacao"))
+    i = 1
+    indice_vs_turma_id = {}
+    for Turma in ler_arqv_turma:
+        print(i, "-", Turma.get("identificacao"))
+        indice_vs_turma_id[f"{i}"] = Turma.get("id_turma")
+        i = i + 1
+    indice_turma = input("\nDigite qual turma deseja visualizar os times: ")
+    if indice_turma not in indice_vs_turma_id:
+        print("Turma inválida!")
+        return
+    id_turma = indice_vs_turma_id[indice_turma]
 
     arqv_time = open("data/times.json", encoding="UTF-8")
     ler_arqv_time = json.load(arqv_time)  # .load() - leitura do arqvo
@@ -19,15 +28,24 @@ def editTime():
     print("\nTimes:")
     x = False
 
+    indice_vs_time_id = {}
+    i = 1
+
     for time in ler_arqv_time:
         if time.get("id_turma") == id_turma:
-            print(time.get("id_time"), "-", time.get("identificacao"))
+            indice_vs_time_id[f"{i}"] = time.get("id_time")
+            print(i, "-", time.get("identificacao"))
+            i = i + 1
             x = True
 
     if x == False:
         print("Turma inválida!")
 
-    id_time = int(input("\nDigite qual time deseja editar: "))
+    indice_time = int(input("\nDigite qual time deseja editar: "))
+    if indice_time not in indice_vs_time_id:
+        print("Time inválido!")
+        return
+    id_time = indice_vs_time_id[indice_time]
 
     id_existentes = [
         time.get("id_time")
