@@ -36,12 +36,12 @@ def editTime():
             indice_vs_time_id[f"{i}"] = time.get("id_time")
             print(i, "-", time.get("identificacao"))
             i = i + 1
-            x = True
+        x = True
 
     if x == False:
         print("Turma inválida!")
 
-    indice_time = int(input("\nDigite qual time deseja editar: "))
+    indice_time = input("\nDigite qual time deseja editar: ")
     if indice_time not in indice_vs_time_id:
         print("Time inválido!")
         return
