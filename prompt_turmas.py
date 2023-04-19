@@ -1,9 +1,8 @@
-from classes.ctrl_turmas import Turmas
+from turmas.ctrl_turmas import Turmas
 from prompt_times import ctrl_times
 import os
 
 def ctrl_turmas():
-    os.system('cls' if os.name == 'nt' else 'clear')
     while True:
         print('')
         print("Controle de Turmas!!!")
