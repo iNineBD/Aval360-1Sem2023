@@ -15,6 +15,9 @@ def visualizarTimes():
                 break
             except ValueError:
                 print('\nOpção inválida! Tente novamente!\n')
+        
+        turma_escolhida = read_arqv_turmas[num_turmas - 1]
+        id_turma = turma_escolhida['id_turma']
             
         while True:
             if num_turmas < x:
@@ -24,7 +27,7 @@ def visualizarTimes():
                         
                 y = 1
                 for time in read_arqv_times:
-                    if time.get('id_turma') == num_turmas - 1:
+                    if time.get('id_turma') == id_turma:
                         print(f"{y} - {time.get('identificacao')}")
                         y = y + 1
                 break   

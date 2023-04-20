@@ -7,7 +7,7 @@ def getIntegrantes():
         arqv_time = open('./data/times.json')
         times = json.load(arqv_time)
 
-        arqv_usuarios = open('./data/usuarios.json')
+        arqv_usuarios = open('./data/usuarios.json', encoding="UTF-8")
         usuarios = json.load(arqv_usuarios)
         
         x = 1
@@ -21,10 +21,13 @@ def getIntegrantes():
                 if entrada_turma > x-1:
                     print ("Essa turma não existe")
                 else: #
+                    turma_escolhida = turmas[entrada_turma - 1]
+                    id_turma = turma_escolhida['id_turma']
+                    
                     print("Opções de time: ")
                     times_pertencentes_turma = []
                     for time in times:  
-                        if time.get ('id_turma') == entrada_turma - 1:
+                        if time.get ('id_turma') == id_turma:
                             times_pertencentes_turma.append(time)
                     y = 1
                     for time in times_pertencentes_turma:

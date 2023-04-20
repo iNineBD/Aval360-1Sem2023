@@ -1,5 +1,5 @@
 from turmas.ctrl_turmas import Turmas
-from prompt_times import ctrl_times
+from times.prompt_times import ctrl_times
 import os
 
 def ctrl_turmas():

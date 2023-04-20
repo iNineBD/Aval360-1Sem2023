@@ -21,6 +21,9 @@ def delTime():
                     break
             except ValueError:
                 print('Valor inválido\n')
+                
+        turma_escolhida = read_arqv_turmas[num_turmas - 1]
+        id_turma = turma_escolhida['id_turma']
 
         #Visualizar Times:
         arqvtimes = open(caminho_time)
@@ -29,7 +32,7 @@ def delTime():
         print("\nVisualizar Times:")
         times_turma = []
         for time in read_arqv_times:
-            if time.get('id_turma') == num_turmas - 1:
+            if time.get('id_turma') == id_turma:
                 times_turma.append(time)
 
         y = 1

@@ -37,10 +37,13 @@ class Turmas:
     #método para retornar o id da ultima turma cadastrada
     def getNextIdTurma():
         turmas = Turmas.getDataTurmas()
-        ids = []
-        for turma in turmas:
-            ids.append(int(turma['id_turma']))
-        return max(ids) + 1
+        if turmas == []:
+            return 0
+        else:
+            ids = []
+            for turma in turmas:
+                ids.append(int(turma['id_turma']))
+            return max(ids) + 1
     
     
     #método para pegar as informações das demais turmas existentes
