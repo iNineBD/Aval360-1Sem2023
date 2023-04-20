@@ -1,22 +1,41 @@
 import json
 
+
 #método para criar times
 def createTime():
-        arquivo_das_turmas = open("./data/turmas.json")
-        turmas= json.load (arquivo_das_turmas)
+    
         arquivo_times = open("data/times.json")
         times= json.load (arquivo_times)
 
-        print('\nTurmas')
-
-        for turma in turmas:
-            print(turma['id_turma'], '-', turma['identificacao'])
-
-        op = int(input("Selecione uma turma: "))
+         #Visualizar Turmas:
+        arqv_turmas = open('./data/turmas.json')
+        read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
+        print("\nVisualizar Turmas:")
+        x = 1
+        for turma in read_arqv_turmas:
+            print(f"{x} - {turma.get('identificacao')}")
+            x = x+1
+        while True:
+            try:
+                op = int(input('\nDigite qual turma deseja inserir um time: '))  #deixar apenas número inteiro
+                if op < x:
+                    break
+                else:
+                    raise ValueError
+            except ValueError:
+                print('\nOpção inválida! Tente novamente!\n')
+        
+        turma_escolhida = read_arqv_turmas[op - 1]
+        id_turma = turma_escolhida['id_turma']
 
         Identificacao_time = input(" Entre com a identificacao do time: ")
-        numero_nr_integrantes_integrantes = input (" Entre com o numero maximo de pessoas no time: ")
-
+        while True:
+            try:
+                numero_nr_integrantes_integrantes = int(input (" Entre com o numero maximo de pessoas no time: "))
+                break
+            except ValueError:
+                print('Insira um valor inteiro!')
+        
         maior_id_time = 0
         for time in times:
             if maior_id_time < int(time['id_time']):
@@ -26,7 +45,7 @@ def createTime():
             'id_time': maior_id_time + 1,
             'identificacao': Identificacao_time,
             'nr_integrantes': numero_nr_integrantes_integrantes,
-            'id_turma': op
+            'id_turma': id_turma
         }
         times.append(novo_time)
 
@@ -34,4 +53,4 @@ def createTime():
             # Escrevendo os dados atualizados no arquivo
             json.dump(times, f)
 
-            print('Time criado!')
+            print('\nTime criado!')
