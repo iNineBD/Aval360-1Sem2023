@@ -1,0 +1,38 @@
+[
+    {
+        "id_time": 2,
+        "identificacao": "Time 2",
+        "nr_integrantes": "6",
+        "id_turma": 1
+    },
+    {
+        "id_time": 3,
+        "identificacao": "Time 3",
+        "nr_integrantes": "5",
+        "id_turma": 1
+    },
+    {
+        "id_time": 4,
+        "identificacao": "Time novo GPI",
+        "nr_integrantes": "10",
+        "id_turma": 2
+    },
+    {
+        "id_time": 5,
+        "identificacao": "Time BD novo",
+        "nr_integrantes": "8",
+        "id_turma": 3
+    },
+    {
+        "id_time": 7,
+        "identificacao": "Turma nova de BD",
+        "nr_integrantes": "10",
+        "id_turma": 3
+    },
+    {
+        "id_time": 9,
+        "identificacao": "Time área 21",
+        "nr_integrantes": "12",
+        "id_turma": 0
+    }
+]
