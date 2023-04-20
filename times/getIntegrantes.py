@@ -40,16 +40,16 @@ def getIntegrantes():
                     print("Time inválido!")
                 else:
                     for time in times_pertencentes_turma:
-                        if time['id_time'] == entrada_time - 1:
+                        if times_pertencentes_turma.index(time) == entrada_time - 1:
                             id_time = time['id_time']
                     break
             except ValueError:
                 print('Valor inválido!')
                 # print("")
 
-        i = 1
+        a = 1
         for usuario in usuarios:
             if usuario.get ('id_time') == id_time:
-                print(i, "-", usuario.get('identificacao'))
-            i +=1
-        print("")
+                print(a, "-", usuario.get('identificacao'))
+                a +=1
+getIntegrantes()
