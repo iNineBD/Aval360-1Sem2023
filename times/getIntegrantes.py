@@ -9,25 +9,47 @@ def getIntegrantes():
 
         arqv_usuarios = open('./data/usuarios.json')
         usuarios = json.load(arqv_usuarios)
-
-        for turma in turmas:
-            print(turma.get('id_turma'), "-", turma.get('identificacao'))
-        print("")
-        entrada_turma = int(input(str("Digite qual turma deseja visualizar: ")))
-        print(turmas[entrada_turma].get('id_turma'), "-", turmas[entrada_turma].get('identificacao'))
-        print("")
-
-        print("Opções de time: ")
-        for time in times:  
-            if time.get ('id_turma') == entrada_turma:
-                print(time.get('id_time'), "-", time.get('identificacao'))
-        print("")        
-        entrada_time = int(input(str("Digite qual time deseja visualizar: ")))
-        print("")
-
+        
         x = 1
+        for turma in turmas:
+            print(f"{x} - {turma.get('identificacao')}")
+            x += 1
+            
+        while True:
+            try:
+                entrada_turma = int(input(str("Digite qual turma acima deseja visualizar: ")))
+                if entrada_turma > x-1:
+                    print ("Essa turma não existe")
+                else: #
+                    print("Opções de time: ")
+                    times_pertencentes_turma = []
+                    for time in times:  
+                        if time.get ('id_turma') == entrada_turma - 1:
+                            times_pertencentes_turma.append(time)
+                    y = 1
+                    for time in times_pertencentes_turma:
+                        print(f"{y} - {time['identificacao']}")
+                        y += 1
+                    break
+            except ValueError:
+                print('Valor inválido!')
+        while True:
+            try:  
+                entrada_time = int(input(str("Digite qual time deseja visualizar: ")))
+                if entrada_time > y-1:
+                    print("Time inválido!")
+                else:
+                    for time in times_pertencentes_turma:
+                        if time['id_time'] == entrada_time - 1:
+                            id_time = time['id_time']
+                    break
+            except ValueError:
+                print('Valor inválido!')
+                # print("")
+
+        i = 1
         for usuario in usuarios:
-            if usuario.get ('id_time') == entrada_time:
-                print(x, "-", usuario.get('identificacao'))
-            x = x + 1
+            if usuario.get ('id_time') == id_time:
+                print(i, "-", usuario.get('identificacao'))
+            i +=1
         print("")
