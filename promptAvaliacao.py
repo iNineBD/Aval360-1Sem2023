@@ -2,13 +2,13 @@
 import json
 import os
 import random
-import avaliacoes
+from avaliacao.avaliacoes import autoAvaliacao, avaliacao
 
 #Limpando a tela do terminal
 os.system('cls' if os.name == 'nt' else 'clear')
 
 #Definindo o caminho do arquivo "usuarios.json"
-local_identificacao = 'data/usuarios.json'
+local_identificacao = './data/usuarios.json'
 
 #Abrindo o arquivo JSON e carregando seus dados na variável "usuarios"
 with open(local_identificacao, 'r', encoding="UTF-8") as arquivo:
@@ -37,8 +37,8 @@ while True:
         print("\nOpção 1 selecionada: 'Responder avaliação'")
         os.system('cls' if os.name == 'nt' else 'clear')
         
-        avaliacoes.autoAvaliacao(id_usuario)
-        avaliacoes.avaliacao(id_usuario, id_time)
+        autoAvaliacao(id_usuario)
+        avaliacao(id_usuario, id_time)
         break
     #Se o usuário escolher a opção "Sair", exibimos uma mensagem de despedida e definimos a variável "y" como False:    
     elif entrada_avaliacao == '2':
