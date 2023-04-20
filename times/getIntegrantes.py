@@ -52,4 +52,3 @@ def getIntegrantes():
             if usuario.get ('id_time') == id_time:
                 print(a, "-", usuario.get('identificacao'))
                 a +=1
-getIntegrantes()
