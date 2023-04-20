@@ -24,7 +24,7 @@ def visualizarTimes():
                         
                 y = 1
                 for time in read_arqv_times:
-                    if time.get('id_turma') == num_turmas:
+                    if time.get('id_turma') == num_turmas - 1:
                         print(f"{y} - {time.get('identificacao')}")
                         y = y + 1
                 break   
