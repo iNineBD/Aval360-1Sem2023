@@ -1,5 +1,7 @@
 import json
 
+from classes.ctrl_turmas import Turmas
+
 #método para criar times
 def createTime():
         arquivo_das_turmas = open("./data/turmas.json")
@@ -15,8 +17,17 @@ def createTime():
         op = int(input("Selecione uma turma: "))
 
         Identificacao_time = input(" Entre com a identificacao do time: ")
+        
+        for id_time in Identificacao_time:
+                      
+            while True:
+                if id_time == Identificacao_time:
+                    print ('Esse time já existe. Para prosseguir, selecione novamente a Turma.')
+                    return createTime() 
+                else:
+                    break 
         numero_nr_integrantes_integrantes = input (" Entre com o numero maximo de pessoas no time: ")
-
+        
         maior_id_time = 0
         for time in times:
             if maior_id_time < int(time['id_time']):
@@ -34,4 +45,4 @@ def createTime():
             # Escrevendo os dados atualizados no arquivo
             json.dump(times, f)
 
-            print('Time criado!')
+            print('\nTime criado!')
