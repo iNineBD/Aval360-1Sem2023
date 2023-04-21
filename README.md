@@ -9,7 +9,8 @@
     <a href="#backlogs">Backlogs do produto</a>  •
     <a href="#entrega">Entrega de Sprints</a>  •
     <a href="#tecnologias">Tecnologias</a>  •
-    <a href="#equipe">Equipe</a>
+    <a href="#equipe">Equipe</a> •
+    <a href="#burndown">Burndown</a>
 </p>
 
 <span id="sobre">
@@ -40,9 +41,7 @@
 | Resultados pelos Dashboard's | Alta | 4 | **Em andamento** |
 
 
-<span id="Entrega">
-
-<span id="Entrega">
+<span id="entrega">
 
 ##  :white_medium_square: Entrega de Sprints
 
@@ -72,21 +71,18 @@
 | Developer | Ana Raquel | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/ana-sasaki-19a2031b8/) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/Anaraquely) |      
 | Developer | Davidson Souza | [![Linkedin Badge](https://img.shields.io/badge/Linkedin-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/davidson-sousa-77858ba3) [![GitHub Badge](https://img.shields.io/badge/GitHub-111217?style=flat-square&logo=github&logoColor=white)](https://github.com/DavidsonSous) |  
     
-<span id="Tecnologias">
+<span id="tecnologias">
     
 ##  :white_medium_square: Tecnologias Utilizadas
     
 ![image](https://user-images.githubusercontent.com/117841950/227992672-e092c2c3-a455-4c97-a6bc-3e420b92ff4d.png)
 
     
-<span id="Planner">
+<span id="burndown">
     
-##  :white_medium_square: Planner
-Para acessar, clique [aqui!!!](https://tasks.office.com/fatec.sp.gov.br/Home/PlanViews/teXwGhH_30Szzu3_EtQgZWQAEDbM?Type=PlanLink&Channel=Link&CreatedTime=638174572703980000)
-    
+##  :white_medium_square:🔥Burndown
 
-
-    
+[![Alt Text](https://user-images.githubusercontent.com/117841950/233720484-f677d745-68b0-4ac0-a762-1ffa74b2387a.png)](https://fatecspgov-my.sharepoint.com/:x:/g/personal/beatriz_bonatto_fatec_sp_gov_br/EaMTlLPVA5tGgh7cetYffGQBmzizocsF7nUIq7DPC1vO3Q?e=wKIcvj)
 
 
 
