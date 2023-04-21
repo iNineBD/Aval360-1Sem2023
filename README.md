@@ -47,7 +47,7 @@
 | SPRINTS | PERÍODOS | DESCRIÇÃO | STATUS |
 |:-------:|:-----:|:---------:|:------:|
 | [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1) | 13/03/23 a 02/04/23 | Planejamento do Projeto | **REALIZADO** |
-| [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2) | 03/04/23 a 23/04/23 | Cadastros/Base de Dados | EM ANDAMENTO |
+| [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2---iNine) | 03/04/23 a 23/04/23 | Cadastros/Base de Dados | EM ANDAMENTO |
 | [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3) | 24/04/23 a 14/05/23 | Controles de Turmas/Sprints | EM ANDAMENTO |
 | [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4) | 15/05/23 a 04/06/23 | Construção Dashboard's | EM ANDAMENTO |
 
