@@ -31,10 +31,10 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
 | Planejamento Backlog | Alta | 1 | **Realizado** |
 | Fluxograma do Projeto | Média | 1 | **Realizado** |
 | Criação Layout GitHub | Baixa | 1 | **Realizado** |
-| Criação de uma Base de Dados | Média | 2 | **Em andamento** |
-| Avaliação 360° | Alta | 2 | **Em andamento** |
-| Controle de Turmas | Média | 2 | **Em andamento** |
-| Controle de Times | Média | 2 | **Em andamento** |
+| Criação de uma Base de Dados | Média | 2 | **Realizado** |
+| Avaliação 360° | Alta | 2 | **Realizado** |
+| Controle de Turmas | Média | 2 | **Realizado** |
+| Controle de Times | Média | 2 | **Realizado** |
 | Controle de Perfis | Média | 3 | **Em andamento** | 
 | Login dos Usuarios | Alta | 3 | **Em andamento** |
 | Controle de Sprints | Alta | 3 | **Em andamento** |
