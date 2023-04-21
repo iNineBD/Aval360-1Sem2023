@@ -62,6 +62,7 @@ def editTime():
         ler_arqv_time[ind_time_alvo]["nr_integrantes"] = input(
             "Número máximo de integrantes: "
         )
+        ler_arqv_time[ind_time_alvo]["id_turma"] = id_turma
         print("\n--------------------------")
         print(
             ler_arqv_time[ind_time_alvo]["id_time"],
@@ -73,10 +74,7 @@ def editTime():
         print("--------------------------")
         print("\nEdição realizada com sucesso!")
     # elif time.get('id_time') :
-
-    caminho = "./data/times.json"
-
-    with open(caminho, "w") as output:
-        json.dump(ler_arqv_time, output)
-
-    output.close()
+    arqv_time.close()  # fecha o arquivo antes de sobrescrever
+    with open("data/times.json", "w", encoding="UTF-8") as f:
+        json.dump(ler_arqv_time, f)
+    arqv_time
