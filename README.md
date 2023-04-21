@@ -24,6 +24,8 @@
   
 ##  :white_medium_square: Backlog do produto
 
+Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428a0e?r=use1) para mais informaçoes!
+
 |  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
 |-------------------------|---------------------|----------------|-------------------------|
 | Planejamento Backlog | Alta | 1 | **Realizado** |
