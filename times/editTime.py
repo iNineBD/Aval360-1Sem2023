@@ -1,82 +1,65 @@
 import json
 
-
-# funcao para editar time
+# Função para editar um time
 def editTime():
-    arqv_turma = open("./data/turmas.json", encoding="UTF-8")
-    ler_arqv_turma = json.load(arqv_turma)
+    arqv_turmas = open("./data/turmas.json", encoding="UTF-8")
+    ler_arqv_turmas = json.load(arqv_turmas)
 
     print("\nTurmas:")
-
-    # for turma in ler_arqv_turma:
-    #     print(turma.get("id_turma"), "-", turma.get("identificacao"))
-    i = 1
     indice_vs_turma_id = {}
-    for Turma in ler_arqv_turma:
-        print(i, "-", Turma.get("identificacao"))
-        indice_vs_turma_id[f"{i}"] = Turma.get("id_turma")
-        i = i + 1
-    indice_turma = input("\nDigite qual turma deseja visualizar os times: ")
+    for i in range(len(ler_arqv_turmas)):
+        turma = ler_arqv_turmas[i]
+        print(i + 1, "-", turma.get("identificacao"))
+        indice_vs_turma_id[str(i + 1)] = turma.get("id_turma")
+
+    indice_turma = input("\nDigite o número da turma que deseja visualizar os times: ")
     if indice_turma not in indice_vs_turma_id:
         print("Turma inválida!")
         return
+
     id_turma = indice_vs_turma_id[indice_turma]
 
-    arqv_time = open("data/times.json", encoding="UTF-8")
-    ler_arqv_time = json.load(arqv_time)  # .load() - leitura do arqvo
+    arqv_times = open("./data/times.json", encoding="UTF-8")
+    ler_arqv_times = json.load(arqv_times)
 
     print("\nTimes:")
     x = False
-
     indice_vs_time_id = {}
-    i = 1
 
-    for time in ler_arqv_time:
+    y = 1
+    for i in range(len(ler_arqv_times)):
+        time = ler_arqv_times[i]
         if time.get("id_turma") == id_turma:
-            indice_vs_time_id[f"{i}"] = time.get("id_time")
-            print(i, "-", time.get("identificacao"))
-            i = i + 1
-        x = True
+            print(y, "-", time.get("identificacao"))
+            indice_vs_time_id[str(y)] = time.get("id_time")
+            y += 1
+            x = True
 
-    if x == False:
-        print("Turma inválida!")
+    if not x:
+        print("Não há times nesta turma para editar.")
+        return
 
-    indice_time = input("\nDigite qual time deseja editar: ")
+    indice_time = input("\nDigite o número do time que deseja editar: ")
     if indice_time not in indice_vs_time_id:
         print("Time inválido!")
         return
+
     id_time = indice_vs_time_id[indice_time]
+    ind_time_alvo = next((i for i, time in enumerate(ler_arqv_times) if time.get("id_time") == id_time), None)
 
-    id_existentes = [
-        time.get("id_time")
-        for time in ler_arqv_time
-        if time.get("id_turma") == id_turma
-    ]
-    if id_time not in id_existentes:
-        print("Time inválido!")
-        editTime()
-    else:
-        ind_time_alvo = id_existentes.index(id_time)
-        print("\nInsira as novas informações\n")
-        ler_arqv_time[ind_time_alvo]["identificacao"] = input("Nome do time: ")
-        ler_arqv_time[ind_time_alvo]["nr_integrantes"] = input(
-            "Número máximo de integrantes: "
-        )
-        print("\n--------------------------")
-        print(
-            ler_arqv_time[ind_time_alvo]["id_time"],
-            "-",
-            ler_arqv_time[ind_time_alvo]["identificacao"],
-        )
-        print("Máximo de integrantes: ", ler_arqv_time[ind_time_alvo]["nr_integrantes"])
-        print("Turma: ", ler_arqv_time[ind_time_alvo]["id_turma"])
-        print("--------------------------")
-        print("\nEdição realizada com sucesso!")
-    # elif time.get('id_time') :
+    if ind_time_alvo is None:
+        print("Time não encontrado!")
+        return
 
-    caminho = "./data/times.json"
+    print("\nInsira as novas informações:")
+    ler_arqv_times[ind_time_alvo]["identificacao"] = input("Nome do time: ")
+    ler_arqv_times[ind_time_alvo]["nr_integrantes"] = input("Número máximo de integrantes: ")
+    ler_arqv_times[ind_time_alvo]["id_turma"] = id_turma
 
-    with open(caminho, "w") as output:
-        json.dump(ler_arqv_time, output)
+    print("\n--------------------------")
+    print(indice_time, "-", ler_arqv_times[ind_time_alvo]["identificacao"])
+    print("--------------------------")
+    print("\nEdição realizada com sucesso!")
 
-    output.close()
+    with open("./data/times.json", "w", encoding="UTF-8") as f:
+        json.dump(ler_arqv_times, f, indent=4)
