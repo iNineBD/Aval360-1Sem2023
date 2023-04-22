@@ -7,9 +7,10 @@ def editTime():
 
     print("\nTurmas:")
     indice_vs_turma_id = {}
-    for i, turma in enumerate(ler_arqv_turmas, start=1):
-        print(i, "-", turma.get("identificacao"))
-        indice_vs_turma_id[str(i)] = turma.get("id_turma")
+    for i in range(len(ler_arqv_turmas)):
+        turma = ler_arqv_turmas[i]
+        print(i + 1, "-", turma.get("identificacao"))
+        indice_vs_turma_id[str(i + 1)] = turma.get("id_turma")
 
     indice_turma = input("\nDigite o número da turma que deseja visualizar os times: ")
     if indice_turma not in indice_vs_turma_id:
@@ -22,18 +23,20 @@ def editTime():
     ler_arqv_times = json.load(arqv_times)
 
     print("\nTimes:")
-    # Verifica o número de times encontrados para a turma selecionada
     x = False
     indice_vs_time_id = {}
-    for i, time in enumerate(ler_arqv_times, start=1):
+    y = 1
+    for i in range(len(ler_arqv_times)):
+        time = ler_arqv_times[i]
         if time.get("id_turma") == id_turma:
-            print(i, "-", time.get("identificacao"))
-            indice_vs_time_id[str(i)] = time.get("id_time")
+            print(y, "-", time.get("identificacao"))
+            y += 1
+            indice_vs_time_id[str(i + 1)] = time.get("id_time")
             x = True
 
-    # Caso não haja nenhum time, atribui o valor 1 para i
     if not x:
-        i = 1
+        print("Não há times nesta turma para editar.")
+        return
 
     indice_time = input("\nDigite o número do time que deseja editar: ")
     if indice_time not in indice_vs_time_id:
@@ -53,9 +56,9 @@ def editTime():
     ler_arqv_times[ind_time_alvo]["id_turma"] = id_turma
 
     print("\n--------------------------")
-    print(ler_arqv_times[ind_time_alvo]["id_time"], "-", ler_arqv_times[ind_time_alvo]["identificacao"])
+    print(indice_time, "-", ler_arqv_times[ind_time_alvo]["identificacao"])
     print("--------------------------")
     print("\nEdição realizada com sucesso!")
 
     with open("./data/times.json", "w", encoding="UTF-8") as f:
-        json.dump(ler_arqv_times, f)
+        json.dump(ler_arqv_times, f, indent=4)
