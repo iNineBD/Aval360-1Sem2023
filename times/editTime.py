@@ -25,13 +25,14 @@ def editTime():
     print("\nTimes:")
     x = False
     indice_vs_time_id = {}
+
     y = 1
     for i in range(len(ler_arqv_times)):
         time = ler_arqv_times[i]
         if time.get("id_turma") == id_turma:
             print(y, "-", time.get("identificacao"))
+            indice_vs_time_id[str(y)] = time.get("id_time")
             y += 1
-            indice_vs_time_id[str(i + 1)] = time.get("id_time")
             x = True
 
     if not x:
