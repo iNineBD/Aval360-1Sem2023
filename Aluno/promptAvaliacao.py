@@ -8,7 +8,7 @@ from avaliacao.avaliacoes import autoAvaliacao, avaliacao
 os.system('cls' if os.name == 'nt' else 'clear')
 
 #Definindo o caminho do arquivo "usuarios.json"
-local_identificacao = './data/usuarios.json'
+local_identificacao = '././data/usuarios.json'
 
 #Abrindo o arquivo JSON e carregando seus dados na variável "usuarios"
 with open(local_identificacao, 'r', encoding="UTF-8") as arquivo:

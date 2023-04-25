@@ -4,11 +4,11 @@ import json
 #método para criar times
 def createTime():
     
-        arquivo_times = open("data/times.json")
+        arquivo_times = open("././data/times.json")
         times= json.load (arquivo_times)
 
          #Visualizar Turmas:
-        arqv_turmas = open('./data/turmas.json')
+        arqv_turmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
         print("\nVisualizar Turmas:")
         x = 1
@@ -49,7 +49,7 @@ def createTime():
         }
         times.append(novo_time)
 
-        with open('./data/times.json', 'w') as f:
+        with open('././data/times.json', 'w') as f:
             # Escrevendo os dados atualizados no arquivo
             json.dump(times, f)
 

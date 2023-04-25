@@ -1,7 +1,7 @@
 import json
 
-caminho_turma = './data/turmas.json'
-caminho_time = './data/times.json'
+caminho_turma = '././data/turmas.json'
+caminho_time = '././data/times.json'
 
 def delTime():
         #Visualizar Turmas:

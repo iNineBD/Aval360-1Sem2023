@@ -2,7 +2,7 @@ import json
 
 def visualizarTimes():
         #Visualizar Turmas:
-        arqv_turmas = open('./data/turmas.json')
+        arqv_turmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
         print("Turmas:\n")
         x = 1
