@@ -51,8 +51,8 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
 |:-------:|:-----:|:---------:|:------:|
 | [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1-iNine) | 13/03/23 a 02/04/23 | Planejamento do Projeto | **REALIZADO** |
 | [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2-iNine) | 03/04/23 a 23/04/23 | Controle Turmas/Times e Avaliação 360° | **REALIZADO** |
-| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Cadastros/Controle de Sprints | EM ANDAMENTO |
-| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | **Parado** |
+| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Cadastros/Controle de Sprints | **EM ANDAMENTO** |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | **PARADO** |
 
 <span id="equipe">
 
