@@ -40,7 +40,7 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
 | Controle de Sprints | Alta | 3 | **Em andamento** |
 | Cadastro dos Usuarios | Alta | 3 | **Em andamento** |
 | Resolução da Avaliação | Baixa | 3 | **Em andamento** |
-| Resultados pelos Dashboard's | Alta | 4 | **Em andamento** |
+| Resultados pelos Dashboard's | Alta | 4 | **Parado** |
 
 
 <span id="entrega">
@@ -52,7 +52,7 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
 | [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1-iNine) | 13/03/23 a 02/04/23 | Planejamento do Projeto | **REALIZADO** |
 | [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2-iNine) | 03/04/23 a 23/04/23 | Controle Turmas/Times e Avaliação 360° | **REALIZADO** |
 | [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Cadastros/Controle de Sprints | EM ANDAMENTO |
-| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | EM ANDAMENTO |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | **Parado** |
 
 <span id="equipe">
 
@@ -84,7 +84,6 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
     
 ##  :white_medium_square:🔥Burndown
 
-[![Alt Text](https://user-images.githubusercontent.com/117841950/233720484-f677d745-68b0-4ac0-a762-1ffa74b2387a.png)](https://fatecspgov-my.sharepoint.com/:x:/g/personal/beatriz_bonatto_fatec_sp_gov_br/EaMTlLPVA5tGgh7cetYffGQBmzizocsF7nUIq7DPC1vO3Q?e=wKIcvj)
 
 
 
