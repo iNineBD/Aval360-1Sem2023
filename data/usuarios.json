@@ -2,71 +2,122 @@
     {
         "id_usuario": 0,
         "identificacao": "João Matheus Lamão",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "cpf": "11",
+        "tp_usu": 1,
         "id_time": 1
     },
     {
         "id_usuario": 1,
         "identificacao": "André Bernardes",
+        "cpf": "22",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "id_time": 1
     },
     {
         "id_usuario": 2,
+        "cpf": "33",
         "identificacao": "Ana Raquel Yamamoto",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "id_time": 1
     },
     {
         "id_usuario": 3,
         "identificacao": "Naiara Lemos",
+        "cpf": "44",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "id_time": 1
     },
     {
         "id_usuario": 4,
         "identificacao": "Jaqueline Fermino",
+        "cpf": "55",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "id_time": 1
     },
     {
         "id_usuario": 5,
         "identificacao": "Paulo Henrique",
+        "cpf": "66",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "id_time": 1
     },
     {
         "id_usuario": 6,
         "identificacao": "Eduardo Farias",
+        "cpf": "77",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "id_time": 1
     },
     {
         "id_usuario": 7,
+        "cpf": "88",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "identificacao": "Davidson Souza",
         "id_time": 1
     },
     {
         "id_usuario": 8,
         "identificacao": "Fabiano Sabha",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "cpf": "99",
+        "tp_usu": 1,
         "id_time": 2
     },
     {
         "id_usuario": 9,
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "cpf": "10",
+        "tp_usu": 1,
         "identificacao": "Lucas Nadalete",
         "id_time": 2
     },
     {
         "id_usuario": 10,
+        "cpf": "101",
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
         "identificacao": "Walmir Duque",
         "id_time": 2
     },
     {
         "id_usuario": 11,
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "cpf": "102",
+        "tp_usu": 1,
         "identificacao": "Marcos Allan",
         "id_time": 2
     },
     {
         "id_usuario": 12,
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 1,
+        "cpf": "103",
         "identificacao": "Emanuel Mineda",
         "id_time": 2
     },
     {
         "id_usuario": 13,
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "cpf": "104",
+        "tp_usu": 1,
         "identificacao": "Fernando Masanori",
+        "id_time": 2
+    }
+    ,
+    {
+        "id_usuario": 14,
+        "senha": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+        "tp_usu": 0,
+        "cpf": "123456789",
+        "identificacao": "Administrador Padrão",
         "id_time": 2
     }
 ]

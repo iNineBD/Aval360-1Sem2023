@@ -1,12 +1,10 @@
-from turmas import prompt_turmas
-from times import prompt_times
 import os
+from Administrador.turmas.prompt_turmas import ctrl_turmas
+from Administrador.times.prompt_times import ctrl_times
 
-
-
-def promptMain():
+def promptMainAdm():
+    os.system('cls' if os.name == 'nt' else 'clear')
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
         print('')
         print("Bem vindo!!!")
         print('')
@@ -20,11 +18,11 @@ def promptMain():
         
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            prompt_turmas.ctrl_turmas()
+            ctrl_turmas()
             
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
-            prompt_times.ctrl_times()
+            ctrl_times()
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -43,5 +41,3 @@ def promptMain():
         else:
             print('\nOpção inválida! Tente novamente!')
         print("----------------------------------------------------")
-        
-promptMain()

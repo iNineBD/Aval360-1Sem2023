@@ -1,8 +1,8 @@
-from times.createTime import createTime
-from times.visualizarTimes import visualizarTimes
-from times.editTime import editTime
-from times.getIntegrantes import getIntegrantes
-from times.delTime import delTime
+from Administrador.times.createTime import createTime
+from Administrador.times.visualizarTimes import visualizarTimes
+from Administrador.times.editTime import editTime
+from Administrador.times.getIntegrantes import getIntegrantes
+from Administrador.times.delTime import delTime
 import os
 
 

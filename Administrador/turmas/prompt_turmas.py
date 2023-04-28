@@ -1,4 +1,4 @@
-from turmas.ctrl_turmas import Turmas
+from Administrador.turmas.ctrl_turmas import Turmas
 import os
 
 def ctrl_turmas():
