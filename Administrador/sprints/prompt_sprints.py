@@ -1,20 +1,20 @@
-from times.createTime import createTime
-from times.visualizarTimes import visualizarTimes
-from times.editTime import editTime
-from times.getIntegrantes import getIntegrantes
-from times.delTime import delTime
+# from sprints.createSprint import 
+# from sprints.visualizarSprint import 
+# from sprints.editSprint import 
+from delSprint import delSprint
 import os
 
 
-def ctrl_times():
+def ctrl_sprints():
     condicao = True
     while condicao:
         print('')
-        print("Controle de Times!!!")
+        
+        print("Controle de Sprints!!!")
         print('')
         while True:
             try:
-                print("Escolha uma opção: \n1 - Criar novo time\n2 - Visualizar times\n3 - Editar times\n4 - Excluir times\n5 - Visualizar integrantes\n0 - Voltar\n")
+                print("Escolha uma opção: \n1 - Criar nova Sprint\n2 - Visualizar Sprint\n3 - Editar Sprint\n4 - Excluir Sprint\n5 - Voltar\n")
                 op = int(input("Digite aqui: "))
                 break
             except ValueError:
@@ -22,24 +22,20 @@ def ctrl_times():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            createTime()
+            pass
             
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
-            visualizarTimes()
+            pass
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
             print('\nEdição de Times')
-            editTime()
+            pass
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-            delTime()
-        
-        elif op == 5:
-            os.system('cls' if os.name == 'nt' else 'clear')
-            getIntegrantes() 
+            delSprint()
         
         elif op == 0:
             condicao = False
@@ -47,4 +43,5 @@ def ctrl_times():
         else:
             print('\nOpção inválida! Tente novamente!')
         print("")
-ctrl_times()
+
+ctrl_sprints()
