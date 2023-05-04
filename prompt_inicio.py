@@ -1,6 +1,7 @@
 import os
 import pwinput
 from Login.Login import Login
+from Cadastro.prompt_cadastro import prompt_cadastro
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -24,7 +25,8 @@ while True:
         Login.logar(cpf, senha)
             
     elif op == 2:
-        pass
+        # Cadastrar
+        prompt_cadastro()
         
     elif op == 0:
         exit()

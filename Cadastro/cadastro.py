@@ -13,12 +13,12 @@ def getNextIdUsuario(usuarios):
                 ids.append(int(usuario['id_usuario']))
             return max(ids) + 1
 
-def cadastro(nome, cpf,data_nascimento, senha, criptografar):
+def cadastro(nome, cpf,data_nascimento,senha):
 
     if os.path.exists(local_usuarios):
         # Carrega os usuários existentes do arquivo
-        with open(local_usuarios, 'r') as arquivo:
-            usuarios = json.load(arquivo)
+        with open(local_usuarios, 'r',encoding="UTF-8") as usuarios:
+            usuarios = json.load(usuarios)
     else:
         # Cria uma lista vazia de usuários
         usuarios = []
@@ -35,7 +35,7 @@ def cadastro(nome, cpf,data_nascimento, senha, criptografar):
             'id_usuario': getNextIdUsuario(usuarios),
             'identificação': nome,
             'cpf': cpf,
-            'senha': criptografar,
+            'senha': senha,
             'dt_nasc': data_nascimento,
             'id_time': "",
             'tp_usu': 1}
@@ -43,6 +43,6 @@ def cadastro(nome, cpf,data_nascimento, senha, criptografar):
         usuarios.append(usuario)
         
         # Escreve a lista atualizada de usuários no arquivo
-        with open(local_usuarios, 'w') as arquivo:
-            json.dump(usuarios, arquivo)
+        with open(local_usuarios, 'w',encoding="UTF-8") as usuarios:
+            json.dump(usuarios, usuarios)
             print("\nNovo usuário adicionado com sucesso")

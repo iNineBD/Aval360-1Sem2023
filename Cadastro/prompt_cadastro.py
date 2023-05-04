@@ -1,11 +1,11 @@
 import pwinput
 
-from cadastro import cadastro
-from senha import criptografar
-from cpf import verificacao_cpf
-from data import data, data_superior
+from Cadastro.cadastro import cadastro
+from Cadastro.senha import criptografar
+from Cadastro.cpf import verificacao_cpf
+from Cadastro.data import data, data_superior
 
-def prompt_cadastro(data,criptografar):
+def prompt_cadastro():
     # Veridicando se o nome tem caracter especial
     while True:
         nome = input('\nDigite seu nome completo: ').strip()
@@ -45,8 +45,6 @@ def prompt_cadastro(data,criptografar):
 
 
     data_nascimento = input('Digite a data de nascimento (dd/mm/aaaa) : ')
-    data = data(data_nascimento)
-    data_superior(data)
-    senha = pwinput.pwinput("Digite a senha: ")
-    criptografar = criptografar(senha)
-    cadastro(nome, cpf,data_nascimento,senha, criptografar)
+    data_superior(data(data_nascimento))
+    senha = criptografar(pwinput.pwinput("Digite a senha: "))
+    cadastro(nome, cpf,data_nascimento, senha)
