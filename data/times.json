@@ -1,1 +1,14 @@
-[{"id_time": 2, "identificacao": "6passa.py", "nr_integrantes": 7, "id_turma": "1"}, {"id_time": 1, "identificacao": "Inine", "nr_integrantes": 9, "id_turma": "0"}]
+[
+    {
+        "id_time": 2,
+        "identificacao": "6passa.py",
+        "nr_integrantes": 7,
+        "id_turma": "1"
+    },
+    {
+        "id_time": 1,
+        "identificacao": "Inine",
+        "nr_integrantes": 9,
+        "id_turma": "0"
+    }
+]
