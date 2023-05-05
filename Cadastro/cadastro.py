@@ -1,8 +1,8 @@
 import json
 import os
 
-caminho = os.getcwd()
-local_usuarios = os.path.join(caminho, 'data/usuarios.json')
+
+local_usuarios = './data/usuarios.json'
 
 def getNextIdUsuario(usuarios):
         if usuarios == []:
@@ -17,8 +17,8 @@ def cadastro(nome, cpf,data_nascimento,senha):
 
     if os.path.exists(local_usuarios):
         # Carrega os usuários existentes do arquivo
-        with open(local_usuarios, 'r',encoding="UTF-8") as usuarios:
-            usuarios = json.load(usuarios)
+        with open(local_usuarios, 'r') as arq:
+            usuarios = json.load(arq)
     else:
         # Cria uma lista vazia de usuários
         usuarios = []
@@ -43,6 +43,6 @@ def cadastro(nome, cpf,data_nascimento,senha):
         usuarios.append(usuario)
         
         # Escreve a lista atualizada de usuários no arquivo
-        with open(local_usuarios, 'w',encoding="UTF-8") as usuarios:
-            json.dump(usuarios, usuarios)
+        with open(local_usuarios, 'w') as aq:
+            json.dump(usuarios, aq)
             print("\nNovo usuário adicionado com sucesso")
