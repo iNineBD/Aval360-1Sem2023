@@ -33,7 +33,7 @@ def cadastro(nome, cpf,data_nascimento,senha):
         
         usuario = {
             'id_usuario': getNextIdUsuario(usuarios),
-            'identificação': nome,
+            'identificacao': nome,
             'cpf': cpf,
             'senha': senha,
             'dt_nasc': data_nascimento,
