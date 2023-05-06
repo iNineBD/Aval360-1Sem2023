@@ -1,4 +1,4 @@
-from usuarios.editarusuarios import editarusuarios
+from usuarios.editusuarios import editusuarios
 from usuarios.excluirusuarios import excluirusuarios
 from usuarios.promoteusuarios import promoteusuarios
 import os
@@ -19,7 +19,7 @@ def ctrl_usuarios():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            editarusuarios()
+            editusuarios()
             
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
