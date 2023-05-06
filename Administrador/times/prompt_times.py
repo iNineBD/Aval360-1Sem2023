@@ -30,7 +30,6 @@ def ctrl_times():
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print('\nEdição de Times')
             editTime()
             
         elif op == 4:

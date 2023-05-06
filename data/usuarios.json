@@ -2,71 +2,49 @@
     {
         "id_usuario": 0,
         "identificacao": "João Matheus Lamão",
-        "id_time": 1
+        "id_time": 1,
+        "cpf": 56262522077,
+        "nascimento": "11/11/2000",
+        "senha": "aqev"
     },
     {
         "id_usuario": 1,
         "identificacao": "André Bernardes",
-        "id_time": 1
+        "id_time": 1,
+        "cpf": 85005031065,
+        "nascimento": "11/11/2000",
+        "senha": "jujn"
     },
     {
         "id_usuario": 2,
         "identificacao": "Ana Raquel Yamamoto",
-        "id_time": 1
+        "id_time": 1,
+        "cpf": 95526393011,
+        "nascimento": "11/11/2000",
+        "senha": "nygd"
     },
     {
         "id_usuario": 3,
         "identificacao": "Naiara Lemos",
-        "id_time": 1
+        "id_time": 1,
+        "cpf": 91538006057,
+        "nascimento": "11/11/2000",
+        "senha": "esve"
     },
     {
         "id_usuario": 4,
         "identificacao": "Jaqueline Fermino",
-        "id_time": 1
+        "id_time": 1,
+        "cpf": 79833104045,
+        "nascimento": "11/11/2000",
+        "senha": "gxcf"
     },
     {
         "id_usuario": 5,
         "identificacao": "Paulo Henrique",
-        "id_time": 1
-    },
-    {
-        "id_usuario": 6,
-        "identificacao": "Eduardo Farias",
-        "id_time": 1
-    },
-    {
-        "id_usuario": 7,
-        "identificacao": "Davidson Souza",
-        "id_time": 1
-    },
-    {
-        "id_usuario": 8,
-        "identificacao": "Fabiano Sabha",
-        "id_time": 2
-    },
-    {
-        "id_usuario": 9,
-        "identificacao": "Lucas Nadalete",
-        "id_time": 2
-    },
-    {
-        "id_usuario": 10,
-        "identificacao": "Walmir Duque",
-        "id_time": 2
-    },
-    {
-        "id_usuario": 11,
-        "identificacao": "Marcos Allan",
-        "id_time": 2
-    },
-    {
-        "id_usuario": 12,
-        "identificacao": "Emanuel Mineda",
-        "id_time": 2
-    },
-    {
-        "id_usuario": 13,
-        "identificacao": "Fernando Masanori",
-        "id_time": 2
+        "id_time": 1,
+        "cpf": 32168417075,
+        "nascimento": "11/11/2000",
+        "senha": "fefv"
     }
 ]

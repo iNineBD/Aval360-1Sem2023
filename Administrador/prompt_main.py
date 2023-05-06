@@ -1,5 +1,6 @@
 from turmas import prompt_turmas
 from times import prompt_times
+from usuarios import prompt_usuarios
 import os
 
 
@@ -25,15 +26,13 @@ def promptMain():
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
             prompt_times.ctrl_times()
-            
+
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            #AQUI ENTRA O CONTROLE DE USUÁRIOS
-            pass
-            
+            prompt_usuarios.ctrl_usuarios()
+
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-            #AQUI ENTRA O CONTROLE DE USUÁRIOS
             pass
         
         elif op == 0:
