@@ -4,11 +4,12 @@
 
 ##  :white_medium_square: Sumário de Conteudos 
 <br id="topo">
+
 <p align="center">
-    <a href="#sobre">Projeto</a>  •
-    <a href="#backlogs">Backlogs do produto</a>  •
-    <a href="#entrega">Entrega de Sprints</a>  •
-    <a href="#tecnologias">Tecnologias</a>  •
+    <a href="#sobre">Projeto</a> •
+    <a href="#backlogs">Backlogs do produto</a> •
+    <a href="#entrega">Entrega de Sprints</a> •
+    <a href="#tecnologias">Tecnologias</a> •
     <a href="#equipe">Equipe</a> •
     <a href="#burndown">Burndown</a>
 </p>
@@ -77,9 +78,8 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
     
 ##  :white_medium_square: Tecnologias Utilizadas
     
-![image](https://user-images.githubusercontent.com/117841950/227992672-e092c2c3-a455-4c97-a6bc-3e420b92ff4d.png)
+![image](https://user-images.githubusercontent.com/117841950/236598286-eb002a5d-64f1-4747-a1b8-97a548c2f0b6.png)
 
-    
 <span id="burndown">
     
 ##  :white_medium_square:🔥Burndown
