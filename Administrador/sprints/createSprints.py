@@ -30,32 +30,40 @@ def createSprints():
     id_turma = turma_escolhida['id_turma']
 
     identificacao_sprint = input("Entre com a identificacao da sprint: ")
-
-    ano = int(input("Digite o Ano: "))
-    mes = int(input("Digite o Mês: "))
-    dia = int(input("Digite o Dia: "))
-    valida = True
-    if ano < 1:
-        valida = False
-    elif mes < 1 or mes > 12 or dia < 1 or dia > 31:
-        valida = False
+    while True:
+        try:
+            n_sprint = int(input("Entre com o numero da sprint: "))
+            break
+        except ValueError:
+            print('Insira um valor inteiro!')
+    
+    data = int(input('Entre com a data (ddmmaaaa):'))
+    dia = data // 1000000
+    mes = data%1000000//10000
+    ano = data % 10000
+    
+    if ano >= 1:
+        vd = 1
+        if mes < 1 or mes > 12 or dia < 1 or dia > 31:
+            vd = 0
     elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
-        valida = False
+        vd = 0
     elif mes == 2:
         if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
             if dia > 29:
-                valida = False
+                vd= 0
         else:
             if dia > 28:
-                valida = False
+                vd = 0
     else:
-        valida = True
+        vd = 0
 
-    if valida:
+    if  vd == 0:
+    
         print("DATA VALIDA")
     else:
         print("DATA INVALIDA")
-
+    
     inicio = f"({dia}/{mes}/{ano})"
 
     # Solicitar a data final até que seja maior que a data de inicio
@@ -80,6 +88,7 @@ def createSprints():
         'identificacao': identificacao_sprint,
         'id_turma': id_turma,
         'inicio': inicio,
+        'n_sprint':n_sprint,
         'final' : final
         
     }
