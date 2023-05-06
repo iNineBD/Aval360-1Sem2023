@@ -9,23 +9,47 @@ def editusuarios():
         x = 1
         for turma in read_arqv_turmas:
             print(f"{x} - {turma.get('identificacao')}")
-            x = x+1
+            x += 1
         while True:
             try:
-                num_turmas = int(input('\nDigite qual Turma deseja visualizar os Times: '))  #deixar apenas número inteiro
-                break
+                num_turmas = int(input('\nDigite de qual Turma deseja visualizar: ')) 
+                #deixar apenas número inteiro
+                if   num_turmas > x- 1 or num_turmas == 0:
+                    raise ValueError
+                else:
+                    break
             except ValueError:
                 print('\nOpção inválida! Tente novamente!\n')
+                return
         
         turma_escolhida = read_arqv_turmas[num_turmas - 1]
         id_turma = turma_escolhida['id_turma']
+
     #Visualizar times     
+        arqv_times = open('./data/times.json')
+        read_arqv_times = json.load(arqv_times) 
+        y = 1
+        for time in read_arqv_times:
+            if time.get('id_turma') == id_turma:
+                    print(f"{y} - {time.get('identificacao')}")
+                    y += 1
         while True:
-            if num_turmas < x:
-                #load() - leitura do arquivo
-                arqv_times = open('./data/times.json')
-                read_arqv_times = json.load(arqv_times) 
-            
+            try:                 
+                num_time = print(int(input('\nDigite de qual time deseja visualizar: ')))
+                if num_time > y - 1 or num_time == 0:
+                    raise ValueError
+                else:
+                    break
+            except ValueError:
+                print('\nOpção inválida! Tente novamente!\n')
+                return
+
+                         
+                times_turmas = []
+                for time in read_arqv_times:
+                     if time.get('id_turma') == id_turma:
+                          times_turmas.append(time)
+
                 y = 1
                 for time in read_arqv_times:
                     if time.get('id_turma') == id_turma:
@@ -34,7 +58,7 @@ def editusuarios():
                 break
             
             
-            else:
+            # else:
                 print('\nValor inválido')
 
         arqv_usuarios = open('././data/usuarios.json')
