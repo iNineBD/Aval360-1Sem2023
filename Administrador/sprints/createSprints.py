@@ -1,9 +1,11 @@
 import json
 import os
+
 caminho_sprint = "././data/sprint.json"
+
 # Método para criar sprints
 def createSprints():
-    with open (caminho_sprint, 'r') as spr:
+    with open(caminho_sprint, 'r') as spr:
         sprints = json.load(spr)
 
     # Visualizar Turmas
@@ -17,7 +19,7 @@ def createSprints():
     while True:
         try:
             op = int(input('\nDigite qual turma deseja inserir uma sprint: '))  # deixar apenas número inteiro
-            if op in range (1,x) :
+            if op in range(1, x):
                 break
             else:
                 raise ValueError
@@ -28,35 +30,45 @@ def createSprints():
     id_turma = turma_escolhida['id_turma']
 
     identificacao_sprint = input("Entre com a identificacao da sprint: ")
-   
+
     ano = int(input("Digite o Ano: "))
     mes = int(input("Digite o Mês: "))
     dia = int(input("Digite o Dia: "))
     valida = True
     if ano < 1:
-            valida = False
+        valida = False
     elif mes < 1 or mes > 12 or dia < 1 or dia > 31:
-            valida = False
+        valida = False
     elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
-                valida = False
+        valida = False
     elif mes == 2:
-                if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
-                    if dia > 29:
-                        valida = False
-                else:
-                    if dia > 28:
-                        valida = False
+        if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
+            if dia > 29:
+                valida = False
+        else:
+            if dia > 28:
+                valida = False
     else:
-            valida = True
+        valida = True
 
     if valida:
-            print("DATA VALIDA")
+        print("DATA VALIDA")
     else:
-            print("DATA INVALIDA")
+        print("DATA INVALIDA")
+
     inicio = f"({dia}/{mes}/{ano})"
-    
-    final = str(input("Entre com a data final da sprint:"))
-    
+
+    # Solicitar a data final até que seja maior que a data de inicio
+    while True:
+        final = str(input("Entre com a data final da sprint: "))
+        dia_final, mes_final, ano_final = map(int, final.split('/'))
+
+        if (ano_final, mes_final, dia_final) > (ano, mes, dia):
+            break
+        else:
+            print("A data final deve ser maior que a data de início.")
+
+    print("DATA FINAL VÁLIDA")
 
     maior_id_sprint = 0
     for sprint in sprints:
@@ -70,8 +82,8 @@ def createSprints():
         'inicio': inicio,
         'final' : final
         
-        
     }
+    
     sprints.append(nova_sprint)
 
     with open(caminho_sprint, 'w') as f:
