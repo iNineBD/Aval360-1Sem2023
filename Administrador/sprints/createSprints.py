@@ -28,15 +28,34 @@ def createSprints():
     id_turma = turma_escolhida['id_turma']
 
     identificacao_sprint = input("Entre com a identificacao da sprint: ")
-    while True:
-        try:
-            numero_da_sprint = int(input("Entre com o numero da sprint: "))
-            break
-        except ValueError:
-            print('Insira um valor inteiro!')
-    inicio = str(input("Entre com a data inicial da sprint"))
+   
+    ano = int(input("Digite o Ano: "))
+    mes = int(input("Digite o Mês: "))
+    dia = int(input("Digite o Dia: "))
+    valida = True
+    if ano < 1:
+            valida = False
+    elif mes < 1 or mes > 12 or dia < 1 or dia > 31:
+            valida = False
+    elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
+                valida = False
+    elif mes == 2:
+                if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
+                    if dia > 29:
+                        valida = False
+                else:
+                    if dia > 28:
+                        valida = False
+    else:
+            valida = True
+
+    if valida:
+            print("DATA VALIDA")
+    else:
+            print("DATA INVALIDA")
+    inicio = f"({dia}/{mes}/{ano})"
     
-    final = str(input("Entre com a data final da sprint"))
+    final = str(input("Entre com a data final da sprint:"))
     
 
     maior_id_sprint = 0
