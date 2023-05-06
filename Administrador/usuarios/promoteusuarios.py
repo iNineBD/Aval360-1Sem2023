@@ -1,4 +1,4 @@
 import json
 
-def visualizarusuarios():
+def promoteusuarios():
     print("ola")

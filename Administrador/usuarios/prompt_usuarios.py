@@ -1,7 +1,6 @@
-from usuarios.visualizarusuarios import visualizarusuarios
 from usuarios.editarusuarios import editarusuarios
 from usuarios.excluirusuarios import excluirusuarios
-
+from usuarios.promoteusuarios import promoteusuarios
 import os
 
 def ctrl_usuarios():
@@ -12,7 +11,7 @@ def ctrl_usuarios():
         print('')
         while True:
             try:
-                print("Escolha uma opção:\n1 - Visualizar Usuários\n2 - Editar Usuários\n3 - Excluir Usuários\n0 - Voltar\n")
+                print("Escolha uma opção:\n1 - Editar Usuários\n2 - Excluir Usuários do Time \n3 - Promover Usuário a ADM \n0 - Voltar\n")
                 op = int(input("Digite aqui: "))
                 break
             except ValueError:
@@ -20,15 +19,15 @@ def ctrl_usuarios():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            visualizarusuarios()
+            editarusuarios()
             
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
-            editarusuarios()
+            excluirusuarios()
 
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            excluirusuarios()
+            promoteusuarios()
             
         elif op == 0:
             condicao = False
