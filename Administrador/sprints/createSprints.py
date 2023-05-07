@@ -30,53 +30,75 @@ def createSprints():
     id_turma = turma_escolhida['id_turma']
 
     identificacao_sprint = input("Entre com a identificacao da sprint: ")
+    
     while True:
-        try:
-            n_sprint = int(input("Entre com o numero da sprint: "))
-            break
-        except ValueError:
-            print('Insira um valor inteiro!')
-    
-    data = int(input('Entre com a data (ddmmaaaa):'))
-    dia = data // 1000000
-    mes = data%1000000//10000
-    ano = data % 10000
-    
-    if ano >= 1:
-        vd = 1
-        if mes < 1 or mes > 12 or dia < 1 or dia > 31:
-            vd = 0
-    elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
-        vd = 0
-    elif mes == 2:
-        if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
-            if dia > 29:
-                vd= 0
-        else:
-            if dia > 28:
+        data_inicio = str(input('Entre com a data (ddmmaaaa):'))
+        if len(data_inicio) >= 8:
+            dia = int(data_inicio) // 1000000
+            mes = int(data_inicio)%1000000//10000
+            ano = int(data_inicio) % 10000
+            
+            if ano >= 1:
+                vd = 1
+                if mes < 1 or mes > 12 or dia < 1 or dia > 31:
+                    vd = 0
+                elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
+                    vd = 0
+                elif mes == 2:
+                    if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
+                        if dia > 29:
+                            vd = 0
+                    else:
+                        if dia > 28:
+                            vd = 0
+            else:
                 vd = 0
-    else:
-        vd = 0
-
-    if  vd == 0:
-    
-        print("DATA VALIDA")
-    else:
-        print("DATA INVALIDA")
-    
-    inicio = f"({dia}/{mes}/{ano})"
+            if vd == 0:
+                print('Data inválida')
+            else:
+                print('Data inicial salva')
+            break
+        else:
+            print('Data inválida digite conforme ddmmaaaa ')
+            
+        
 
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
-        final = str(input("Entre com a data final da sprint: "))
-        dia_final, mes_final, ano_final = map(int, final.split('/'))
-
-        if (ano_final, mes_final, dia_final) > (ano, mes, dia):
-            break
+        data_final = str(input('Entre com a data (ddmmaaaa):'))
+        if len(data_final) >= 8:
+            dia = int(data_final) // 1000000
+            mes = int(data_final)%1000000//10000
+            ano = int(data_final) % 10000
+            
+            if ano >= 1:
+                vd = 1
+                if mes < 1 or mes > 12 or dia < 1 or dia > 31:
+                    vd = 0
+                elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
+                    vd = 0
+                elif mes == 2:
+                    if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
+                        if dia > 29:
+                            vd = 0
+                    else:
+                        if dia > 28:
+                            vd = 0
+            else:
+                vd = 0
+            if vd == 0:
+                print('Data inválida')
+            else:
+                
+                if data_inicio >= data_final:
+                    print('Data inicial maior que a data final \nDigite uma data maior que a inicial')
+                else:
+                    print('Data final Salva')
+                    break
         else:
-            print("A data final deve ser maior que a data de início.")
+            print('Data inválida digite conforme ddmmaaaa')
+            
 
-    print("DATA FINAL VÁLIDA")
 
     maior_id_sprint = 0
     for sprint in sprints:
@@ -87,9 +109,8 @@ def createSprints():
         'id_sprint': maior_id_sprint + 1,
         'identificacao': identificacao_sprint,
         'id_turma': id_turma,
-        'inicio': inicio,
-        'n_sprint':n_sprint,
-        'final' : final
+        'inicio': data_inicio,
+        'final' : data_final
         
     }
     
@@ -99,5 +120,5 @@ def createSprints():
         # Escrevendo os dados atualizados no arquivo
         json.dump(sprints, f)
 
-    print('\nTime sprint!')
+    print('Nova sprint criada!')
 
