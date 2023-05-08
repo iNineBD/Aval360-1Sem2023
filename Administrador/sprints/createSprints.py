@@ -32,7 +32,7 @@ def createSprints():
     identificacao_sprint = input("Entre com a identificacao da sprint: ")
     
     while True:
-        data_inicio = str(input('Entre com a data (ddmmaaaa):'))
+        data_inicio = str(input('Entre com a data inicial (ddmmaaaa):'))
         if len(data_inicio) >= 8:
             dia = int(data_inicio) // 1000000
             mes = int(data_inicio)%1000000//10000
@@ -65,7 +65,7 @@ def createSprints():
 
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
-        data_final = str(input('Entre com a data (ddmmaaaa):'))
+        data_final = str(input('Entre com a data final (ddmmaaaa):'))
         if len(data_final) >= 8:
             dia = int(data_final) // 1000000
             mes = int(data_final)%1000000//10000
