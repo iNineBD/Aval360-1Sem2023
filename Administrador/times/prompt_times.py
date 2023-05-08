@@ -47,4 +47,3 @@ def ctrl_times():
         else:
             print('\nOpção inválida! Tente novamente!')
         print("")
-ctrl_times()
