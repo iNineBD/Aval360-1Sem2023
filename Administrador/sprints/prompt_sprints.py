@@ -2,8 +2,8 @@
 # from sprints.visualizarSprint import 
 # from sprints.editSprint import 
 
-from delSprint import delSprint
-from createSprints import createSprints
+from sprints.delSprint import delSprint
+from sprints.createSprints import createSprints
 import os
 
 
