@@ -33,32 +33,40 @@ def createSprints():
     
     while True:
         data_inicio = str(input('Entre com a data inicial (dd/mm/aaaa):'))
-        if len(data_inicio) >= 10:
-            dia = int(data_inicio.split('/')[0]) #// 1000000 
-            mes = int(data_inicio.split('/')[1])#%1000000//10000
-            ano = int(data_inicio.split('/')[2]) #% 10000
+        if len(data_inicio) == 10 and data_inicio[2] == '/' and data_inicio[5] == '/':
+            dia = (data_inicio.split('/')[0]) #// 1000000 
+            mes = (data_inicio.split('/')[1])#%1000000//10000
+            ano = (data_inicio.split('/')[2]) #% 10000
             
-            if ano >= 1:
-                vd = 1
-                if mes < 1 or mes > 12 or dia < 1 or dia > 31:
+            if dia.isdigit() and mes.isdigit() and ano.isdigit():
+                dia = int(dia)
+                mes = int(mes)
+                ano = int(ano)
+             
+            
+                if ano >= 1:
+                    vd = 1
+                    if mes < 1 or mes > 12 or dia < 1 or dia > 31:
+                        vd = 0
+                    elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
+                        vd = 0
+                    elif mes == 2:
+                        if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
+                            if dia > 29:
+                                vd = 0
+                        else:
+                            if dia > 28:
+                                vd = 0
+                else:
                     vd = 0
-                elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
-                    vd = 0
-                elif mes == 2:
-                    if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
-                        if dia > 29:
-                            vd = 0
-                    else:
-                        if dia > 28:
-                            vd = 0
+                if vd == 0:
+                    print('Data inválida')
+                else:
+                    print('Data inicial salva')
+                break
             else:
-                vd = 0
-            if vd == 0:
-                print('Data inválida')
-            else:
-                print('Data inicial salva')
-            break
-        else:
+                print('Formato de data inválida digite somente numeros')
+        else: 
             print('Data inválida digite conforme dd/mm/aaaa ')
             
         
@@ -66,37 +74,45 @@ def createSprints():
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
         data_final = str(input('Entre com a data final (dd/mm/aaaa):'))
-        if len(data_final) >= 10:
-            dia = int(data_final.split('/')[0]) #// 1000000
-            mes = int(data_final.split('/')[1])#%1000000//10000
-            ano = int(data_final.split('/')[2])# % 10000
+        if len(data_final) == 10 and data_final[2] == '/' and data_final[5] == '/':
+            dia = (data_final.split('/')[0]) #// 1000000
+            mes = (data_final.split('/')[1])#%1000000//10000
+            ano = (data_final.split('/')[2])# % 10000
             
-            if ano >= 1:
-                vd = 1
-                if mes < 1 or mes > 12 or dia < 1 or dia > 31:
-                    vd = 0
-                elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
-                    vd = 0
-                elif mes == 2:
-                    if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
-                        if dia > 29:
-                            vd = 0
-                    else:
-                        if dia > 28:
-                            vd = 0
-            else:
-                vd = 0
-            if vd == 0:
-                print('Data inválida')
-            else:
-                
-                if data_inicio >= data_final:
-                    print('Data inicial maior que a data final \nDigite uma data maior que a inicial')
+            if dia.isdigit() and mes.isdigit() and ano.isdigit():
+                dia = int(dia)
+                mes = int(mes)
+                ano = int(ano)
+            
+            
+                if ano >= 1:
+                    vd = 1
+                    if mes < 1 or mes > 12 or dia < 1 or dia > 31:
+                        vd = 0
+                    elif (mes == 4 or mes == 6 or mes == 9 or mes == 11) and dia > 30:
+                        vd = 0
+                    elif mes == 2:
+                        if (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
+                            if dia > 29:
+                                vd = 0
+                        else:
+                            if dia > 28:
+                                vd = 0
                 else:
-                    print('Data final Salva')
-                    break
-        else:
-            print('Data inválida digite conforme dd/mm/aaaa')
+                    vd = 0
+                if vd == 0:
+                    print('Data inválida')
+                else:
+                    if data_inicio >= data_final:
+                        print('Data inicial maior que a data final \nDigite uma data maior que a inicial')
+                    else:
+                        print('Data final Salva')
+                        break
+            else:
+                print('Formato de data inválida digite somente numeros')
+        else: 
+            print('Data inválida digite conforme dd/mm/aaaa ')
+            
             
 
 
