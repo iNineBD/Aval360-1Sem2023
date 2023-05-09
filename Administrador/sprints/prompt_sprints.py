@@ -1,21 +1,21 @@
 # from sprints.createSprint import 
 # from sprints.visualizarSprint import 
 # from sprints.editSprint import 
+
 from delSprint import delSprint
 from createSprints import createSprints
 import os
 
 
 def ctrl_sprints():
-    condicao = True
-    while condicao:
+    while True:
         print('')
         
         print("Controle de Sprints!!!")
         print('')
         while True:
             try:
-                print("Escolha uma opção: \n1 - Criar nova Sprint\n2 - Visualizar Sprint\n3 - Editar Sprint\n4 - Excluir Sprint\n5 - Voltar\n")
+                print("Escolha uma opção: \n1 - Criar nova Sprint\n2 - Visualizar Sprint\n3 - Editar Sprint\n4 - Excluir Sprint\n0 - Voltar\n")
                 op = int(input("Digite aqui: "))
                 break
             except ValueError:
@@ -39,10 +39,8 @@ def ctrl_sprints():
             delSprint()
         
         elif op == 0:
-            condicao = False
+            break
             
         else:
             print('\nOpção inválida! Tente novamente!')
         print("")
-
-ctrl_sprints()
