@@ -28,15 +28,15 @@ def createSprints():
 
     turma_escolhida = read_arqv_turmas[op - 1]
     id_turma = turma_escolhida['id_turma']
-
+    
     identificacao_sprint = input("Entre com a identificacao da sprint: ")
     
     while True:
-        data_inicio = str(input('Entre com a data inicial (ddmmaaaa):'))
-        if len(data_inicio) >= 8:
-            dia = int(data_inicio) // 1000000
-            mes = int(data_inicio)%1000000//10000
-            ano = int(data_inicio) % 10000
+        data_inicio = str(input('Entre com a data inicial (dd/mm/aaaa):'))
+        if len(data_inicio) >= 10:
+            dia = int(data_inicio.split('/')[0]) #// 1000000 
+            mes = int(data_inicio.split('/')[1])#%1000000//10000
+            ano = int(data_inicio.split('/')[2]) #% 10000
             
             if ano >= 1:
                 vd = 1
@@ -59,17 +59,17 @@ def createSprints():
                 print('Data inicial salva')
             break
         else:
-            print('Data inválida digite conforme ddmmaaaa ')
+            print('Data inválida digite conforme dd/mm/aaaa ')
             
         
 
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
-        data_final = str(input('Entre com a data final (ddmmaaaa):'))
-        if len(data_final) >= 8:
-            dia = int(data_final) // 1000000
-            mes = int(data_final)%1000000//10000
-            ano = int(data_final) % 10000
+        data_final = str(input('Entre com a data final (dd/mm/aaaa):'))
+        if len(data_final) >= 10:
+            dia = int(data_final.split('/')[0]) #// 1000000
+            mes = int(data_final.split('/')[1])#%1000000//10000
+            ano = int(data_final.split('/')[2])# % 10000
             
             if ano >= 1:
                 vd = 1
@@ -96,7 +96,7 @@ def createSprints():
                     print('Data final Salva')
                     break
         else:
-            print('Data inválida digite conforme ddmmaaaa')
+            print('Data inválida digite conforme dd/mm/aaaa')
             
 
 
