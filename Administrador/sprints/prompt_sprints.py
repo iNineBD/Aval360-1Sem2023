@@ -1,7 +1,9 @@
 # from sprints.createSprint import 
 # from sprints.visualizarSprint import 
 # from sprints.editSprint import 
-from sprints.delSprint import delSprint
+
+from delSprint import delSprint
+from createSprints import createSprints
 import os
 
 
@@ -21,7 +23,7 @@ def ctrl_sprints():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
+            createSprints()
             
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
