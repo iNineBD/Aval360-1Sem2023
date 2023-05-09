@@ -2,15 +2,35 @@ import json
 import os
 
 caminho_sprint = "././data/sprint.json"
+caminho_turmas = "././data/turmas.json"
 
 # Método para criar sprints
 def createSprints():
-    with open(caminho_sprint, 'r') as spr:
-        sprints = json.load(spr)
+        
+    # Visualizar Turmas
+    # Verifica se o arquivo JSON já existe
+    if os.path.exists(caminho_sprint):
+        # Se existir, carrega os usuários existentes
+        with open(caminho_sprint, 'r') as spr:
+            sprints = json.load(spr)
+    else:
+        # Se não existir, cria uma lista vazia
+        sprints = []
+    
+
+
+
 
     # Visualizar Turmas
-    arqv_turmas = open('././data/turmas.json')
-    read_arqv_turmas = json.load(arqv_turmas)  # load() - leitura do arquivo
+    # Verifica se o arquivo JSON já existe
+    if os.path.exists(caminho_turmas):
+        # Se existir, carrega os usuários existentes
+        with open(caminho_turmas, 'r') as arquivo:
+            read_arqv_turmas = json.load(arquivo)
+    else:
+        # Se não existir, cria uma lista vazia
+        read_arqv_turmas = []
+    
     print("\nVisualizar Turmas:")
     x = 1
     for turma in read_arqv_turmas:
