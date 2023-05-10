@@ -2,59 +2,66 @@ import json
 import os
 
 caminho_sprint = "././data/sprint.json"
+caminho_turma = "././data/turmas.json"
 
 # Método para criar sprints
 def editSprints():
-    with open(caminho_sprint, 'r') as spr:
-        sprints = json.load(spr)
-
-    # Visualizar Turmas
-    arqv_turmas = open('././data/turmas.json')
-    read_arqv_turmas = json.load(arqv_turmas)  # load() - leitura do arquivo
-    print("\nVisualizar Turmas:")
+    with open(caminho_turma, 'r') as turmas:
+        turmas = json.load(turmas)
+    
     x = 1
-    for turma in read_arqv_turmas:
-        print(f"{x} - {turma.get('identificacao')}")
-        x = x + 1
+    for turma in turmas:
+        print(f'{x} - {turma["identificacao"]}')
+        x +=1
+    
     while True:
         try:
-            op = int(input('\nDigite qual turma deseja editar a sprint: '))  # deixar apenas número inteiro
-            if op in range(1, x):
-                break
-            else:
+            indice_turma_escolhida = int(input('\nDigite a turma referente a sprint desejada: ')) - 1
+            if indice_turma_escolhida >= (x - 1) or indice_turma_escolhida + 1 == 0:
                 raise ValueError
+            else:
+                break
         except ValueError:
-            print('\nOpção inválida! Tente novamente!\n')
-
-    turma_escolhida = read_arqv_turmas[op - 1]
-    id_turma = turma_escolhida['id_turma']
+            print("Opção inválida - Tente novamente")
     
-    #Visualizar sprints
-    arqv_sprints = open ('././data/sprint.json')
-    read_arqv_sprints = json.load(arqv_sprints)
-    print("\n Visualizar Sprints:")
-    x = 1
-    for sprint in read_arqv_sprints:
-        print(f"{x} - {sprint.get('identificacao')}")
-        x = x + 1
+    
+    id_turma = str(turmas[indice_turma_escolhida]["id_turma"])
+    
+    with open(caminho_sprint, 'r') as sprints:
+        sprints = json.load(sprints)
+    
+    sprints_turmas = []
+    for sprint in sprints:
+        if sprint['id_turma'] == id_turma:
+            sprints_turmas.append(sprint)
+    
+    y = 1
+    for sprint in sprints_turmas:
+        print(f'{y} - {sprint["identificacao"]}')
+        y+=1
+    
+    
+    
     while True:
         try:
-            ap = int(input('\n Digite qual sprint deseja editar:'))
-            if op in range(1,x):
-                break
-            else:
+            a = int(input('\nDigite a sprint que você deseja editar: ')) - 1
+            if a >= (y - 1) or a + 1 == 0:
                 raise ValueError
+            else:
+                break
         except ValueError:
-            print('\nOpção inválida! Tente novamente!\n')
-    sprint_escolhida = read_arqv_sprints[ap - 1]
-    identificacao_sprint = sprint_escolhida['identificacao']
-    del (read_arqv_sprints[0:])
-    id_sprint = sprint_escolhida['id_sprint']
+            print("Opção inválida - Tente novamente")
     
-    identificacao_sprint = input("Entre com a identificacao da nova sprint: ")
     
+    
+    id_sprint = sprints_turmas[a]["id_sprint"]
+    indice_sprint_escolhida = sprints.index(sprints_turmas[a])
+    
+    del(sprints[indice_sprint_escolhida])
+    
+    identificacao_sprint = input("Entre com a identificacao da sprint: ")
     while True:
-        data_inicio = str(input('Entre com a nova data inicial (dd/mm/aaaa):'))
+        data_inicio = str(input('Entre com a data inicial (dd/mm/aaaa):'))
         if len(data_inicio) == 10 and data_inicio[2] == '/' and data_inicio[5] == '/':
             dia = (data_inicio.split('/')[0]) #// 1000000 
             mes = (data_inicio.split('/')[1])#%1000000//10000
@@ -64,7 +71,7 @@ def editSprints():
                 dia = int(dia)
                 mes = int(mes)
                 ano = int(ano)
-             
+            
             
                 if ano >= 1:
                     vd = 1
@@ -90,12 +97,10 @@ def editSprints():
                 print('Formato de data inválida digite somente numeros')
         else: 
             print('Data inválida digite conforme dd/mm/aaaa ')
-            
-        
 
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
-        data_final = str(input('Entre com a nova data final (dd/mm/aaaa):'))
+        data_final = str(input('Entre com a data final (dd/mm/aaaa):'))
         if len(data_final) == 10 and data_final[2] == '/' and data_final[5] == '/':
             dia = (data_final.split('/')[0]) #// 1000000
             mes = (data_final.split('/')[1])#%1000000//10000
@@ -135,12 +140,8 @@ def editSprints():
         else: 
             print('Data inválida digite conforme dd/mm/aaaa ')
             
-            
-
-
-    
     nova_sprint = {
-        'id_sprint': id_sprint ,
+        'id_sprint': id_sprint,
         'identificacao': identificacao_sprint,
         'id_turma': id_turma,
         'inicio': data_inicio,
@@ -149,9 +150,9 @@ def editSprints():
     }
     
     sprints.append(nova_sprint)
+    
+    with open(caminho_sprint, "w") as spr:
+        json.dump(sprints, spr)
+    
 
-    with open(caminho_sprint, 'w') as f:
-        # Escrevendo os dados atualizados no arquivo
-        json.dump(sprints, f)
-
-    print('Sprint editada !')
+editSprints()
