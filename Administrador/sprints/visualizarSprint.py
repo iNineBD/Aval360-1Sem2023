@@ -42,7 +42,7 @@ def visualizarSprint():
                 
                 y = 1
                 for sprint in read_arqv_sprints:
-                    if sprint == id_turma:
+                    if sprint.get('id_turma') == id_turma:
                         print(f"{y} - {sprint.get('identificacao')}")
                         y = y + 1
                 print('0 - Voltar')
@@ -64,7 +64,7 @@ def visualizarSprint():
                             print(f'Data de início: {inicio_sprint}\nData final: {fim_sprint}')
                             print('\nVisualizar nova Sprint:\n\n1 - Sim')
                                     
-                            opcao = int(input('\nDeseja fazer nova busca ? '))
+                            opcao = int(input('\n'))
                             while True:
                                 if opcao == 1:
                                     os.system('cls' if os.name == 'nt' else 'clear')
