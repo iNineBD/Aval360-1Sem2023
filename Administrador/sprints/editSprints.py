@@ -153,6 +153,3 @@ def editSprints():
     
     with open(caminho_sprint, "w") as spr:
         json.dump(sprints, spr)
-    
-
-editSprints()

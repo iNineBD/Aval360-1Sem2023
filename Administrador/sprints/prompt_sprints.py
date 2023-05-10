@@ -4,6 +4,7 @@
 
 from sprints.delSprint import delSprint
 from sprints.createSprints import createSprints
+from sprints.editSprints import editSprints
 import os
 
 
@@ -28,11 +29,10 @@ def ctrl_sprints():
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
             pass
-            
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print('\nEdição de Times')
-            pass
+            editSprints()
+            
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
