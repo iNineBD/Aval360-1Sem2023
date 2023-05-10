@@ -5,7 +5,7 @@ def visualizarSprint():
         #Visualizar Turmas:
         arqvturmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqvturmas) #load() - leitura do arquivo
-        turmas=read_arqv_turmas
+        turmas = read_arqv_turmas
         print("\nVisualizar Turmas:")
         x = 1
         for name in turmas:
@@ -42,7 +42,7 @@ def visualizarSprint():
                 
                 y = 1
                 for sprint in read_arqv_sprints:
-                    if sprint.get('id_turma') == id_turma:
+                    if sprint == id_turma:
                         print(f"{y} - {sprint.get('identificacao')}")
                         y = y + 1
                 print('0 - Voltar')
