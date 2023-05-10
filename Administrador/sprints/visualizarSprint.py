@@ -62,16 +62,9 @@ def visualizarSprint():
                             fim_sprint = sprint_escolhida['final']
                             print(f'\n{identificacao_sprint}')
                             print(f'Data de início: {inicio_sprint}\nData final: {fim_sprint}')
-                            print('\nVisualizar nova Sprint:\n\n1 - Sim')
-                                    
-                            opcao = int(input('\n'))
-                            while True:
-                                if opcao == 1:
-                                    os.system('cls' if os.name == 'nt' else 'clear')
-                                    return visualizarSprint()
-                                else:
-                                    print('\nOpcção inválida')
-                                    opcao = int(input('\nDeseja fazer nova busca ? '))
+                            print('\n--------------------------')
+                            return 
+
                             
                     except ValueError:
                         print('\nOpção inválida! Tente novamente!')

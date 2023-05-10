@@ -14,7 +14,7 @@ def ctrl_sprints():
         print('')
         while True:
             try:
-                print("Escolha uma opção: \n1 - Criar nova Sprint\n2 - Visualizar Sprint\n3 - Editar Sprint\n4 - Excluir Sprint\n5 - Voltar\n")
+                print("Escolha uma opção: \n1 - Criar nova Sprint\n2 - Visualizar Sprint\n3 - Editar Sprint\n4 - Excluir Sprint\n0 - Voltar\n")
                 op = int(input("Digite aqui: "))
                 break
             except ValueError:
