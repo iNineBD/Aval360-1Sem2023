@@ -1,4 +1,5 @@
 import json
+from random import randint
 
 
 #método para criar times
@@ -40,11 +41,15 @@ def createTime():
         for time in times:
             if maior_id_time < int(time['id_time']):
                 maior_id_time = int(time['id_time'])
+                
+                
+        cod_acesso = 'A' + str(randint(1, 100))
 
         novo_time = {
             'id_time': maior_id_time + 1,
             'identificacao': Identificacao_time,
             'nr_integrantes': numero_nr_integrantes_integrantes,
+            'cod_acesso': cod_acesso,
             'id_turma': id_turma
         }
         times.append(novo_time)
