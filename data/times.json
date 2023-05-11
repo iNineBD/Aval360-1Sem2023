@@ -4,12 +4,29 @@
         "id_time": 2,
         "identificacao": "6passa.py",
         "nr_integrantes": 7,
+        "cod_acesso": "A001",
         "id_turma": "1"
     },
     {
         "id_time": 1,
         "identificacao": "Inine",
+        "cod_acesso": "A002",
+        "nr_integrantes": 9,
+        "id_turma": "0"
+    },
+    {
+        "id_time": 3,
+        "identificacao": "Dragon Ball",
+        "cod_acesso": "A003",
+        "nr_integrantes": 9,
+        "id_turma": "0"
+    },
+    {
+        "id_time": 4,
+        "identificacao": "Sapatenis",
+        "cod_acesso": "A004",
         "nr_integrantes": 9,
         "id_turma": "0"
     }
 ]
+
