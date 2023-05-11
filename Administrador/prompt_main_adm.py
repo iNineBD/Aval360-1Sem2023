@@ -10,7 +10,6 @@ from Administrador.turmas.prompt_turmas import ctrl_turmas
 from Administrador.times.prompt_times import ctrl_times
 from Administrador.sprints import prompt_sprints
 
-
 def promptMainAdm():
     os.system('cls' if os.name == 'nt' else 'clear')
     while True:
@@ -28,11 +27,13 @@ def promptMainAdm():
         
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
+
             prompt_turmas.ctrl_turmas()
 
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
             prompt_times.ctrl_times()
+
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -41,6 +42,7 @@ def promptMainAdm():
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
+
             prompt_sprints.ctrl_sprints()
             
         
