@@ -1,5 +1,6 @@
 from turmas import prompt_turmas
 from times import prompt_times
+from sprints import prompt_sprints
 import os
 
 
@@ -21,12 +22,10 @@ def promptMain():
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
             prompt_turmas.ctrl_turmas()
-            pass
-            
+
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
             prompt_times.ctrl_times()
-            pass
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -35,13 +34,12 @@ def promptMain():
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-            #AQUI ENTRA O CONTROLE DE USUÁRIOS
+            prompt_sprints.ctrl_sprints()
             
         
         elif op == 0:
             os.system('cls' if os.name == 'nt' else 'clear')
             exit()
-            pass
             
         else:
             print('\nOpção inválida! Tente novamente!')

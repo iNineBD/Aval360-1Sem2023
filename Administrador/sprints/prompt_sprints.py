@@ -1,13 +1,15 @@
 # from sprints.createSprint import 
 from visualizarSprint import visualizarSprint
 # from sprints.editSprint import 
-from delSprint import delSprint
+
+from sprints.delSprint import delSprint
+from sprints.createSprints import createSprints
+from sprints.editSprints import editSprints
 import os
 
 
 def ctrl_sprints():
-    condicao = True
-    while condicao:
+    while True:
         print('')
         
         print("Controle de Sprints!!!")
@@ -22,7 +24,7 @@ def ctrl_sprints():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
+            createSprints()
             
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -30,18 +32,16 @@ def ctrl_sprints():
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print('\nEdição de Times')
-            pass
+            editSprints()
+            
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
             delSprint()
         
         elif op == 0:
-            condicao = False
+            break
             
         else:
             print('\nOpção inválida! Tente novamente!')
         print("")
-
-ctrl_sprints()
