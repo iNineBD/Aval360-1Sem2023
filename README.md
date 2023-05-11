@@ -9,7 +9,7 @@
     <a href="#backlogs">Backlogs do produto</a>  •
     <a href="#entrega">Entrega de Sprints</a>  •
     <a href="#tecnologias">Tecnologias</a>  •
-    <a href="#equipe">Equipe</a> •
+    <a href="#equipe">Equipe</a>  •
     <a href="#burndown">Burndown</a>
 </p>
 
@@ -19,12 +19,11 @@
 ![image](https://user-images.githubusercontent.com/127355284/228393600-18d89b72-0631-4e04-be23-4f14fd5bc29c.png)
 
 
-
 <span id="backlogs">
   
 ##  :white_medium_square: Backlog do produto
 
-Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428a0e?r=use1) para mais informaçoes!
+Acesse [Monday] para mais informaçoes!
 
 |  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
 |-------------------------|---------------------|----------------|-------------------------|
@@ -51,9 +50,9 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
 |:-------:|:-----:|:---------:|:------:|
 | [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1-iNine) | 13/03/23 a 02/04/23 | Planejamento do Projeto | **REALIZADO** |
 | [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2-iNine) | 03/04/23 a 23/04/23 | Controle Turmas/Times e Avaliação 360° | **REALIZADO** |
-| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Cadastros/Controle de Sprints | EM ANDAMENTO |
-| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | EM ANDAMENTO |
-
+| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Controle de Perfil/Controle de Sprints | **REALIZADO** |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | **EM ANDAMENTO** |
+    
 <span id="equipe">
 
 ##  :white_medium_square: Equipe
@@ -77,14 +76,12 @@ Acesse [Monday](https://view.monday.com/4348900510-1c34874d2bac97e25ad48dc7ec428
     
 ##  :white_medium_square: Tecnologias Utilizadas
     
-![image](https://user-images.githubusercontent.com/117841950/227992672-e092c2c3-a455-4c97-a6bc-3e420b92ff4d.png)
+![image](https://github.com/iNineBD/1Sem2023/assets/117841950/245264a5-33bd-4e41-b2f4-90ec30dbb475)
+
 
     
 <span id="burndown">
     
-##  :white_medium_square:🔥Burndown
-
-[![Alt Text](https://user-images.githubusercontent.com/117841950/233720484-f677d745-68b0-4ac0-a762-1ffa74b2387a.png)](https://fatecspgov-my.sharepoint.com/:x:/g/personal/beatriz_bonatto_fatec_sp_gov_br/EaMTlLPVA5tGgh7cetYffGQBmzizocsF7nUIq7DPC1vO3Q?e=wKIcvj)
 
 
 
