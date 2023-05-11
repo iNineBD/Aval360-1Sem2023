@@ -1,10 +1,19 @@
+
+
+
+
+
+
+
 import os
 from Administrador.turmas.prompt_turmas import ctrl_turmas
 from Administrador.times.prompt_times import ctrl_times
+from Administrador.sprints import prompt_sprints
 
 def promptMainAdm():
     os.system('cls' if os.name == 'nt' else 'clear')
     while True:
+        os.system('cls' if os.name == 'nt' else 'clear')
         print('')
         print("Bem vindo!!!")
         print('')
@@ -18,11 +27,13 @@ def promptMainAdm():
         
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            ctrl_turmas()
-            
+
+            prompt_turmas.ctrl_turmas()
+
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
-            ctrl_times()
+            prompt_times.ctrl_times()
+
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -31,8 +42,9 @@ def promptMainAdm():
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-            #AQUI ENTRA O CONTROLE DE USUÁRIOS
-            pass
+
+            prompt_sprints.ctrl_sprints()
+            
         
         elif op == 0:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -41,3 +53,4 @@ def promptMainAdm():
         else:
             print('\nOpção inválida! Tente novamente!')
         print("----------------------------------------------------")
+        
