@@ -1,10 +1,10 @@
 # from sprints.createSprint import 
 # from sprints.editSprint import 
 
-from sprints.delSprint import delSprint
-from sprints.createSprints import createSprints
-from sprints.editSprints import editSprints
-from sprints.visualizarSprint import visualizarSprint
+from Administrador.sprints.delSprint import delSprint
+from Administrador.sprints.createSprints import createSprints
+from Administrador.sprints.editSprints import editSprints
+from Administrador.sprints.visualizarSprint import visualizarSprint
 import os
 
 

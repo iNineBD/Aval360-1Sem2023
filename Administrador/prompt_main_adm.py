@@ -6,8 +6,8 @@
 
 
 import os
-from Administrador.turmas.prompt_turmas import ctrl_turmas
-from Administrador.times.prompt_times import ctrl_times
+from Administrador.turmas import prompt_turmas
+from Administrador.times import prompt_times
 from Administrador.sprints import prompt_sprints
 
 def promptMainAdm():
