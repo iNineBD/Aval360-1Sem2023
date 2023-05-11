@@ -1,11 +1,18 @@
-from turmas import prompt_turmas
-from times import prompt_times
-from sprints import prompt_sprints
+
+
+
+
+
+
+
 import os
+from Administrador.turmas.prompt_turmas import ctrl_turmas
+from Administrador.times.prompt_times import ctrl_times
+from Administrador.sprints import prompt_sprints
 
 
-
-def promptMain():
+def promptMainAdm():
+    os.system('cls' if os.name == 'nt' else 'clear')
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         print('')
@@ -45,4 +52,3 @@ def promptMain():
             print('\nOpção inválida! Tente novamente!')
         print("----------------------------------------------------")
         
-promptMain()
