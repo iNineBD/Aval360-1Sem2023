@@ -36,7 +36,7 @@ Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b
 | Controle de Sprints | Um controle sprint onde o administrador fazer a gestão de todas as informações da sprint | Média | 3 | **Realizado** |
 | Dashboards | Dashboards a partir de dados de avaliações respondidas no decorrer das sprints para que o cliente tenha melhor análise dos resultados de desempenho | Alta | 4 | **A Realizar** | 
 | Backlog | O projeto precisa ser estruturado de acordo com a metodologia ágil, contendo todos os tópicos exigidos pelo cliente | Alta | 1,2,3 | **Realizado** |
-| Design | Ter uma visualização clara, organizada e com cores de maior destaque | Alta | 4 | **A realizar** |
+| Design | Aprimorar a visualização do sistema no console, de forma organizada e com cores de maior destaque | Alta | 4 | **A realizar** |
 | Fluxograma | Um protótipo que permite uma visualização ramificada do sistema | Baixa | 1 | **Realizado** |
 
 
