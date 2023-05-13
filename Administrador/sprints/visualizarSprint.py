@@ -32,19 +32,25 @@ def visualizarSprint():
             
         
         #Visualizar Sprints:
-        
+        cond = True
         print("\nVisualizar Sprints:")
-        while True:
+        while cond:
             if num_turmas < x:
                 #Visualizar Sprints:
                 arqv_sprints = open('././data/sprint.json')
                 read_arqv_sprints = json.load(arqv_sprints) #load() - leitura do arquivo
                 
-                y = 1
+                sprint_turma = []
                 for sprint in read_arqv_sprints:
                     if sprint.get('id_turma') == id_turma:
-                        print(f"{y} - {sprint.get('identificacao')}")
-                        y = y + 1
+                        sprint_turma.append(sprint)
+                
+                
+                y = 1
+                for haha in sprint_turma:
+                    print(f"{y} - {haha['identificacao']}")
+                    y = y + 1
+        
                 print('0 - Voltar')
                 while True:
                     try:
@@ -53,10 +59,11 @@ def visualizarSprint():
                             print ("\nEssa sprint não existe")
                         elif num_sprint == 0:
                             os.system('cls' if os.name == 'nt' else 'clear')
-                            return visualizarSprint()    
+                            cond = False
+                            break  
                         else:
                             os.system('cls' if os.name == 'nt' else 'clear')
-                            sprint_escolhida = read_arqv_sprints[num_sprint-1]
+                            sprint_escolhida = sprint_turma[num_sprint-1]
                             identificacao_sprint = sprint_escolhida['identificacao']
                             inicio_sprint = sprint_escolhida['inicio']
                             fim_sprint = sprint_escolhida['final']
