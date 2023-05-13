@@ -2,7 +2,7 @@ import json
 
 # Função para editar um time
 def editTime():
-    arqv_turmas = open("./data/turmas.json", encoding="UTF-8")
+    arqv_turmas = open("././data/turmas.json", encoding="UTF-8")
     ler_arqv_turmas = json.load(arqv_turmas)
 
     print("\nTurmas:")
@@ -19,7 +19,7 @@ def editTime():
 
     id_turma = indice_vs_turma_id[indice_turma]
 
-    arqv_times = open("./data/times.json", encoding="UTF-8")
+    arqv_times = open("././data/times.json", encoding="UTF-8")
     ler_arqv_times = json.load(arqv_times)
 
     print("\nTimes:")
@@ -61,5 +61,5 @@ def editTime():
     print("--------------------------")
     print("\nEdição realizada com sucesso!")
 
-    with open("./data/times.json", "w", encoding="UTF-8") as f:
+    with open("././data/times.json", "w", encoding="UTF-8") as f:
         json.dump(ler_arqv_times, f, indent=4)

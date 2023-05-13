@@ -1,5 +1,4 @@
-from turmas.ctrl_turmas import Turmas
-from times.prompt_times import ctrl_times
+from Administrador.turmas.ctrl_turmas import Turmas
 import os
 
 def ctrl_turmas():
@@ -9,7 +8,7 @@ def ctrl_turmas():
         print('')
         while True:
             try:
-                print("Escolha uma opção: \n1 - Criar nova turma\n2 - Visualizar turmas\n3 - Editar turma\n4 - Excluir turma\n5 - Controle de times\n0 - Voltar\n")
+                print("Escolha uma opção: \n1 - Criar nova turma\n2 - Visualizar turmas\n3 - Editar turma\n4 - Excluir turma\n0 - Voltar\n")
                 op = int(input("Digite aqui: "))
                 break
             except ValueError:
@@ -35,16 +34,10 @@ def ctrl_turmas():
             print("\nExcluír turma!!!")
             print(Turmas.delTurma())
         
-        elif op == 5:
-            os.system('cls' if os.name == 'nt' else 'clear')
-            ctrl_times()
-        
         elif op == 0:
             os.system('cls' if os.name == 'nt' else 'clear')
-            exit()
+            break
             
         else:
             print('\nOpção inválida! Tente novamente!')
         print("----------------------------------------------------")
-
-ctrl_turmas()

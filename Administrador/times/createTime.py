@@ -1,14 +1,15 @@
 import json
+from random import randint
 
 
 #método para criar times
 def createTime():
     
-        arquivo_times = open("data/times.json")
+        arquivo_times = open("././data/times.json")
         times= json.load (arquivo_times)
 
          #Visualizar Turmas:
-        arqv_turmas = open('./data/turmas.json')
+        arqv_turmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
         print("\nVisualizar Turmas:")
         x = 1
@@ -40,16 +41,20 @@ def createTime():
         for time in times:
             if maior_id_time < int(time['id_time']):
                 maior_id_time = int(time['id_time'])
+                
+                
+        cod_acesso = 'A' + str(randint(1, 100))
 
         novo_time = {
             'id_time': maior_id_time + 1,
             'identificacao': Identificacao_time,
             'nr_integrantes': numero_nr_integrantes_integrantes,
+            'cod_acesso': cod_acesso,
             'id_turma': id_turma
         }
         times.append(novo_time)
 
-        with open('./data/times.json', 'w') as f:
+        with open('././data/times.json', 'w') as f:
             # Escrevendo os dados atualizados no arquivo
             json.dump(times, f)
 

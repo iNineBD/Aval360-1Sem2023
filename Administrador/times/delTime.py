@@ -1,7 +1,8 @@
 import json
 
-caminho_turma = './data/turmas.json'
-caminho_time = './data/times.json'
+caminho_turma = '././data/turmas.json'
+caminho_time = '././data/times.json'
+caminho_usuarios = '././data/usuarios.json'
 
 def delTime():
         #Visualizar Turmas:
@@ -53,6 +54,20 @@ def delTime():
 
         time_del = times_turma[op_time_del - 1]
         read_arqv_times.remove(time_del)
+
+        arqv_usuarios = open(caminho_usuarios)
+        read_arqv_usuario = json.load(arqv_usuarios)
+
+        novo_id = ""
+
+        for time in read_arqv_usuario:
+            if time.get("id_time") == op_time_del:
+                time["id_time"] = novo_id
+                
+                with open(caminho_usuarios, 'w') as output:
+                    json.dump(read_arqv_usuario, output)
+                output.close()        
+
 
         with open(caminho_time, 'w') as output:
             json.dump(read_arqv_times, output)

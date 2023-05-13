@@ -1,10 +1,10 @@
 import json
 
 def getIntegrantes():
-        arqv_turma = open('./data/turmas.json')
+        arqv_turma = open('././data/turmas.json')
         turmas = json.load(arqv_turma)
 
-        arqv_time = open('./data/times.json')
+        arqv_time = open('././data/times.json')
         times = json.load(arqv_time)
 
         arqv_usuarios = open('./data/usuarios.json', encoding="UTF-8")

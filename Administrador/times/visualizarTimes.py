@@ -2,7 +2,7 @@ import json
 
 def visualizarTimes():
         #Visualizar Turmas:
-        arqv_turmas = open('./data/turmas.json')
+        arqv_turmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
         print("Turmas:\n")
         x = 1
@@ -29,6 +29,8 @@ def visualizarTimes():
                 for time in read_arqv_times:
                     if time.get('id_turma') == id_turma:
                         print(f"{y} - {time.get('identificacao')}")
+                        print(f"Código de acesso: {time.get('cod_acesso')}")
+                        print("-----------------------------------")
                         y = y + 1
                 break   
             else:

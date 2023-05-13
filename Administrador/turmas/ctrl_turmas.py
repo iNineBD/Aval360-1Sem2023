@@ -5,7 +5,10 @@ import os
 #claase que contem os metodos relacionados a turma
 class Turmas:
     #variaveis globais
-    local_data_turma = "data/turmas.json"
+    local_data_turma = "././data/turmas.json"
+    local_data_time = "././data/times.json"
+    local_data_usu = "././data/usuarios.json"
+    local_data_sprint= "././data/sprint.json"
     
 
     #método para cadastrar uma turma
@@ -149,6 +152,7 @@ class Turmas:
                 print('Valor inválido')
         #calcula o index da turma selecionada no dicionário com todas as turmas
         turma_selecionada = turmas[op - 1]
+        Turmas.updateAll(turma_selecionada['id_turma'])
         
         #apaga os dados antigos da turma
         del(turmas[op-1])
@@ -157,3 +161,38 @@ class Turmas:
         Turmas.setDataTurmas(turmas)
         
         return "Turma excluída!!!"
+    
+    
+    def updateAll(id_turma):
+        with open(Turmas.local_data_time) as times:
+            times = json.load(times)
+        
+        with open(Turmas.local_data_sprint) as sprints:
+            sprints = json.load(sprints)
+        
+        with open(Turmas.local_data_usu) as usuarios:
+            usuarios = json.load(usuarios)
+            
+        
+        for time in times:
+            if time['id_turma'] == id_turma:
+                
+                id_time = time['id_time']
+                
+                for usu in usuarios:
+                    if usu['id_time'] == id_time:
+                        usuarios[usuarios.index(usu)]['id_time'] = ""
+                del(times[times.index(time)])
+        
+        for sprint in sprints:
+            if sprint['id_turma'] == id_turma:
+                del(sprints[sprints.index(sprint)])
+                
+        with open(Turmas.local_data_usu, 'w') as usu:
+            json.dump(usuarios, usu)
+            
+        with open(Turmas.local_data_time, 'w') as tim:
+            json.dump(times, tim)
+            
+        with open(Turmas.local_data_sprint, 'w') as spr:
+            json.dump(sprints, spr)
