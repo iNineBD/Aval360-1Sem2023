@@ -81,6 +81,9 @@ Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b
     
 <span id="burndown">
     
+##  :white_medium_square: 🔥Burndown
+    
+[![Alt Text](https://github.com/iNineBD/1Sem2023/assets/117841950/6e52b577-005a-4620-83ba-da9732036351)](https://fatecspgov.sharepoint.com/:x:/r/sites/API-1semestre/Shared%20Documents/General/Controle/Burndown%20-%20iNine.xlsx?d=w384dbeb48e7f4130bf8b069653f09751&csf=1&web=1&e=XE3g2R)
 
 
 
