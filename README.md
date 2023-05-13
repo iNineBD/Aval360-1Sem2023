@@ -25,21 +25,20 @@
 
 Acesse [Monday] para mais informaçoes!
 
-|  **FUNCIONALIDADE**  | **PRIORIDADE** | **SPRINT** | **STATUS** |
-|-------------------------|---------------------|----------------|-------------------------|
-| Planejamento Backlog | Alta | 1 | **Realizado** |
-| Fluxograma do Projeto | Média | 1 | **Realizado** |
-| Criação Layout GitHub | Baixa | 1 | **Realizado** |
-| Criação de uma Base de Dados | Média | 2 | **Realizado** |
-| Avaliação 360° | Alta | 2 | **Realizado** |
-| Controle de Turmas | Média | 2 | **Realizado** |
-| Controle de Times | Média | 2 | **Realizado** |
-| Controle de Perfis | Média | 3 | **Em andamento** | 
-| Login dos Usuarios | Alta | 3 | **Em andamento** |
-| Controle de Sprints | Alta | 3 | **Em andamento** |
-| Cadastro dos Usuarios | Alta | 3 | **Em andamento** |
-| Resolução da Avaliação | Baixa | 3 | **Em andamento** |
-| Resultados pelos Dashboard's | Alta | 4 | **Em andamento** |
+|  **ÉPICO**  | **USER STORE** | **PRIORIDADE** | **SPRINT** | **STATUS** |
+|-------------------------|---------------------|----------------|-------------------------|------------------------|
+| Avaliação 360° | O sistema deve realizar uma avaliação dos integrantes do time e uma autoavaliação para analisar o desempenho como equipe | Alta | 2 | **Realizado** |
+| Avaliação 360° | A avaliação deve ter respostas baseadas em uma escala Likert (5 valores), seguindo fatores fixos a serem avaliados | Alta | 2 | **Realizado** |
+| Controle de Usuário | O sistema deve conter um controle de usuários, de uso exclusivo do administrador, com as funções de editar, excluir e promover usuários a administrador | Média | 3 | **Realizado** |
+| Controle de Usuário | O sistema deve conter um controle de perfil que possibilita a realização do login, onde é possível diferenciar o usuário do administrador |  Média | 3 | **Realizado** |
+| Controle de Turmas | Ter um controle para turmas que possibilite e permita que o administrador consiga gerir os times dentro de uma turma  | Média | 2 | **Realizado** |
+| Controle de Times | Ter um controle para times que possibilite gestão de usuários dentro do time (sendo que está dentro de uma turma)| Média | 2 | **Realizado** |
+| Controle de Sprints | Um controle sprint onde o administrador fazer a gestão de todas as informações da sprint | Média | 3 | **Realizado** |
+| Dashboards | Dashboards a partir de dados de avaliações respondidas no decorrer das sprints para que o cliente tenha melhor análise dos resultados de desempenho | Alta | 4 | **A Realizar** | 
+| Backlog | O projeto precisa ser estruturado de acordo com a metodologia ágil, contendo todos os tópicos exigidos pelo cliente | Alta | 1,2,3 | **Realizado** |
+| Design | Ter uma visualização clara, organizada e com cores de maior destaque | Alta | 4 | **A realizar** |
+| Fluxograma | Um protótipo que permite uma visualização ramificada do sistema | Baixa | 1 | **Realizado** |
+
 
 
 <span id="entrega">
@@ -50,8 +49,8 @@ Acesse [Monday] para mais informaçoes!
 |:-------:|:-----:|:---------:|:------:|
 | [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1-iNine) | 13/03/23 a 02/04/23 | Planejamento do Projeto | **REALIZADO** |
 | [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2-iNine) | 03/04/23 a 23/04/23 | Controle Turmas/Times e Avaliação 360° | **REALIZADO** |
-| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Controle de Perfil/Controle de Sprints | **REALIZADO** |
-| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos | **EM ANDAMENTO** |
+| [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Controle de Perfil/Controle de Usuários/Controle de Sprints | **REALIZADO** |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos/Design | **EM ANDAMENTO** |
     
 <span id="equipe">
 

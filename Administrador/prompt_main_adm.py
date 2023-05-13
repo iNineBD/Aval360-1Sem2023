@@ -9,6 +9,7 @@ import os
 from Administrador.turmas import prompt_turmas
 from Administrador.times import prompt_times
 from Administrador.sprints import prompt_sprints
+from Administrador.usuarios import prompt_usuarios
 
 def promptMainAdm():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -37,18 +38,16 @@ def promptMainAdm():
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            #AQUI ENTRA O CONTROLE DE USUÁRIOS
-            pass
+            prompt_usuarios.ctrl_usuarios()
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-
             prompt_sprints.ctrl_sprints()
             
         
         elif op == 0:
             os.system('cls' if os.name == 'nt' else 'clear')
-            exit()
+            break
             
         else:
             print('\nOpção inválida! Tente novamente!')
