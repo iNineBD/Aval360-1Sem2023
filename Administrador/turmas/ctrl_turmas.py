@@ -1,6 +1,8 @@
 #Importando bibliotecas necessárias
 import json
 import os
+from time import sleep
+
 
 #claase que contem os metodos relacionados a turma
 class Turmas:
@@ -16,7 +18,7 @@ class Turmas:
         
         
         #pede ao usuário a identificacao da nova turma
-        identificacao = input("\nEntre com o nome da turma: ")
+        identificacao = input("\n\033[3mOk, agora entre com o Nome da Turma\033[m: ")
 
         # busca os dados das turmas ja existentes
         turmas = Turmas.getDataTurmas() 
@@ -33,10 +35,11 @@ class Turmas:
         
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
-        
-        return "Turma Cadastrada!!!"
-    
-    
+        print('\n\033[32;3mSALVANDO...\033[m')
+        sleep(1)
+
+        return "\n\033[3mProntinho, Turma Cadastrada com sucesso!\033[m"
+          
     #método para retornar o id da ultima turma cadastrada
     def getNextIdTurma():
         turmas = Turmas.getDataTurmas()
@@ -93,7 +96,7 @@ class Turmas:
         turmas = Turmas.getDataTurmas()
         
         #pede ao usuário que entre com a turma que ele deseja editar
-        print('\nEscolha uma turma para editar:\n')
+        print('\n\033[3mOk, agora escolha uma Turma para Editar\033[m:\n')
         x = 1
         for turma in turmas:
             print(f"{x} - {turma['identificacao']}")
@@ -101,12 +104,13 @@ class Turmas:
             
         while True:
             try:
-                op = int(input("\nDigite aqui: "))
+                op = int(input("\n\033[3;33;1mDigite aqui\033[m: "))
                 if op > x or op == 0:
                     raise ValueError
                 break
             except ValueError:
-                print('Valor inválido')
+                print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')
+                #print('Valor inválido')
         #calcula o index da turma selecionada no dicionário com todas as turmas
         turma_selecionada = turmas[op - 1]
                     
@@ -128,15 +132,16 @@ class Turmas:
         
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
-        
-        return "Turma editada!!!"
+        print('\n\033[32;3mSALVANDO...\033[m')
+        sleep(1)
+        return "\n\033[3mProntinho, Turma Editada com sucesso!\033[m"
     
     def delTurma():
         #busca os dados de todas as turmas
         turmas = Turmas.getDataTurmas()
         
         #pede ao usuário que entre com a turma que ele deseja excluir
-        print('\nEscolha uma turma para excluir:\n')
+        print('\n\033[mOk, qual Turma deseja Exluir?:\033[m\n')
         x = 1
         for turma in turmas:
             print(f"{x} - {turma['identificacao']}")
@@ -144,15 +149,14 @@ class Turmas:
     
         while True:
             try:
-                op = int(input("\nDigite aqui: "))
+                op = int(input("\n\033[3;33;1mDigite aqui\033[m: "))
                 if op > x or op == 0:
                     raise ValueError
                 break
             except ValueError:
-                print('Valor inválido')
+                print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')
         #calcula o index da turma selecionada no dicionário com todas as turmas
         turma_selecionada = turmas[op - 1]
-        Turmas.updateAll(turma_selecionada['id_turma'])
         
         #apaga os dados antigos da turma
         del(turmas[op-1])
@@ -160,8 +164,7 @@ class Turmas:
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
         
-        return "Turma excluída!!!"
-    
+        return "\n\033[3mProntinho, Turma Excluída com sucesso!\033[m"
     
     def updateAll(id_turma):
         with open(Turmas.local_data_time) as times:
