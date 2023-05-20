@@ -12,6 +12,9 @@ local_sprints = '././data/sprint.json'
 local_time = '././data/times.json'
 
 def sprint_atual(id_usuario):
+    x = True
+    y = False
+
     with open( local_identificacao,'r',encoding="UTF-8") as arquivo:
         usuarios = json.load(arquivo)
 
@@ -30,13 +33,34 @@ def sprint_atual(id_usuario):
     with open(local_sprints,'r',encoding="UTF-8") as arquivo:
         sprints = json.load(arquivo)
 
-        for sprint in sprints:
-            data_final_avaliacao = datetime.strptime(sprint['final_avaliacao'],'%d/%m/%Y')
-            data_final = datetime.strptime(sprint['final'], '%d/%m/%Y')
+        sprint_usuario = next((sprint for sprint in sprints if turma_usuario == sprint['id_turma']),None)
+        if sprint_usuario is not None:
+            z = 0
+            for sprint in sprints:
+                if turma_usuario == sprint.get('id_turma'):
+                        
+                    sprint_usuario_dados = sprints[z]
+                    identificacao_sprint = sprint_usuario_dados.get('identificacao')
 
-            if datetime.now() <= data_final_avaliacao and datetime.now() > data_final:
-                id_sprint = sprint.get('id_sprint')
-                return id_sprint
+                    data_final_avaliacao = datetime.strptime(sprint_usuario_dados['final_avaliacao'],'%d/%m/%Y')
+                    data_final = datetime.strptime(sprint_usuario_dados['final'], '%d/%m/%Y')
+
+
+                    if datetime.now() <= data_final_avaliacao and datetime.now() > data_final:
+                        id_sprint = sprint_usuario_dados.get('id_sprint')
+                        return id_sprint, x
+                    elif datetime.now() > data_final_avaliacao:
+                        os.system('cls' if os.name == 'nt' else 'clear')
+                        print(f'Já passou a data limite para responder a avaliação da {identificacao_sprint}')
+                        print('\n--------------------------------\n')
+                        return None, y
+                else:
+                    z +=1
+        else:
+            print('\nNão existe sprint cadastrado para essa turma')
+            print('\n--------------------------------\n')
+            return None, y
+
 
 def autoAvaliacao(id_usuario):
     
