@@ -18,6 +18,7 @@ def sprint_atual(id_usuario):
         for usuario in usuarios:
             if usuario.get('id_usuario') == id_usuario:
                 time_usuario = usuario['id_time']
+            
     
     with open(local_time,'r',encoding="UTF-8") as arquivo:
         times = json.load(arquivo)
@@ -34,7 +35,7 @@ def sprint_atual(id_usuario):
             data_final = datetime.strptime(sprint['final'], '%d/%m/%Y')
 
             if datetime.now() <= data_final_avaliacao and datetime.now() > data_final:
-                id_sprint = sprint.get('identificacao')
+                id_sprint = sprint.get('id_sprint')
                 return id_sprint
 
 def autoAvaliacao(id_usuario):
@@ -101,7 +102,7 @@ def autoAvaliacao(id_usuario):
                     'ip': str(pergunta["ip"]),
                     'resp': str(obter_resposta()),
                     'id_usuario': id_usuario,
-                    'id_sprint': id_usuario
+                    'id_sprint': sprint_atual(id_usuario)
                     }
         respostas.append(resposta)  
         # Salvar as respostas em um arquivo JSON
@@ -190,7 +191,7 @@ def avaliacao(id_usuario, id_time):
                         'resp': str(obter_resposta()),
                         'id_usuario_respondeu': id_usuario,
                         'id_usuario_avaliado': usuario['id_usuario'],
-                        'id_sprint': id_usuario
+                        'id_sprint': sprint_atual(id_usuario)
                         }
             respostas.append(resposta)  
             # Salvar as respostas em um arquivo JSON
