@@ -27,6 +27,7 @@ def cadastro(nome, cpf,data_nascimento,senha):
     usuario_existente = next((u for u in usuarios if u['cpf'] == cpf), None)
 
     if usuario_existente is not None:
+        os.system('cls' if os.name == 'nt' else 'clear')
         print('\n\033[31mUSUÁRIO JÁ CADASTRADO NO SISTEMA!\033[m\n\033[3mTente novamente!\033[m')
         #print("\nUsuário já existe no sistema\n")
         
@@ -46,4 +47,6 @@ def cadastro(nome, cpf,data_nascimento,senha):
         # Escreve a lista atualizada de usuários no arquivo
         with open(local_usuarios, 'w') as aq:
             json.dump(usuarios, aq)
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("\n\033[1;32mNOVO USUÁRIO CADASTRADO COM SUCESSO\033[m")
+            
