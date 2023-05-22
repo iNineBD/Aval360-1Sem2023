@@ -12,7 +12,6 @@ local_sprints = '././data/sprint.json'
 local_time = '././data/times.json'
 
 def sprint_atual(id_usuario):
-    y = False
     with open( local_identificacao,'r',encoding="UTF-8") as arquivo:
         usuarios = json.load(arquivo)
 
@@ -42,7 +41,6 @@ def sprint_atual(id_usuario):
                 identificacao_sprint = sprint_usuario.get('identificacao')
 
                 if turma_usuario == sprint_usuario.get('id_turma') and (data_atual >= data_inicio_sprint and data_atual <= data_final_avaliacao_sprint):     
-                    print(sprint_usuario)
                     if data_atual <= data_final_avaliacao_sprint and data_atual > data_final_sprint:
                         id_sprint = sprint_usuario.get('id_sprint')
                         return id_sprint
@@ -91,8 +89,8 @@ def autoAvaliacao(id_usuario):
         while True:
             try:
                 resposta = int(input("\nPor favor, avalie de 1 a 5: "))
+                os.system('cls' if os.name == 'nt' else 'clear')
                 if resposta < 1 or resposta > 5:
-                    os.system('cls' if os.name == 'nt' else 'clear')
                     raise ValueError
                 break
             except ValueError:
@@ -139,8 +137,8 @@ def avaliacao(id_usuario, id_time):
         while True:
             try:
                 resposta = int(input("\nPor favor, avalie de 1 a 5: "))
+                os.system('cls' if os.name == 'nt' else 'clear')
                 if resposta < 1 or resposta > 5:
-                    os.system('cls' if os.name == 'nt' else 'clear')
                     raise ValueError
                 break
             except ValueError:
