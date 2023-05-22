@@ -1,6 +1,6 @@
 import json
 import os
-from datetime import datetime
+from datetime import datetime,date
 
 
 local_perguntas = '././data/perguntas_autoAvaliacao.json'
@@ -12,9 +12,7 @@ local_sprints = '././data/sprint.json'
 local_time = '././data/times.json'
 
 def sprint_atual(id_usuario):
-    x = True
     y = False
-
     with open( local_identificacao,'r',encoding="UTF-8") as arquivo:
         usuarios = json.load(arquivo)
 
@@ -33,33 +31,30 @@ def sprint_atual(id_usuario):
     with open(local_sprints,'r',encoding="UTF-8") as arquivo:
         sprints = json.load(arquivo)
 
-        sprint_usuario = next((sprint for sprint in sprints if turma_usuario == sprint['id_turma']),None)
-        if sprint_usuario is not None:
-            z = 0
-            for sprint in sprints:
-                if turma_usuario == sprint.get('id_turma'):
-                        
-                    sprint_usuario_dados = sprints[z]
-                    identificacao_sprint = sprint_usuario_dados.get('identificacao')
+        sprint = next((sprint for sprint in sprints if turma_usuario == sprint['id_turma']),None)
+        if sprint is not None:
+            for sprint_usuario in sprints:
+                data_data = date.today().strftime('%d/%m/%Y')
+                data_atual = datetime.strptime(data_data,'%d/%m/%Y')
+                data_inicio_sprint =datetime.strptime(sprint_usuario.get('inicio'),'%d/%m/%Y')
+                data_final_sprint = datetime.strptime(sprint_usuario.get('final'),'%d/%m/%Y')
+                data_final_avaliacao_sprint = datetime.strptime(sprint_usuario.get('final_avaliacao'),'%d/%m/%Y')
 
-                    data_final_avaliacao = datetime.strptime(sprint_usuario_dados['final_avaliacao'],'%d/%m/%Y')
-                    data_final = datetime.strptime(sprint_usuario_dados['final'], '%d/%m/%Y')
-
-
-                    if datetime.now() <= data_final_avaliacao and datetime.now() > data_final:
-                        id_sprint = sprint_usuario_dados.get('id_sprint')
-                        return id_sprint, x
-                    elif datetime.now() > data_final_avaliacao:
-                        os.system('cls' if os.name == 'nt' else 'clear')
-                        print(f'Já passou a data limite para responder a avaliação da {identificacao_sprint}')
-                        print('\n--------------------------------\n')
-                        return None, y
+                if turma_usuario == sprint_usuario.get('id_turma') and (data_atual >= data_inicio_sprint and data_atual <= data_final_avaliacao_sprint):     
+                    print(sprint_usuario)
+                    if data_atual <= data_final_avaliacao_sprint and data_atual > data_final_sprint:
+                        id_sprint = sprint_usuario.get('id_sprint')
+                        return id_sprint
                 else:
-                    z +=1
+                    continue
+            if data_atual > data_final_avaliacao_sprint :
+                print(f'Já passou a data limite para responder a avaliação')
+                print('\n--------------------------------\n')
+                return None
         else:
             print('\nNão existe sprint cadastrado para essa turma')
             print('\n--------------------------------\n')
-            return None, y
+            return None
 
 
 def autoAvaliacao(id_usuario):
@@ -96,6 +91,7 @@ def autoAvaliacao(id_usuario):
             try:
                 resposta = int(input("\nPor favor, avalie de 1 a 5: "))
                 if resposta < 1 or resposta > 5:
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     raise ValueError
                 break
             except ValueError:
@@ -143,6 +139,7 @@ def avaliacao(id_usuario, id_time):
             try:
                 resposta = int(input("\nPor favor, avalie de 1 a 5: "))
                 if resposta < 1 or resposta > 5:
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     raise ValueError
                 break
             except ValueError:

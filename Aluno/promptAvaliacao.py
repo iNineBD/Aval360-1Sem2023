@@ -33,8 +33,8 @@ def prompt_avaliacao(id_usu):
             print("\nOpção 1 selecionada: 'Responder avaliação'")
             os.system('cls' if os.name == 'nt' else 'clear')
 
-            a , b = sprint_atual(usu['id_usuario'])
-            if b == True:
+            a = sprint_atual(usu['id_usuario'])
+            if a is not None:
                 autoAvaliacao(usu['id_usuario'])
                 avaliacao(usu['id_usuario'], usu['id_time'])
         #Se o usuário escolher a opção "Sair", exibimos uma mensagem de despedida e definimos a variável "y" como False:    
