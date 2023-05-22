@@ -2,13 +2,14 @@ from datetime import datetime
 
 def execucao():
     while True:
-        data = input('Digite a data de nascimento (dd/mm/aaaa) : ')
+        data = input('\033[36mDIGITE A DATA DE NASCIMENTO (dd/mm/aaaa) : \033[m')
         try:
             data = datetime.strptime(data, '%d/%m/%Y')
             if data > datetime.now():
-                print("\nData superior a data atual\n")
+                print("\n\033[31;3mATENÇÃO!\nData deve ser superior a data atual\033[m")
             else:
                 data_formatada = data.strftime("%d/%m/%Y")
                 return data_formatada
         except ValueError:
-            print('\nDigitou uma data com formatação inválida ou uma data inválida\n')
+            print('\n\033[31mFORMATO OU DATA INVÁLIDA...\033[m\n\033[3mTente novamente!\033[m')            
+            #print('\nDigitou uma data com formatação inválida ou uma data inválida\n')
