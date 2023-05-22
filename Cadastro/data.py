@@ -2,11 +2,11 @@ from datetime import datetime
 
 def execucao():
     while True:
-        data = input('\033[36mDIGITE A DATA DE NASCIMENTO (dd/mm/aaaa) : \033[m')
+        data = input('\033[36mDigite a data de nascimento (dd/mm/aaaa) : \033[m')
         try:
             data = datetime.strptime(data, '%d/%m/%Y')
             if data > datetime.now():
-                print("\n\033[31;3mATENÇÃO!\nData deve ser superior a data atual\033[m")
+                print("\n\033[31;3mATENÇÃO!\nData deve ser inferior a data atual\033[m")
             else:
                 data_formatada = data.strftime("%d/%m/%Y")
                 return data_formatada
