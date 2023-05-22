@@ -39,6 +39,7 @@ def sprint_atual(id_usuario):
                 data_inicio_sprint =datetime.strptime(sprint_usuario.get('inicio'),'%d/%m/%Y')
                 data_final_sprint = datetime.strptime(sprint_usuario.get('final'),'%d/%m/%Y')
                 data_final_avaliacao_sprint = datetime.strptime(sprint_usuario.get('final_avaliacao'),'%d/%m/%Y')
+                identificacao_sprint = sprint_usuario.get('identificacao')
 
                 if turma_usuario == sprint_usuario.get('id_turma') and (data_atual >= data_inicio_sprint and data_atual <= data_final_avaliacao_sprint):     
                     print(sprint_usuario)
@@ -48,7 +49,7 @@ def sprint_atual(id_usuario):
                 else:
                     continue
             if data_atual > data_final_avaliacao_sprint :
-                print(f'Já passou a data limite para responder a avaliação')
+                print(f'Já passou a data limite para responder a avaliação da {identificacao_sprint}')
                 print('\n--------------------------------\n')
                 return None
         else:
