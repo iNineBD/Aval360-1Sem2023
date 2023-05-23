@@ -39,11 +39,3 @@ def setFeedback(id_usu_avaliador, id_usu_avaliado, id_sprint, id_resp, id_pergun
         json.dump(feedbacks, fp)
         
     print('')
-    
-# If auto avaaliação
-# if resposta['resp'] in [1, 2, 3]:
-#         setFeedback(id_usuario, id_usuario, resposta['id_sprint'], resposta['id_resposta'], resposta['ip'])
-
-# If avaaliação grupo
-# if resposta['resp'] in [1, 2, 3]:
-#         setFeedback(id_usuario, resposta['id_usuario_avaliado'], resposta['id_sprint'], resposta['id_resposta'], resposta['ip'])

@@ -1,6 +1,7 @@
 import json
 import os
 from datetime import datetime,date
+from Aluno.avaliacao.feedback import setFeedback
 
 
 local_perguntas = '././data/perguntas_autoAvaliacao.json'
@@ -120,6 +121,11 @@ def autoAvaliacao(id_usuario):
                     'id_sprint': sprint_atual(id_usuario)
                     }
         respostas.append(resposta)  
+        
+        
+        if int(resposta['resp']) in [1, 2, 3]:
+                setFeedback(id_usuario, id_usuario, resposta['id_sprint'], resposta['id_resposta'], resposta['ip'])    
+            
         # Salvar as respostas em um arquivo JSON
         with open(local_resposta, "w") as arquivo:
             json.dump(respostas, arquivo, indent=5) 
@@ -196,6 +202,7 @@ def avaliacao(id_usuario, id_time):
         else:
             respostas = []
                     
+                    
             
         # Loop para obter as respostas do participante
         for pergunta in perguntas:
@@ -209,6 +216,10 @@ def avaliacao(id_usuario, id_time):
                         'id_usuario_avaliado': usuario['id_usuario'],
                         'id_sprint': sprint_atual(id_usuario)
                         }
+            
+            if int(resposta['resp']) in [1, 2, 3]:
+                setFeedback(id_usuario, resposta['id_usuario_avaliado'], resposta['id_sprint'], resposta['id_resposta'], resposta['ip'])
+            
             respostas.append(resposta)  
             # Salvar as respostas em um arquivo JSON
             with open(local_resposta_grupo, "w") as arquivo:
