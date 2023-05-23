@@ -58,11 +58,6 @@ def sprint_atual(id_usuario):
 
 def autoAvaliacao(id_usuario):
     
-    print('Autoavaliação:')
-
-
-    #loop prompt
-
     # Verifica se o arquivo JSON já existe
     if os.path.exists(local_perguntas):
         # Se existir, carrega as perguntas existentes
@@ -89,7 +84,6 @@ def autoAvaliacao(id_usuario):
         while True:
             try:
                 resposta = int(input("\nPor favor, avalie de 1 a 5: "))
-                os.system('cls' if os.name == 'nt' else 'clear')
                 if resposta < 1 or resposta > 5:
                     raise ValueError
                 break
@@ -116,6 +110,8 @@ def autoAvaliacao(id_usuario):
 
     # Loop para obter as respostas do participante
     for pergunta in perguntas:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print('Autoavaliação:')
         print(pergunta["descricao"])
         resposta = {'id_resposta': getNextIdResp(),
                     'ip': str(pergunta["ip"]),
@@ -128,8 +124,7 @@ def autoAvaliacao(id_usuario):
         with open(local_resposta, "w") as arquivo:
             json.dump(respostas, arquivo, indent=5) 
     print("\nRespostas salvas no sistema!.\n")
-    y = False
-    
+
 def avaliacao(id_usuario, id_time):
             
     # Função para obter a resposta do usuário como um número inteiro entre 1 e 5
@@ -137,8 +132,8 @@ def avaliacao(id_usuario, id_time):
         while True:
             try:
                 resposta = int(input("\nPor favor, avalie de 1 a 5: "))
-                os.system('cls' if os.name == 'nt' else 'clear')
                 if resposta < 1 or resposta > 5:
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     raise ValueError
                 break
             except ValueError:
@@ -180,7 +175,6 @@ def avaliacao(id_usuario, id_time):
         os.system('cls' if os.name == 'nt' else 'clear')
         print('Avaliação do grupo:')
         
-        print('\n Em relação a(ao) integrante {}, responda: \n'.format(usuario['identificacao']))
     
         # Verifica se o arquivo JSON já existe
         if os.path.exists(local_perguntas_grupo):
@@ -205,6 +199,8 @@ def avaliacao(id_usuario, id_time):
             
         # Loop para obter as respostas do participante
         for pergunta in perguntas:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print('\n Em relação a(ao) integrante {}, responda: \n'.format(usuario['identificacao']))
             print(pergunta["descricao"])
             resposta = {'id_resposta': getNextIdResp(),
                         'ip': str(pergunta["ip"]),
