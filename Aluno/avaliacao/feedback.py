@@ -15,7 +15,15 @@ def nextId():
         return 0
 
 def setFeedback(id_usu_avaliador, id_usu_avaliado, id_sprint, id_resp, id_pergunta):
-    feedback = input("\nExplique o motivo da nota: ")
+    while True:
+        try:
+            feedback = input("\nExplique o motivo da nota: ")
+            if feedback == "":
+                raise ValueError
+            else:
+                break
+        except ValueError:
+            print("O feedback é obrigatório!")
     
     if os.path.exists(caminho_feedbacks):
         with open(caminho_feedbacks, 'r') as feedbacks:
