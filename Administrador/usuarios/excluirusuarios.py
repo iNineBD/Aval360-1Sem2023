@@ -1,18 +1,19 @@
 import json
+import os
 
 caminho_usuario = "././data/usuarios.json"
 def excluirusuarios():
     arqv_usuarios = open(caminho_usuario)
     read_arqv_usuarios = json.load(arqv_usuarios)
 
-    print("\n\033[36;1mIntegrantes:\033[m\n")
+    print("\033[36;1mIntegrantes:\033[m\n")
        
     indice_vs_usuario_id = {}
     z = 1
     for usuario in read_arqv_usuarios:
         if usuario.get("tp_usu") == 1:
             print(f"\033[33;4m{z}\033[m - \033[33;4m{usuario.get('identificacao')}\033[m ",end="")
-            print(f" | \033[33;4mCPF:\033[m \033[33;4m{usuario.get('cpf')}\033[m")
+            print(f"| \033[33;4mCPF:\033[m \033[33;4m{usuario.get('cpf')}\033[m")
             indice_vs_usuario_id[str(z)] = usuario.get("id_usuario")
             z += 1
 
@@ -35,4 +36,5 @@ def excluirusuarios():
     with open(caminho_usuario, 'w') as output:
             json.dump(read_arqv_usuarios, output)
     output.close()
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("\n\033[1;32mIntegrante Excluido com Sucesso!!\033[m")

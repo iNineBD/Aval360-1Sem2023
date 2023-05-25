@@ -1,4 +1,5 @@
 import json
+import os
 
 caminho_usuarios = "././data/usuarios.json"
 
@@ -7,7 +8,7 @@ def promoveusuarios():
     while condicao:
         while True:
             try:
-                cpf = input('Digite o CPF do usuário que será promovido: (para cancelar digite 0) ')
+                cpf = input('\033[36;1mDigite o CPF do usuário que será promovido(para cancelar digite 0): \033[m')
                 if cpf != "0":
                     with open(caminho_usuarios, 'r') as usu:
                         usuarios = json.load(usu)
@@ -38,14 +39,14 @@ def promoveusuarios():
                             
                             with open(caminho_usuarios, 'w') as usus:
                                 json.dump(usuarios, usus)
-                            
-                            print('Usuário promovido com sucesso!!!')
+                            os.system('cls' if os.name == 'nt' else 'clear')
+                            print('\n\033[1;32mUsuário promovido com sucesso!!!\033[m')
                             return
                         except:
-                            print('Ocorreu algum erro! Tente novamente')
+                            print('\n\033[31;1mOcorreu algum erro! Tente novamente\033[m\n')
                 else:
                     break
             except ValueError:
-                print('CPF inválido.')
+                print('\n\033[31;1mCPF inválido\033[m\n')
 
     

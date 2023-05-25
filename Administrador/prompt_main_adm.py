@@ -8,7 +8,7 @@ from time import sleep
 def promptMainAdm():
     os.system('cls' if os.name == 'nt' else 'clear')
     while True:
-        print('')
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(f"\033[1;3;32mOlá, seja muito bem vindo(a) à nossa \033[37;4mAvaliação 360º\033[m ",  end='')
         #print(emoji.emojize(':partying_face:'))
         print('')

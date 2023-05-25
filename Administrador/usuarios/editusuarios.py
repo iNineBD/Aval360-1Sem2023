@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+import os
 
 caminho_turmas = "././data/turmas.json"
 caminho_times = "././data/times.json"
@@ -54,7 +55,7 @@ def editusuarios():
 
         arqv_usuarios = open(caminho_usuarios, encoding="UTF-8")
         usuarios = json.load(arqv_usuarios)
-        print("\n\033[36;1mTurmas: \033[m\n")
+        print("\033[36;1mTurmas: \033[m\n")
         x = 1
         for turma in turmas:
             print(f"\033[33;4m{x}\033[m - \033[33;4m{turma.get('identificacao')}\033[m")
@@ -68,8 +69,8 @@ def editusuarios():
                 else: #
                     turma_escolhida = turmas[entrada_turma - 1]
                     id_turma = turma_escolhida['id_turma']
-                    
-                    print("\n\033[36;1mOpções de time: \033[m")
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    print("\n\033[36;1mOpções de time: \033[m\n")
                     times_pertencentes_turma = []
                     for time in times:  
                         if time.get ('id_turma') == id_turma:
@@ -99,7 +100,7 @@ def editusuarios():
         for usuario in usuarios:
             if usuario.get ('id_time') == id_time:
                 integrantes.append(usuario)
-        
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("\n\033[36;1mIntegrantes: \033[m\n")
 
         a = 1
@@ -156,4 +157,5 @@ def editusuarios():
         with open(caminho_usuarios, 'w') as fp:
             json.dump(usuarios, fp)
         fp.close()
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("\n\033[1;32mIntegrante Editado com Sucesso!!\033[m")                
