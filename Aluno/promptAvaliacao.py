@@ -3,7 +3,9 @@ import json
 import os
 import random
 from Aluno.avaliacao.avaliacoes import autoAvaliacao, avaliacao,sprint_atual
-
+from emoji import emojize
+import shutil
+from time import sleep
 #Limpando a tela do terminal
 
 #Definindo o caminho do arquivo "usuarios.json"
@@ -15,10 +17,7 @@ def prompt_avaliacao(id_usu):
     os.system('cls' if os.name == 'nt' else 'clear')
     
     usu = getUsu(id_usu)
-    
-
-    #Exibindo uma mensagem de boas-vindas com o nome do usuário e pedindo que ele escolha uma opção:
-    print(f"Olá, {usu['identificacao']}!\nSeja muito bem vindo ao nosso Sistema de Avaliação 360º! O que deseja fazer?")
+    print(f"Olá, {usu['identificacao']}! 😀\nSeja muito bem vindo ao nosso Sistema de Avaliação 360º! O que deseja fazer?")
 
     while True:
         entrada_avaliacao = input("\n1 - Responder Avaliação"
