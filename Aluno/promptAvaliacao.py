@@ -1,27 +1,3 @@
-# #Importando módulos
-# import json
-# import os
-# import random
-# from Aluno.avaliacao.avaliacoes import autoAvaliacao, avaliacao,sprint_atual
-# from emoji import emojize
-# import shutil
-# from time import sleep
-# #Limpando a tela do terminal
-
-# # Obtém o tamanho da largura da janela
-# terminal_width = shutil.get_terminal_size().columns
-# # Texto a ser centralizado
-# texto = "\033[1;32mSISTEMA DE AVALIAÇÃO 360°\033[m"
-# # Calcula o espaçamento antes e depois do texto
-# espacos = (terminal_width - len(texto)) // 2
-# # Imprime o texto centralizado
-# print(" " * espacos + texto)
-# sleep(1)
-
-# #Definindo o caminho do arquivo "usuarios.json"
-
-# local_identificacao = '././data/usuarios.json'
-#Importando módulos
 import json
 import os
 import random

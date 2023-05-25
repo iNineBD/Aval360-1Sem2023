@@ -112,7 +112,7 @@ def autoAvaliacao(id_usuario):
     # Loop para obter as respostas do participante
     for pergunta in perguntas:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print('Autoavaliação:')
+        print("\033[1;32mAUTOAVALIAÇÃO\033[m")
         print(pergunta["descricao"])
         resposta = {'id_resposta': getNextIdResp(),
                     'ip': str(pergunta["ip"]),
@@ -129,7 +129,7 @@ def autoAvaliacao(id_usuario):
         # Salvar as respostas em um arquivo JSON
         with open(local_resposta, "w") as arquivo:
             json.dump(respostas, arquivo, indent=5) 
-    print("\nRespostas salvas no sistema!.\n")
+    print("\n\033[1;32mRESPOSTAS REGISTRADAS COM SUCESSO\033[m\n")
 
 def avaliacao(id_usuario, id_time):
             
