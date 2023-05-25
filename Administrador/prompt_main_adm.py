@@ -1,30 +1,27 @@
-
-
-
-
-
-
-
 import os
 from Administrador.turmas import prompt_turmas
 from Administrador.times import prompt_times
 from Administrador.sprints import prompt_sprints
 from Administrador.usuarios import prompt_usuarios
+from time import sleep
 
 def promptMainAdm():
     os.system('cls' if os.name == 'nt' else 'clear')
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
         print('')
-        print("Bem vindo!!!")
+        print(f"\033[1;3;32mOlá, seja muito bem vindo(a) à nossa \033[37;4mAvaliação 360º\033[m ",  end='')
+        #print(emoji.emojize(':partying_face:'))
         print('')
+        sleep (0.5)
         while True:
             try:
-                print("Escolha uma opção: \n1 - Controle de turmas\n2 - Controle de times\n3 - Controle de Usuários\n4 - Controle de Sprints\n0 - Voltar\n")
-                op = int(input("Digite aqui: "))
+                print("\033[3mPara iniciarmos, escolha uma opção\033[m:\n\n\033[4m1\033[m - Controle de Turmas\n\033[4m2\033[m - Controle de Times\n\033[4m3\033[m - Controle de Usuários\n\033[4m4\033[m - Controle de Sprints\n\033[4m0\033[m - Voltar\n\033[m")
+                op = int(input("\033[3;33;1mDigite aqui\033[m: "))
+                print('\n\033[32;3mACESSANDO NOSSO BANCO DE DADOS...\033[m')
+                sleep(0.5)
                 break
             except ValueError:
-                print('\nOpção inválida! Tente novamente!\n')   
+                print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')   
         
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -50,6 +47,6 @@ def promptMainAdm():
             break
             
         else:
-            print('\nOpção inválida! Tente novamente!')
+            print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')
         print("----------------------------------------------------")
         
