@@ -18,7 +18,7 @@ class Turmas:
         
         
         #pede ao usuário a identificacao da nova turma
-        identificacao = input("\n\033[3mOk, agora entre com o Nome da Turma\033[m: ")
+        identificacao = input("\033[36mDigite o Nome da Turma\033[m: ")
 
         # busca os dados das turmas ja existentes
         turmas = Turmas.getDataTurmas() 
@@ -35,10 +35,9 @@ class Turmas:
         
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
-        print('\n\033[32;3mSALVANDO...\033[m')
-        sleep(1)
 
-        return "\n\033[3mProntinho, Turma Cadastrada com sucesso!\033[m"
+        return "\n\n\033[1;32mTURMA CRIADA COM SUCESSO\033[m"
+    os.system('clear')
           
     #método para retornar o id da ultima turma cadastrada
     def getNextIdTurma():
@@ -96,7 +95,7 @@ class Turmas:
         turmas = Turmas.getDataTurmas()
         
         #pede ao usuário que entre com a turma que ele deseja editar
-        print('\n\033[3mOk, agora escolha uma Turma para Editar\033[m:\n')
+        #print("\033[36mDigite o Número da Turma que deseja Editar\033[m: ")
         x = 1
         for turma in turmas:
             print(f"{x} - {turma['identificacao']}")
@@ -104,12 +103,12 @@ class Turmas:
             
         while True:
             try:
-                op = int(input("\n\033[3;33;1mDigite aqui\033[m: "))
+                op = int(input("\n\033[36mDigite o Número da Turma que deseja Editar\033[m: "))
                 if op > x or op == 0:
                     raise ValueError
                 break
             except ValueError:
-                print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m') 
                 #print('Valor inválido')
         #calcula o index da turma selecionada no dicionário com todas as turmas
         turma_selecionada = turmas[op - 1]
@@ -118,7 +117,7 @@ class Turmas:
         id_turma = turma_selecionada['id_turma']
         
         #pede ao usuario a nova identificacao da turma
-        new_identificacao = input("\nEntre com a nova identificação: ")
+        new_identificacao = input("\n\033[36mEdite a Turma: \033[m")
         
         #gera um dicionario com a os dados da turma ja editados
         new_turma = {'id_turma': id_turma,
@@ -132,16 +131,15 @@ class Turmas:
         
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
-        print('\n\033[32;3mSALVANDO...\033[m')
-        sleep(1)
-        return "\n\033[3mProntinho, Turma Editada com sucesso!\033[m"
+
+        return "\n\n\033[1;32mTURMA EDITADA COM SUCESSO\033[m"
     
     def delTurma():
         #busca os dados de todas as turmas
         turmas = Turmas.getDataTurmas()
         
         #pede ao usuário que entre com a turma que ele deseja excluir
-        print('\n\033[mOk, qual Turma deseja Exluir?:\033[m\n')
+        print('\n\033[36mQual Turma deseja Exluir?:\033[m\n')
         x = 1
         for turma in turmas:
             print(f"{x} - {turma['identificacao']}")
@@ -149,12 +147,12 @@ class Turmas:
     
         while True:
             try:
-                op = int(input("\n\033[3;33;1mDigite aqui\033[m: "))
+                op = int(input("\n\033[36mDigite o Número da Turma que deseja Excluir\033[m: "))
                 if op > x or op == 0:
                     raise ValueError
                 break
             except ValueError:
-                print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m') 
         #calcula o index da turma selecionada no dicionário com todas as turmas
         turma_selecionada = turmas[op - 1]
         
@@ -164,7 +162,7 @@ class Turmas:
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
         
-        return "\n\033[3mProntinho, Turma Excluída com sucesso!\033[m"
+        return "\n\n\033[1;32mTURMA EXCLUÍDA COM SUCESSO\033[m"
     
     def updateAll(id_turma):
         with open(Turmas.local_data_time) as times:
