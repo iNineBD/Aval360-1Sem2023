@@ -6,25 +6,26 @@ def visualizarSprint():
         arqvturmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqvturmas) #load() - leitura do arquivo
         turmas = read_arqv_turmas
-        print("\nVisualizar Turmas:")
+
+        print("\n\033[32;1mVisualizar Turmas:\033[m\n")
         x = 1
         for name in turmas:
-            print(f"{x} - {name['identificacao']}")
+            print(f"\033[33;4m{x}\033[m - {name['identificacao']}")
             x = x+1
-        print('0 - Voltar')
+        print('\033[33;4m0\033[m - Voltar')
         
         while True:
             try:
-                num_turmas = int(input('\nDigite qual turma deseja visualizar: '))  #deixar apenas número inteiro
+                num_turmas = int(input('\n\033[36mDigite qual turma deseja visualizar: \033[m'))  #deixar apenas número inteiro
                 if num_turmas > x-1:
-                    print('\nEssa turma não existe')
+                    print('\n\033[31mEssa turma não existe\033[m')
                 elif num_turmas == 0:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     return 
                 else:
                     break    
             except ValueError:
-                print('\nOpção inválida! Tente novamente!')
+                print('\n\033[31mOpção inválida! Tente novamente!\033[m')
 
         os.system('cls' if os.name == 'nt' else 'clear')
         turma_escolhida = read_arqv_turmas[num_turmas - 1]
@@ -33,7 +34,7 @@ def visualizarSprint():
         
         #Visualizar Sprints:
         cond = True
-        print("\nVisualizar Sprints:")
+        print("\n\033[32;1mVisualizar Sprints:\033[m")
         while cond:
             if num_turmas < x:
                 #Visualizar Sprints:
@@ -48,15 +49,15 @@ def visualizarSprint():
                 
                 y = 1
                 for haha in sprint_turma:
-                    print(f"{y} - {haha['identificacao']}")
+                    print(f"\033[33;4m{y}\033[m - {haha['identificacao']}")
                     y = y + 1
         
-                print('0 - Voltar')
+                print('\033[33;4m0 - Voltar\033[m')
                 while True:
                     try:
-                        num_sprint = int(input('\nDigite qual sprint deseja visualizar: '))  #deixar apenas número inteiro
+                        num_sprint = int(input('\n\033[32mDigite qual sprint deseja visualizar: \033[m'))  #deixar apenas número inteiro
                         if num_sprint > y-1:
-                            print ("\nEssa sprint não existe")
+                            print ("\033[31m\nEssa sprint não existe\033[m")
                         elif num_sprint == 0:
                             os.system('cls' if os.name == 'nt' else 'clear')
                             cond = False
@@ -74,6 +75,6 @@ def visualizarSprint():
 
                             
                     except ValueError:
-                        print('\nOpção inválida! Tente novamente!')
+                        print('\033[31m\nOpção inválida! Tente novamente!\033[m')
             else:
-                print('\nValor inválido')
+                print('\033[31m\nValor inválido\033[m')
