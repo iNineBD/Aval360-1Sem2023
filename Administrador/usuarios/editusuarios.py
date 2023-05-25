@@ -54,45 +54,45 @@ def editusuarios():
 
         arqv_usuarios = open(caminho_usuarios, encoding="UTF-8")
         usuarios = json.load(arqv_usuarios)
-        print("\nTurmas: \n")
+        print("\n\033[36;1mTurmas: \033[m\n")
         x = 1
         for turma in turmas:
-            print(f"{x} - {turma.get('identificacao')}")
+            print(f"\033[33;4m{x}\033[m - \033[33;4m{turma.get('identificacao')}\033[m")
             x += 1
             
         while True:
             try:
-                entrada_turma = int(input(str("\nDigite qual turma acima deseja visualizar: ")))
+                entrada_turma = int(input(str("\n\033[36;1mDigite qual turma acima deseja visualizar: \033[m")))
                 if entrada_turma > x-1:
-                    print ("Essa turma não existe")
+                    print ("\033[31mESSA TURMA NÃO EXISTE!\033[m\n\033[31mTENTE NOVAMENTE!\033[m")
                 else: #
                     turma_escolhida = turmas[entrada_turma - 1]
                     id_turma = turma_escolhida['id_turma']
                     
-                    print("\nOpções de time: ")
+                    print("\n\033[36;1mOpções de time: \033[m")
                     times_pertencentes_turma = []
                     for time in times:  
                         if time.get ('id_turma') == id_turma:
                             times_pertencentes_turma.append(time)
                     y = 1
                     for time in times_pertencentes_turma:
-                        print(f"{y} - {time['identificacao']}")
+                        print(f"\033[33;4m{y}\033[m - \033[33;4m{time['identificacao']}\033[m")
                         y += 1
                     break
             except ValueError:
-                print('Valor inválido!')
+                print('\033[1;31mValor inválido!\033[m')
         while True:
             try:  
-                entrada_time = int(input(str("\nDigite qual time deseja visualizar: ")))
+                entrada_time = int(input(str("\n\033[36;1mDigite qual time deseja visualizar: \033[m")))
                 if entrada_time > y-1:
-                    print("Time inválido!")
+                    print("\033[1;31mTime inválido!\033[m")
                 else:
                     for time in times_pertencentes_turma:
                         if times_pertencentes_turma.index(time) == entrada_time - 1:
                             id_time = time['id_time']
                     break
             except ValueError:
-                print('Valor inválido!')
+                print('\033[1;31mValor inválido!\033[m')
                 # print("")
                 
         integrantes = []
@@ -100,51 +100,51 @@ def editusuarios():
             if usuario.get ('id_time') == id_time:
                 integrantes.append(usuario)
         
-        print("\nIntegrantes: \n")
+        print("\n\033[36;1mIntegrantes: \033[m\n")
 
         a = 1
         for integrante in integrantes:
-            print(f"{a} - {integrante['identificacao']}")
+            print(f"\033[33;4m{a}\033[m - \033[33;4m{integrante['identificacao']}\033[m")
             a += 1
                 
         while True:
             try:  
-                entrada_usu = int(input(str("\nEscolha o usuário para editar: ")))
+                entrada_usu = int(input(str("\n\033[36;1mEscolha o usuário para editar: \033[m")))
                 if entrada_usu > a-1:
-                    print("Time inválido!")
+                    print("\033[31;1mTime inválido!\033[m")
                 else:
                     id_usu = integrantes[entrada_usu - 1]['id_usuario']
                     integrante_sel = integrantes[entrada_usu - 1]
                     break
             except ValueError:
-                print('Valor inválido!')
+                print('\033[31;1mValor inválido!\033[m')
         
         
         while True:
-            nome = input("\nEntre com o nome do usuário: ")
+            nome = input("\n\033[36;1mEntre com o nome do usuário: \033[m")
             if valida_nome(nome):
                 break
             else:
-                print("Nome inválido - Tente novamente!")
+                print("\033[36;1mNome inválido - Tente novamente!\033[m")
         
         while True:
-            cpf = input("Entre com o CPF do usuário: ")
+            cpf = input("\033[36;1mEntre com o CPF do usuário: \033[m")
             if valida_cpf(cpf):
                 break
             else:
-                print("CPF inválido - Tente novamente!")
+                print("\033[31;1mCPF inválido - Tente novamente!\033[m")
         
         while True:
-            data = input('Digite a data de nascimento (dd/mm/aaaa) : ')
+            data = input('\033[36;1mDigite a data de nascimento (dd/mm/aaaa) : \033[m')
             try:
                 data = datetime.strptime(data, '%d/%m/%Y')
                 if data > datetime.now():
-                    print("\nData superior a data atual\n")
+                    print("\n\033[31;1mData superior a data atual\033[m\n")
                 else:
                     data_formatada = data.strftime("%d/%m/%Y")
                     break
             except ValueError:
-                print('\nDigitou uma data com formatação inválida ou uma data inválida\n')
+                print('\n\033[31;1mDigitou uma data com formatação inválida ou uma data inválida\033[m\n')
             
         for usuario in usuarios:
             if usuario["id_usuario"] == id_usu:
