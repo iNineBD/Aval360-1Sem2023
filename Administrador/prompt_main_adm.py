@@ -3,6 +3,7 @@ from Administrador.turmas import prompt_turmas
 from Administrador.times import prompt_times
 from Administrador.sprints import prompt_sprints
 from Administrador.usuarios import prompt_usuarios
+from Administrador.dashborads import prompt_dashs
 from time import sleep
 import shutil
 
@@ -58,6 +59,11 @@ def promptMainAdm():
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
             prompt_sprints.ctrl_sprints()          
+        
+        elif op == 5:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            prompt_dashs.view_dashs()
+                      
             
         elif op == 0:
             os.system('cls' if os.name == 'nt' else 'clear')
