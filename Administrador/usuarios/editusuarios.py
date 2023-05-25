@@ -64,7 +64,7 @@ def editusuarios():
             try:
                 entrada_turma = int(input(str("\n\033[36;1mDigite qual turma acima deseja visualizar: \033[m")))
                 if entrada_turma > x-1:
-                    print ("\033[31mESSA TURMA NÃO EXISTE!\033[m\n\033[31mTENTE NOVAMENTE!\033[m")
+                    print ("\033[31mEssa Turma Não Existe!\033[m\n\033[31mTente Novamente!\033[m")
                 else: #
                     turma_escolhida = turmas[entrada_turma - 1]
                     id_turma = turma_escolhida['id_turma']
@@ -155,4 +155,5 @@ def editusuarios():
         
         with open(caminho_usuarios, 'w') as fp:
             json.dump(usuarios, fp)
-        fp.close()                
+        fp.close()
+        print("\n\033[1;32mIntegrante Editado com Sucesso!!\033[m")                
