@@ -6,7 +6,6 @@ caminho_usuarios = "././data/usuarios.json"
 def promoveusuarios():
     condicao = True
     while condicao:
-        while True:
             try:
                 cpf = input('\033[36;1mDigite o CPF do usuário que será promovido(para cancelar digite 0): \033[m')
                 if cpf != "0":
@@ -45,7 +44,7 @@ def promoveusuarios():
                         except:
                             print('\n\033[31;1mOcorreu algum erro! Tente novamente\033[m\n')
                 else:
-                    break
+                    condicao = False
             except ValueError:
                 print('\n\033[31;1mCPF inválido\033[m\n')
 

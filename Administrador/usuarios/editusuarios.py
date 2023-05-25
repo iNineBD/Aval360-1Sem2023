@@ -43,6 +43,16 @@ def valida_nome(nome):
     else:
         return False
 
+def cpf_repetido(cpf):
+    with open(caminho_usuarios) as usu:
+        usu = json.load(usu)
+    
+    for i in usu:
+        if i['cpf'] == cpf:
+            return False
+    
+    return True
+
 
 
 # Função para editar um time
@@ -130,7 +140,7 @@ def editusuarios():
         
         while True:
             cpf = input("\033[36;1mEntre com o CPF do usuário: \033[m")
-            if valida_cpf(cpf):
+            if valida_cpf(cpf) and cpf_repetido(cpf):
                 break
             else:
                 print("\033[31;1mCPF inválido - Tente novamente!\033[m")
