@@ -44,6 +44,7 @@ def promoveusuarios():
                         except:
                             print('\n\033[31;1mOcorreu algum erro! Tente novamente\033[m\n')
                 else:
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     condicao = False
             except ValueError:
                 print('\n\033[31;1mCPF inválido\033[m\n')
