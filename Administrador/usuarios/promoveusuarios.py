@@ -47,6 +47,7 @@ def promoveusuarios():
                     os.system('cls' if os.name == 'nt' else 'clear')
                     condicao = False
             except ValueError:
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print('\n\033[31;1mCPF inválido\033[m\n')
 
     

@@ -16,6 +16,7 @@ def excluirusuarios():
             print(f" \033[33;4mCPF:\033[m {usuario.get('cpf')}\033[m")
             indice_vs_usuario_id[str(z)] = usuario.get("id_usuario")
             z += 1
+        
 
     while True:
         try:
@@ -25,7 +26,8 @@ def excluirusuarios():
                 raise ValueError
             else:
                 if user_del == 0:
-                     raise  ValueError
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    return
                 else:
                     break
         except ValueError:
