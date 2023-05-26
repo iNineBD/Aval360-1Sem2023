@@ -68,15 +68,19 @@ def editusuarios():
         print("\033[36;1mTurmas: \033[m\n")
         x = 1
         for turma in turmas:
-            print(f"\033[33;4m{x}\033[m - \033[33;4m{turma.get('identificacao')}\033[m")
+            print(f"\033[33;4m{x}\033[m - {turma.get('identificacao')}")
             x += 1
             
         while True:
             try:
+                print("\033[33;4m0\033[m - Voltar")
                 entrada_turma = int(input(str("\n\033[36;1mDigite qual turma acima deseja visualizar: \033[m")))
                 if entrada_turma > x-1:
                     print ("\033[31mEssa Turma Não Existe!\033[m\n\033[31mTente Novamente!\033[m")
-                else: #
+                elif entrada_turma == 0:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    return
+                else: 
                     turma_escolhida = turmas[entrada_turma - 1]
                     id_turma = turma_escolhida['id_turma']
                     os.system('cls' if os.name == 'nt' else 'clear')
@@ -87,16 +91,20 @@ def editusuarios():
                             times_pertencentes_turma.append(time)
                     y = 1
                     for time in times_pertencentes_turma:
-                        print(f"\033[33;4m{y}\033[m - \033[33;4m{time['identificacao']}\033[m")
+                        print(f"\033[33;4m{y}\033[m - {time['identificacao']}")
                         y += 1
                     break
             except ValueError:
                 print('\033[1;31mValor inválido!\033[m')
         while True:
-            try:  
+            try:
+                print("\033[33;4m0\033[m - Voltar")  
                 entrada_time = int(input(str("\n\033[36;1mDigite qual time deseja visualizar: \033[m")))
                 if entrada_time > y-1:
                     print("\033[1;31mTime inválido!\033[m")
+                elif entrada_time == 0:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    return
                 else:
                     for time in times_pertencentes_turma:
                         if times_pertencentes_turma.index(time) == entrada_time - 1:
@@ -115,14 +123,18 @@ def editusuarios():
 
         a = 1
         for integrante in integrantes:
-            print(f"\033[33;4m{a}\033[m - \033[33;4m{integrante['identificacao']}\033[m")
+            print(f"\033[33;4m{a}\033[m - {integrante['identificacao']}")
             a += 1
                 
         while True:
-            try:  
+            try:
+                print("\033[33;4m0\033[m - Voltar")
                 entrada_usu = int(input(str("\n\033[36;1mEscolha o usuário para editar: \033[m")))
                 if entrada_usu > a-1:
                     print("\033[31;1mTime inválido!\033[m")
+                elif entrada_usu == 0:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    return
                 else:
                     id_usu = integrantes[entrada_usu - 1]['id_usuario']
                     integrante_sel = integrantes[entrada_usu - 1]

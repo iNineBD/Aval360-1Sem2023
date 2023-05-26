@@ -11,7 +11,7 @@ def ctrl_usuarios():
         print('')
         while True:
             try:
-                print("\033[36;1mESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - \033[33;4mEditar Usuário\033[m\n\033[33;4m2\033[m - \033[33;4mExcluir Usuário\033[33;4m\n\033[33;4m3\033[m - \033[33;4mPromover Usuário á ADM\033[m\n\033[33;4m0\033[m - \033[33;4mVoltar\n\033[m")
+                print("\033[36;1mESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Editar Usuário\n\033[33;4m2\033[m - Excluir Usuário\n\033[33;4m3\033[m - Promover Usuário á ADM\n\033[33;4m0\033[m - Voltar\n")
                 
                 op = int(input("\033[36;1mDigite aqui\033[m: "))
                 break

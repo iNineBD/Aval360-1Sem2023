@@ -12,13 +12,14 @@ def excluirusuarios():
     z = 1
     for usuario in read_arqv_usuarios:
         if usuario.get("tp_usu") == 1:
-            print(f"\033[33;4m{z}\033[m - \033[33;4m{usuario.get('identificacao')}\033[m ",end="")
-            print(f"| \033[33;4mCPF:\033[m \033[33;4m{usuario.get('cpf')}\033[m")
+            print(f"\033[33;4m{z}\033[m - {usuario.get('identificacao')}",end="")
+            print(f" \033[33;4mCPF:\033[m {usuario.get('cpf')}\033[m")
             indice_vs_usuario_id[str(z)] = usuario.get("id_usuario")
             z += 1
 
     while True:
         try:
+            print("\033[33;4m0\033[m - Voltar")
             user_del = int(input("\n\033[36;1mEscolha o integrante que deseja excluir: \033[m"))
             if user_del > z:
                 raise ValueError

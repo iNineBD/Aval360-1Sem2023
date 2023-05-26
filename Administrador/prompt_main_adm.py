@@ -15,7 +15,7 @@ def promptMainAdm():
         sleep (0.5)
         while True:
             try:
-                print("\033[3mPara iniciarmos, escolha uma opção\033[m:\n\n\033[4m1\033[m - Controle de Turmas\n\033[4m2\033[m - Controle de Times\n\033[4m3\033[m - Controle de Usuários\n\033[4m4\033[m - Controle de Sprints\n\033[4m0\033[m - Voltar\n\033[m")
+                print("\033[36;1mPara iniciarmos, escolha uma opção\033[m:\n\n\033[33;4m1\033[m - Controle de Turmas\n\033[33;4m2\033[m - Controle de Times\n\033[33;4m3\033[m - Controle de Usuários\n\033[33;4m4\033[m - Controle de Sprints\n\033[33;4m0\033[m - Voltar\n\033[m")
                 op = int(input("\033[3;33;1mDigite aqui\033[m: "))
                 print('\n\033[32;3mACESSANDO NOSSO BANCO DE DADOS...\033[m')
                 sleep(0.5)
