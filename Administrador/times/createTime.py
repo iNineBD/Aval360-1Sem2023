@@ -20,7 +20,6 @@ def createTime():
             
         while True:
             try:
-                print("\033[33;4m0\033[m - Voltar\033[m")
                 op = int(input('\n\033[36;1mDigite qual turma deseja inserir um time: \033[m'))  #deixar apenas número inteiro
                 if op < x:
                     break
