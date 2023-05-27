@@ -21,10 +21,10 @@ def prompt_avaliacao(id_usu):
     os.system('cls' if os.name == 'nt' else 'clear')
     
     usu = getUsu(id_usu)
-    print(f"\033[32;3;1mOlá \033[m\033[36;1m{usu['identificacao']}\033[m 😀. \033[32;3;1mSeja muito bem vindo (a)... para começar:\033[m")
+    print(f"\033[32;3;1mOlá \033[m\033[36;1m{usu['identificacao']}\033[m 😀. \033[32;3;1mSeja muito bem vindo (a)!\033[m")
 
     while True:
-        entrada_avaliacao = input("\n\033[36;1m\nESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Iniciar Avaliação\n\033[33;4m0\033[m - Sair\033[m\n\n\033[36;1mO QUE DESEJA FAZER?: \033[m")
+        entrada_avaliacao = input("\033[36;1m\nESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Iniciar Avaliação\n\033[33;4m0\033[m - Sair\033[m\n\n\033[36;1mO QUE DESEJA FAZER?: \033[m")
         
         if entrada_avaliacao == '1':
             print("\nOpção 1 selecionada: 'Iniciar Avaliação'")
