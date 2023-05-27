@@ -31,7 +31,7 @@ def excluirusuarios():
                 else:
                     break
         except ValueError:
-            print("\n\033[31;1mValor inválido, tente novamente.\033[m")
+            print("\n\033[31;1mValor inválido, tente novamente.\033[m\n")
 
     userdeletado = read_arqv_usuarios[user_del - 1]
     read_arqv_usuarios.remove(userdeletado)

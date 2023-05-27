@@ -21,11 +21,11 @@ def promptMainAdm():
                 sleep(0.5)
                 break
             except ValueError:
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')   
         
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-
             prompt_turmas.ctrl_turmas()
 
         elif op == 2:
