@@ -30,7 +30,7 @@ def delTime():
         arqvtimes = open(caminho_time)
         read_arqv_times = json.load(arqvtimes)
 
-        print("\n\033[36;1mVisualizar Times:")
+        print("\n\033[36;1mVisualizar Times:\033[m")
         times_turma = []
         for time in read_arqv_times:
             if time.get('id_turma') == id_turma:
@@ -38,19 +38,19 @@ def delTime():
 
         y = 1
         for time in times_turma:
-            print(f"{y} - {time['identificacao']}")
+            print(f"\033[33;4m{y}\033[m - {time['identificacao']}")
             y += 1
 
 
         while True:
             try:
-                op_time_del = int(input('Digite o time que deseja excluir: '))
+                op_time_del = int(input('\033[36;1mDigite o time que deseja excluir: \033[m'))
                 if op_time_del > y - 1:
                     raise ValueError
                 else:
                     break
             except ValueError:
-                print('Valor inválido\n')
+                print('\033[31mValor inválido\033[m\n')
 
         time_del = times_turma[op_time_del - 1]
         read_arqv_times.remove(time_del)
@@ -72,4 +72,4 @@ def delTime():
         with open(caminho_time, 'w') as output:
             json.dump(read_arqv_times, output)
         output.close()
-        print('\nTurma excluída!!!\n')
+        print('\n\033[1;32mTurma excluída!!!\033[m\n')
