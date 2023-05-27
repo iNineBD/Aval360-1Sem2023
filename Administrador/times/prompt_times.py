@@ -9,13 +9,11 @@ import os
 def ctrl_times():
     condicao = True
     while condicao:
-        print('')
-        print("Controle de Times!!!")
-        print('')
+        print("\n\033[32;1;4mControle de Times!!!\033[m\n")
         while True:
             try:
-                print("Escolha uma opção: \n1 - Criar novo time\n2 - Visualizar times\n3 - Editar times\n4 - Excluir times\n5 - Visualizar integrantes\n0 - Voltar\n")
-                op = int(input("Digite aqui: "))
+                print("\033[36;1mEscolha uma opção: \033[m\n\033[33;4m1\033[m - Criar novo Time\n\033[33;4m2\033[m - Visualizar Times\n\033[33;4m3\033[m - Editar Times\n\033[33;4m4\033[m - Excluir Times\n\033[33;4m5\033[m - Visualizar Integrantes\n\033[33;4m0\033[m - Voltar\n")
+                op = int(input("\033[36;1mDigite aqui: \033[m"))
                 break
             except ValueError:
                 print('\nOpção inválida! Tente novamente!\n')
@@ -45,5 +43,5 @@ def ctrl_times():
             condicao = False
             
         else:
-            print('\nOpção inválida! Tente novamente!')
-        print("")
+            print('\n\033[31mOpção inválida! Tente novamente!\033[m\n')
+        
