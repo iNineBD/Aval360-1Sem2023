@@ -7,7 +7,8 @@ def visualizarSprint():
         read_arqv_turmas = json.load(arqvturmas) #load() - leitura do arquivo
         turmas = read_arqv_turmas
 
-        print("\n\033[32;1mVisualizar Turmas:\033[m\n")
+        print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Vizualizar Sprint"\033[m\n')
+        print("\n\033[32;1mTurmas:\033[m\n")
         x = 1
         for name in turmas:
             print(f"\033[33;4m{x}\033[m - {name['identificacao']}")
@@ -34,7 +35,7 @@ def visualizarSprint():
         
         #Visualizar Sprints:
         cond = True
-        print("\n\033[32;1mVisualizar Sprints:\033[m")
+        print("\n\033[32;1mSprints:\033[m")
         while cond:
             if num_turmas < x:
                 #Visualizar Sprints:
@@ -52,7 +53,7 @@ def visualizarSprint():
                     print(f"\033[33;4m{y}\033[m - {haha['identificacao']}")
                     y = y + 1
         
-                print('\033[33;4m0 - Voltar\033[m')
+                print('\033[33;4m0\033[m - Voltar')
                 while True:
                     try:
                         num_sprint = int(input('\n\033[32mDigite qual sprint deseja visualizar: \033[m'))  #deixar apenas número inteiro

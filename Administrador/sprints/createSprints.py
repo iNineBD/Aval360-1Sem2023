@@ -18,9 +18,6 @@ def createSprints():
         sprints = []
     
 
-
-
-
     # Visualizar Turmas
     # Verifica se o arquivo JSON já existe
     if os.path.exists(caminho_turmas):
@@ -31,6 +28,7 @@ def createSprints():
         # Se não existir, cria uma lista vazia
         read_arqv_turmas = []
     
+    print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Criar Sprint"\033[m\n')
     print("\n\033[32;1mTurmas:\033[m\n")
     x = 1
     for turma in read_arqv_turmas:

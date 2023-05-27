@@ -9,8 +9,8 @@ def delSprint():
     arqv_turmas = open(caminho_turma)
     read_arqv_turmas = json.load(arqv_turmas)
     
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print("\n\033[32;Turmas:\033[m")
+    print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Deletar Sprint"\033[m\n')
+    print("\n\033[32;1mTurmas:\033[m")
     y = 1
     for turma in read_arqv_turmas:
         print(f"\033[33;4m{y}\033[m - {turma.get('identificacao')}")
@@ -52,7 +52,7 @@ def delSprint():
     while True:
         try:
             num_sprint = int(input('\033[36m\nDigite aqui: \033[m'))
-            if num_sprint > x-1 or num_sprint == 0:
+            if num_sprint > x-1:
                 raise ValueError
             else:
                 if num_sprint == 0:

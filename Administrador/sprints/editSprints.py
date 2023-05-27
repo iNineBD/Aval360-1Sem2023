@@ -9,7 +9,7 @@ def editSprints():
     with open(caminho_turma, 'r') as turmas:
         turmas = json.load(turmas)
 
-    os.system('cls' if os.name == 'nt' else 'clear')
+    print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Editar Sprint"\033[m\n')
     print("\n\033[32;1mTurmas:\033[m\n")
     x = 1
     for turma in turmas:
