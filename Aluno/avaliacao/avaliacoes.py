@@ -48,12 +48,12 @@ def sprint_atual(id_usuario):
                 else:
                     continue
             if data_atual > data_final_avaliacao_sprint :
-                print(f'Já passou a data limite para responder a avaliação da {identificacao_sprint}')
-                print('\n--------------------------------\n')
+                print(f'\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mPrazo expirado para responder a avaliação da\033[m {identificacao_sprint}')
+                #print('\n--------------------------------\n')
                 return None
         else:
-            print('\nNão existe sprint cadastrado para essa turma')
-            print('\n--------------------------------\n')
+            print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não tem sprint cadastrada!\033[m')
+            #print('\n--------------------------------\n')
             return None
 
 
@@ -84,13 +84,13 @@ def autoAvaliacao(id_usuario):
     def obter_resposta():
         while True:
             try:
-                resposta = int(input("\nPor favor, avalie de 1 a 5: "))
+                resposta = int(input("\n\033[36;1mPOR FAVOR, AVALIEI DE 1 a 5: \033[m"))
                 if resposta < 1 or resposta > 5:
                     raise ValueError
                 break
             except ValueError:
                 print(
-                    "\nNúmero Invalido\nPor favor, insira um número inteiro entre 1 e 5.")
+                    "\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mInsira um número inteiro\033[m\033[31m entre 1 e 5\033[m")
         return resposta
 
 
@@ -137,14 +137,14 @@ def avaliacao(id_usuario, id_time):
     def obter_resposta():
         while True:
             try:
-                resposta = int(input("\nPor favor, avalie de 1 a 5: "))
+                resposta = int(input("\n\033[36;1mPOR FAVOR, AVALIEI DE 1 a 5: \033[m"))
                 if resposta < 1 or resposta > 5:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     raise ValueError
                 break
             except ValueError:
                 print(
-                    "\nNúmero Invalido\nPor favor, insira um número inteiro entre 1 e 5.")
+                    "\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mInsira um número inteiro\033[m\033[31m entre 1 e 5\033[m")
         return resposta
 
 
@@ -179,7 +179,7 @@ def avaliacao(id_usuario, id_time):
     #para cada usuario pertencente ao time
     for usuario in time_usuarios:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print('Avaliação do grupo:')
+        print("\033[1;32mAVALIAÇÃO DO GRUPO\033[m")
         
     
         # Verifica se o arquivo JSON já existe
@@ -224,4 +224,4 @@ def avaliacao(id_usuario, id_time):
             # Salvar as respostas em um arquivo JSON
             with open(local_resposta_grupo, "w") as arquivo:
                 json.dump(respostas, arquivo, indent=5) 
-        print("\nRespostas salvas no sistema!.\n")
+        print("\n\033[1;32mRESPOSTAS REGISTRADAS COM SUCESSO\033[m\n")

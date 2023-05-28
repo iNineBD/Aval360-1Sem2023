@@ -2,26 +2,26 @@
     {
         "ip": "1",
         "pergunta": "Comunicacão e Trabalho em Equipe",
-        "descricao": "\n 1ª Pergunta - Como você avalia sua própria capacidade de se comunicar efetivamente e colaborar com outros membros da equipe para alcançar objetivos em projetos de trabalho em equipe?"
+        "descricao": "\n1ª PERGUNTA:\nComo você avalia sua própria capacidade de se comunicar efetivamente e colaborar com outros membros da equipe para alcançar objetivos em projetos de trabalho em equipe?"
     },
     {
         "ip": "2",
         "pergunta": "Engajamento e Proatividade",
-        "descricao": "\n 2ª Pergunta - Como você avalia o seu próprio nível de engajamento e proatividade no ambiente de trabalho?"
+        "descricao": "\n2ª PERGUNTA\nComo você avalia o seu próprio nível de engajamento e proatividade no ambiente de trabalho?"
     },
     {
         "ip": "3",
         "pergunta": "Conhecimento e Aplicabilidade",
-        "descricao": "\n 3ª Pergunta - Como você avalia seu próprio nível de conhecimento técnico em relação às tecnologias e ferramentas usadas no trabalho e sua capacidade de aplicá-lo em projetos e tarefas específicas relacionadas ao trabalho?"
+        "descricao": "\n3ªPERGUNTA\nComo você avalia seu próprio nível de conhecimento técnico em relação às tecnologias e ferramentas usadas no trabalho e sua capacidade de aplicá-lo em projetos e tarefas específicas relacionadas ao trabalho?"
     },
     {
         "ip": "4",
         "pergunta": "Entrega de Resultados com Valor Agregado",
-        "descricao": "\n 4ª Pergunta - Como você avalia sua própria capacidade de entregar resultados com valor agregado em projetos e tarefas relacionadas ao trabalho?"
+        "descricao": "\n4ªPERGUNTA\nComo você avalia sua própria capacidade de entregar resultados com valor agregado em projetos e tarefas relacionadas ao trabalho?"
     },
     {
         "ip": "5",
         "pergunta": "Autogestão de Atividades",
-        "descricao": "\n 5ª Pergunta - Como você avalia sua própria capacidade de gerenciar suas próprias atividades e prazos para atingir as metas do projeto?"
+        "descricao": "\n5ªPERGUNTA\nComo você avalia sua própria capacidade de gerenciar suas próprias atividades e prazos para atingir as metas do projeto?"
     }
 ]
