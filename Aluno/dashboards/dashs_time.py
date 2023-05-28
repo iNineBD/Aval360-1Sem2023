@@ -69,16 +69,16 @@ def dashs_time(id_usuario, id_time):
                             elif resp['resp'] == "5":
                                 likert5 += 1
 
-                    coluna = [(likert1), (likert2), (likert3), (likert4), (likert5)]
+                    coluna = [(likert5), (likert4), (likert3), (likert2), (likert1)]
                     total = sum(coluna)
                     
                     if total != 0:
-                        coluna = [(likert1/total)*100, (likert2/total)*100, (likert3/total)*100, (likert4/total)*100, (likert5/total)*100]
+                        coluna = [(likert5/total)*100, (likert4/total)*100, (likert3/total)*100, (likert2/total)*100, (likert1/total)*100]
                     dados_colunas[sprint['identificacao']] = coluna
                 
                 indice_comp += 1
                 df = pd.DataFrame(dados_colunas, index = ['Excelente', 'Muito bom', 'Bom', 'Razoável', 'Ruim'])
-                print(f"\n{comp} (%)\n")
+                print(f"\n\033[32;3;1m{comp} (%)\033[m\n")
                 print(df.round(2))
                 print('\n------------------------------------')
                 print("")
@@ -87,5 +87,3 @@ def dashs_time(id_usuario, id_time):
                 break
             
         break
-        
-dashs_time(0, 1)
