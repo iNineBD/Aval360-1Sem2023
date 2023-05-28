@@ -36,7 +36,8 @@ def prompt_avaliacao(id_usu):
                 avaliacao(usu['id_usuario'], usu['id_time'])
         #Se o usuário escolher a opção "Sair", exibimos uma mensagem de despedida e definimos a variável "y" como False:    
         elif entrada_avaliacao == '0':
-            print("\nOpção 0 selecionada: 'Sair'\n\nSaindo...\n")
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("\n\033[36;3mVOCÊ OPTOU POR SAIR DO PROGRAMA\033[m\n\033[32;3;1mOBRIGADO PELA PARTICIPAÇÃO!\033[m")
             break
         #Se o usuário escolher uma opção inválida, exibimos uma mensagem de erro:    
         else:
