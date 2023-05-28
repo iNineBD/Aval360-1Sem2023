@@ -207,7 +207,7 @@ def avaliacao(id_usuario, id_time):
         # Loop para obter as respostas do participante
         for pergunta in perguntas:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print("\033[1;32mAVALIAÇÃO DE CADA INTEGRANTE DO TIME6\033[m")
+            print("\033[1;32mAVALIAÇÃO DE CADA INTEGRANTE DO TIME\033[m")
             print('\n\033[32;3;1mEm relação a(ao) integrante\033[m \033[m\033[36;1m{}\033[m, \033[32;3;1mresponda:\033[m\n'.format(usuario['identificacao']))
             print(pergunta["descricao"])
             resposta = {'id_resposta': getNextIdResp(),

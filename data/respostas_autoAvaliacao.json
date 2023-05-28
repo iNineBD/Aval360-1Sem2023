@@ -341,5 +341,40 @@
           "resp": "5",
           "id_usuario": 3,
           "id_sprint": 6
+     },
+     {
+          "id_resposta": 49,
+          "ip": "1",
+          "resp": "1",
+          "id_usuario": 3,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 50,
+          "ip": "2",
+          "resp": "5",
+          "id_usuario": 3,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 51,
+          "ip": "3",
+          "resp": "5",
+          "id_usuario": 3,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 52,
+          "ip": "4",
+          "resp": "4",
+          "id_usuario": 3,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 53,
+          "ip": "5",
+          "resp": "3",
+          "id_usuario": 3,
+          "id_sprint": 6
      }
 ]

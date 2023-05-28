@@ -15,7 +15,7 @@ def nextId():
         return 0
 
 def setFeedback(id_usu_avaliador, id_usu_avaliado, id_sprint, id_resp, id_pergunta):
-    feedback = input("\nExplique o motivo da nota: ")
+    feedback = input("\n\033[33mPor favor, explique o motivo da nota;\033[m \033[4;3mé muito importante para nós\033[m: ")
     
     if os.path.exists(caminho_feedbacks):
         with open(caminho_feedbacks, 'r') as feedbacks:
