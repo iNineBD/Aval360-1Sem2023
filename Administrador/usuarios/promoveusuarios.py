@@ -39,15 +39,17 @@ def promoveusuarios():
                             with open(caminho_usuarios, 'w') as usus:
                                 json.dump(usuarios, usus)
                             os.system('cls' if os.name == 'nt' else 'clear')
-                            print('\n\033[1;32mUsuário promovido com sucesso!!!\033[m')
+                            print("\n\n\033[1;32mUSUÁRIO PROMOVIDO COM SUCESSO\033[m\n")
                             return
                         except:
-                            print('\n\033[31;1mOcorreu algum erro! Tente novamente\033[m\n')
+                            print('\n\033[31mOCORREU ALGUM ERRO!\033[m\n\033[3mTente novamente!\033[m')
+                            #print('\n\033[31;1mOcorreu algum erro! Tente novamente\033[m\n')
                 else:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     condicao = False
             except ValueError:
                 os.system('cls' if os.name == 'nt' else 'clear')
-                print('\n\033[31;1mCPF inválido\033[m\n')
+                print('\n\033[31mCPF INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+                
 
     

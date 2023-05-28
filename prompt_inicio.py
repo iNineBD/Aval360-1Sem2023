@@ -45,5 +45,5 @@ while True:
         exit()
             
     else:
-        print('\n\033[31mOpção inválida! Tente novamente!\033[m\n')   
+        print('\n\033[31mOpção inválida! Tente novamente!\033[m\n') 
     #print("----------------------------------------------------")

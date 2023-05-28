@@ -12,7 +12,7 @@ def delTime():
         print("\n\033[36;1mVisualizar Turmas:\033[m")
         x = 1
         for turma in read_arqv_turmas:
-            print(f"\n\033[33;4m{x}\033[m - {turma.get('identificacao')}")
+            print(f"\033[33;4m{x}\033[m - {turma.get('identificacao')}")
             x +=1
         while True:
             try:
@@ -22,7 +22,7 @@ def delTime():
                 else:
                     break
             except ValueError:
-                print('\033[31mValor inválido\033[m\n')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
                 
         turma_escolhida = read_arqv_turmas[num_turmas - 1]
         id_turma = turma_escolhida['id_turma']
@@ -31,7 +31,7 @@ def delTime():
         arqvtimes = open(caminho_time)
         read_arqv_times = json.load(arqvtimes)
 
-        print("\n\033[36;1mVisualizar Times:\033[m")
+        print("\n\033[36;1mVisualizar Times:\033[m\n")
         times_turma = []
         for time in read_arqv_times:
             if time.get('id_turma') == id_turma:
@@ -45,13 +45,13 @@ def delTime():
 
         while True:
             try:
-                op_time_del = int(input('\033[36;1mDigite o time que deseja excluir: \033[m'))
+                op_time_del = int(input('\n\033[36;1mDigite o time que deseja excluir: \033[m'))
                 if op_time_del > y - 1:
                     raise ValueError
                 else:
                     break
             except ValueError:
-                print('\033[31mValor inválido\033[m\n')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m\n')
 
         time_del = times_turma[op_time_del - 1]
         read_arqv_times.remove(time_del)
@@ -74,4 +74,4 @@ def delTime():
             json.dump(read_arqv_times, output)
         output.close()
         os.system('cls' if os.name == 'nt' else 'clear')
-        print('\n\033[1;32mTurma excluída!!!\033[m\n')
+        print("\n\033[1;32mTIME EXCLUIDO COM SUCESSO\033[m")

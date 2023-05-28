@@ -76,7 +76,8 @@ def editusuarios():
                 print("\033[33;4m0\033[m - Voltar")
                 entrada_turma = int(input(str("\n\033[36;1mDigite qual turma acima deseja visualizar: \033[m")))
                 if entrada_turma > x-1:
-                    print ("\033[31mEssa Turma Não Existe!\033[m\n\033[31mTente Novamente!\033[m")
+                    print('\n\033[31mESSA TURMA NÃO EXISTE!\033[m\n\033[3mTente novamente!\033[m')
+                    #print ("\033[31mEssa Turma Não Existe!\033[m\n\033[31mTente Novamente!\033[m")
                 elif entrada_turma == 0:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     return
@@ -95,13 +96,15 @@ def editusuarios():
                         y += 1
                     break
             except ValueError:
-                print('\033[1;31mValor inválido!\033[m')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+                #print('\033[1;31mValor inválido!\033[m')
         while True:
             try:
                 print("\033[33;4m0\033[m - Voltar")  
                 entrada_time = int(input(str("\n\033[36;1mDigite qual time deseja visualizar: \033[m")))
                 if entrada_time > y-1:
-                    print("\033[1;31mTime inválido!\033[m")
+                    #print("\033[1;31mTime inválido!\033[m")
+                    print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
                 elif entrada_time == 0:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     return
@@ -111,7 +114,8 @@ def editusuarios():
                             id_time = time['id_time']
                     break
             except ValueError:
-                print('\033[1;31mValor inválido!\033[m')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+                #print('\033[1;31mValor inválido!\033[m')
                 # print("")
                 
         integrantes = []
@@ -131,7 +135,8 @@ def editusuarios():
                 print("\033[33;4m0\033[m - Voltar")
                 entrada_usu = int(input(str("\n\033[36;1mEscolha o usuário para editar: \033[m")))
                 if entrada_usu > a-1:
-                    print("\033[31;1mTime inválido!\033[m")
+                    print('\n\033[31mTIME INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+                    #print("\033[31;1mTime inválido!\033[m")
                 elif entrada_usu == 0:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     return
@@ -140,7 +145,8 @@ def editusuarios():
                     integrante_sel = integrantes[entrada_usu - 1]
                     break
             except ValueError:
-                print('\033[31;1mValor inválido!\033[m')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+                #print('\033[31;1mValor inválido!\033[m')
         
         
         while True:
@@ -148,14 +154,15 @@ def editusuarios():
             if valida_nome(nome):
                 break
             else:
-                print("\033[36;1mNome inválido - Tente novamente!\033[m")
+                print('\n\033[31mNOME INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+                #print("\033[36;1mNome inválido - Tente novamente!\033[m")
         
         while True:
             cpf = input("\033[36;1mEntre com o CPF do usuário: \033[m")
             if valida_cpf(cpf) and cpf_repetido(cpf):
                 break
             else:
-                print("\033[31;1mCPF inválido - Tente novamente!\033[m")
+                print("\033[31;1mCPF INVÁLIDO - Tente novamente!\033[m")
         
         while True:
             data = input('\033[36;1mDigite a data de nascimento (dd/mm/aaaa) : \033[m')
@@ -180,4 +187,5 @@ def editusuarios():
             json.dump(usuarios, fp)
         fp.close()
         os.system('cls' if os.name == 'nt' else 'clear')
-        print("\n\033[1;32mIntegrante Editado com Sucesso!!\033[m")                
+        print("\n\n\033[1;32mINTEGRANTE EDITADO COM SUCESSO\033[m\n")
+                     

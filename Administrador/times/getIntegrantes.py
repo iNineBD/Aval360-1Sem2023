@@ -13,19 +13,19 @@ def getIntegrantes():
         
         x = 1
         for turma in turmas:
-            print(f"\n\033[33;4m{x}\033[m - {turma.get('identificacao')}")
+            print(f"\033[33;4m{x}\033[m - {turma.get('identificacao')}")
             x += 1
             
         while True:
             try:
                 entrada_turma = int(input(str("\n\033[36;1mDigite qual turma acima deseja visualizar: \033[m")))
                 if entrada_turma > x-1:
-                    print ("\033[31mEssa turma não existe!\033[m")
-                else: #
+                    print('\n\033[31mTURMA NÃO EXISTE!\033[m\n\033[3mTente novamente!\033[m')
+                else: 
                     turma_escolhida = turmas[entrada_turma - 1]
                     id_turma = turma_escolhida['id_turma']
                     
-                    print("\033[36;1mOpções de time:\033[m")
+                    print("\n\033[36;1mOpções de time:\033[m\n")
                     times_pertencentes_turma = []
                     for time in times:  
                         if time.get ('id_turma') == id_turma:
@@ -36,20 +36,19 @@ def getIntegrantes():
                         y += 1
                     break
             except ValueError:
-                print('\033[31mValor inválido!\033[m')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
         while True:
             try:  
-                entrada_time = int(input(str("\033[36;1mDigite qual time deseja visualizar: \033[m")))
+                entrada_time = int(input(str("\n\033[36;1mDigite qual time deseja visualizar os integrantes: \033[m")))
                 if entrada_time > y-1:
-                    print("\033[31mTime inválido!\033[m")
+                    print('\n\033[31mTIME INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m\n')
                 else:
                     for time in times_pertencentes_turma:
                         if times_pertencentes_turma.index(time) == entrada_time - 1:
                             id_time = time['id_time']
                     break
             except ValueError:
-                print('\033[31mValor inválido!\033[m')
-                # print("")
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m\n')
 
         a = 1
         for usuario in usuarios:

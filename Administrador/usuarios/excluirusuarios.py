@@ -31,7 +31,7 @@ def excluirusuarios():
                 else:
                     break
         except ValueError:
-            print("\n\033[31;1mValor inválido, tente novamente.\033[m\n")
+            print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
 
     userdeletado = read_arqv_usuarios[user_del - 1]
     read_arqv_usuarios.remove(userdeletado)
@@ -40,4 +40,4 @@ def excluirusuarios():
             json.dump(read_arqv_usuarios, output)
     output.close()
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("\n\033[1;32mIntegrante Excluido com Sucesso!!\033[m")
+    print("\n\n\033[1;32mINTEGRANTE EXCLUÍDO COM SUCESSO\033[m")

@@ -16,7 +16,7 @@ def visualizarTimes():
                 os.system('cls' if os.name == 'nt' else 'clear')
                 break
             except ValueError:
-                print('\n\033[31mOpção inválida! Tente novamente!\033[m\n')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
         
         turma_escolhida = read_arqv_turmas[num_turmas - 1]
         id_turma = turma_escolhida['id_turma']

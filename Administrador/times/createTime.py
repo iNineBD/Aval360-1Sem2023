@@ -12,7 +12,7 @@ def createTime():
          #Visualizar Turmas:
         arqv_turmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
-        print("\n\033[36;1mVisualizar Turmas: \033[m\n")
+        print("\n\033[36;1mTurmas:\033[m\n")
         x = 1
         for turma in read_arqv_turmas:
             print(f"\033[33;4m{x}\033[m - {turma.get('identificacao')}")
@@ -26,7 +26,7 @@ def createTime():
                 else:
                     raise ValueError
             except ValueError:
-                print('\n\033[31mOpção inválida! Tente novamente!\033[m\n')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
         
         turma_escolhida = read_arqv_turmas[op - 1]
         id_turma = turma_escolhida['id_turma']
@@ -60,4 +60,4 @@ def createTime():
             # Escrevendo os dados atualizados no arquivo
             json.dump(times, f)
             os.system('cls' if os.name == 'nt' else 'clear')
-            print('\n\033[1;32mTime criado!\033[m')
+            print('\n\033[1;32mTIME CRIADO COM SUCESSO!\033[m\n')
