@@ -84,7 +84,7 @@ def autoAvaliacao(id_usuario):
     def obter_resposta():
         while True:
             try:
-                resposta = int(input("\n\033[36;1mPOR FAVOR, AVALIEI DE 1 a 5: \033[m"))
+                resposta = int(input("\n\033[36;1mPOR FAVOR, AVALIE DE 1 a 5: \033[m"))
                 if resposta < 1 or resposta > 5:
                     raise ValueError
                 break
@@ -137,7 +137,7 @@ def avaliacao(id_usuario, id_time):
     def obter_resposta():
         while True:
             try:
-                resposta = int(input("\n\033[36;1mPOR FAVOR, AVALIEI DE 1 a 5: \033[m"))
+                resposta = int(input("\n\033[36;1mPOR FAVOR, AVALIE DE 1 a 5: \033[m"))
                 if resposta < 1 or resposta > 5:
                     os.system('cls' if os.name == 'nt' else 'clear')
                     raise ValueError
@@ -178,7 +178,7 @@ def avaliacao(id_usuario, id_time):
     
     #para cada usuario pertencente ao time
     for usuario in time_usuarios:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        #os.system('cls' if os.name == 'nt' else 'clear')
         print("\033[1;32mAVALIAÇÃO DO GRUPO\033[m")
         
     
@@ -207,7 +207,8 @@ def avaliacao(id_usuario, id_time):
         # Loop para obter as respostas do participante
         for pergunta in perguntas:
             os.system('cls' if os.name == 'nt' else 'clear')
-            print('\n Em relação a(ao) integrante {}, responda: \n'.format(usuario['identificacao']))
+            print("\033[1;32mAVALIAÇÃO DE CADA INTEGRANTE DO TIME6\033[m")
+            print('\n\033[32;3;1mEm relação a(ao) integrante\033[m \033[m\033[36;1m{}\033[m, \033[32;3;1mresponda:\033[m\n'.format(usuario['identificacao']))
             print(pergunta["descricao"])
             resposta = {'id_resposta': getNextIdResp(),
                         'ip': str(pergunta["ip"]),
@@ -224,4 +225,6 @@ def avaliacao(id_usuario, id_time):
             # Salvar as respostas em um arquivo JSON
             with open(local_resposta_grupo, "w") as arquivo:
                 json.dump(respostas, arquivo, indent=5) 
+                os.system('cls' if os.name == 'nt' else 'clear')
         print("\n\033[1;32mRESPOSTAS REGISTRADAS COM SUCESSO\033[m\n")
+        #os.system('cls' if os.name == 'nt' else 'clear')
