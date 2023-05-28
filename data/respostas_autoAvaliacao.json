@@ -446,5 +446,110 @@
           "resp": "5",
           "id_usuario": 2,
           "id_sprint": 6
+     },
+     {
+          "id_resposta": 64,
+          "ip": "1",
+          "resp": "5",
+          "id_usuario": 2,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 65,
+          "ip": "2",
+          "resp": "1",
+          "id_usuario": 2,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 66,
+          "ip": "3",
+          "resp": "5",
+          "id_usuario": 2,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 67,
+          "ip": "4",
+          "resp": "5",
+          "id_usuario": 2,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 68,
+          "ip": "5",
+          "resp": "5",
+          "id_usuario": 2,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 69,
+          "ip": "1",
+          "resp": "5",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 70,
+          "ip": "2",
+          "resp": "1",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 71,
+          "ip": "3",
+          "resp": "5",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 72,
+          "ip": "4",
+          "resp": "5",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 73,
+          "ip": "5",
+          "resp": "5",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 74,
+          "ip": "1",
+          "resp": "5",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 75,
+          "ip": "2",
+          "resp": "1",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 76,
+          "ip": "3",
+          "resp": "3",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 77,
+          "ip": "4",
+          "resp": "5",
+          "id_usuario": 7,
+          "id_sprint": 6
+     },
+     {
+          "id_resposta": 78,
+          "ip": "5",
+          "resp": "5",
+          "id_usuario": 7,
+          "id_sprint": 6
      }
 ]
