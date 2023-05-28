@@ -1,4 +1,5 @@
 import json
+import os
 
 caminho_turma = '././data/turmas.json'
 caminho_time = '././data/times.json'
@@ -72,4 +73,5 @@ def delTime():
         with open(caminho_time, 'w') as output:
             json.dump(read_arqv_times, output)
         output.close()
+        os.system('cls' if os.name == 'nt' else 'clear')
         print('\n\033[1;32mTurma excluída!!!\033[m\n')

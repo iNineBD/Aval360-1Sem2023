@@ -16,7 +16,7 @@ def ctrl_times():
                 op = int(input("\033[36;1mDigite aqui: \033[m"))
                 break
             except ValueError:
-                print('\nOpção inválida! Tente novamente!\n')
+                print('\n\033[31mOpção inválida! Tente novamente!\033[m\n')
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')

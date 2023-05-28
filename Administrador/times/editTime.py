@@ -1,11 +1,12 @@
 import json
+import os
 
 # Função para editar um time
 def editTime():
     arqv_turmas = open("././data/turmas.json", encoding="UTF-8")
     ler_arqv_turmas = json.load(arqv_turmas)
 
-    print("\nTurmas:")
+    print("\n033[36;1mTurmas:\033[m")
     indice_vs_turma_id = {}
     for i in range(len(ler_arqv_turmas)):
         turma = ler_arqv_turmas[i]
@@ -56,6 +57,7 @@ def editTime():
     ler_arqv_times[ind_time_alvo]["nr_integrantes"] = input("\033[36;1mNúmero máximo de integrantes: \033[m")
     ler_arqv_times[ind_time_alvo]["id_turma"] = id_turma
 
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("\n\033[33m--------------------------\033[m")
     print(indice_time, "-", ler_arqv_times[ind_time_alvo]["identificacao"])
     print("\033[33m--------------------------\033[m")
