@@ -17,11 +17,6 @@ while True:
 # Imprime o texto centralizado
     print(" " * espacos + texto)
     sleep (1)
-    # texto = 'sistema de avaliação 360º'
-    # terminal_width = shutil.get_terminal_size().columns
-    # espacos = (terminal_width - len(texto)) 
-    # print("\033[1;32mSISTEMA DE AVALIAÇÃO 360°\033[m" * espacos)
-    # print('')
     while True:
         try:
             print("\033[32;3;1mSeja muito bem vindo (a)... para começar:\033[m\n\033[36;1m\nESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Logar\n\033[33;4m2\033[m - Cadastrar\n\033[33;4m0\033[m - Sair\n")
