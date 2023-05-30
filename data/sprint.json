@@ -13,7 +13,7 @@
         "id_turma": "0",
         "inicio": "10/12/2020",
         "final": "20/12/2020",
-        "final_avaliacao": "25/05/2023"
+        "final_avaliacao": "30/05/2023"
     },
     {
         "id_sprint": 7,
@@ -35,7 +35,7 @@
         "id_sprint": 9,
         "identificacao": "Funciona 2",
         "id_turma": "0",
-        "inicio": "01/05/2023",
+        "inicio": "30/05/2023",
         "final": "15/05/2023",
         "final_avaliacao": "20/05/2023"
     }

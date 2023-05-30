@@ -1,49 +1,48 @@
-#Importando módulos
 import json
 import os
 import random
-from Aluno.avaliacao.avaliacoes import autoAvaliacao, avaliacao,sprint_atual
+from Aluno.avaliacao.avaliacoes import autoAvaliacao, avaliacao, sprint_atual
+from Aluno.dashboards.prompt_dashs_integrante import ctrl_dashs
+from emoji import emojize
+import shutil
+from time import sleep
 
-#Limpando a tela do terminal
+# Limpando a tela do terminal
+os.system('cls' if os.name == 'nt' else 'clear')
+
+# Resto do código...
 
 #Definindo o caminho do arquivo "usuarios.json"
 local_identificacao = '././data/usuarios.json'
 
+# Resto do código...
 
 def prompt_avaliacao(id_usu):
     
     os.system('cls' if os.name == 'nt' else 'clear')
     
     usu = getUsu(id_usu)
-    
-
-    #Exibindo uma mensagem de boas-vindas com o nome do usuário e pedindo que ele escolha uma opção:
-    print(f"Olá, {usu['identificacao']}!\nSeja muito bem vindo ao nosso Sistema de Avaliação 360º! O que deseja fazer?")
+    print(f"\033[32;3;1mOlá \033[m\033[36;1m{usu['identificacao']}\033[m 😀. \033[32;3;1mSeja muito bem vindo (a)!\033[m")
 
     while True:
-        entrada_avaliacao = input("\n1 - Responder Avaliação"
-                                    "\n"
-                                    "\n2 - Sair"
-                                    "\n"
-                                    "\n"
-                                    "Escolha uma opção: ")
-
-        #Se o usuário escolher a opção "Responder Avaliação", limpamos a tela novamente e chamamos as funções "autoAvaliacao" e "avaliacao" do módulo "avaliacoes", passando o id do usuário e o id do time como parâmetros:
+        entrada_avaliacao = input("\033[36;1m\nESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Iniciar Avaliação\n\033[33;4m2\033[m - Dashboards\n\033[33;4m0\033[m - Sair\033[m\n\n\033[36;1mO QUE DESEJA FAZER?: \033[m")
+        
         if entrada_avaliacao == '1':
-            print("\nOpção 1 selecionada: 'Responder avaliação'")
-            os.system('cls' if os.name == 'nt' else 'clear')
-
+            print("\nOpção 1 selecionada: 'Iniciar Avaliação'")
             a = sprint_atual(usu['id_usuario'])
             if a is not None:
                 autoAvaliacao(usu['id_usuario'])
                 avaliacao(usu['id_usuario'], usu['id_time'])
-        #Se o usuário escolher a opção "Sair", exibimos uma mensagem de despedida e definimos a variável "y" como False:    
         elif entrada_avaliacao == '2':
-            print("\nOpção 2 selecionada: 'Sair'\n\nSaindo...\n")
+            os.system('cls' if os.name == 'nt' else 'clear')
+            ctrl_dashs(int(usu['id_usuario']), int(usu['id_time']))
+        elif entrada_avaliacao == '0':
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("\n\033[36;3mVOCÊ OPTOU POR SAIR DO PROGRAMA\033[m\n\033[32;3;1mOBRIGADO PELA PARTICIPAÇÃO!\033[m")
             break
         #Se o usuário escolher uma opção inválida, exibimos uma mensagem de erro:    
         else:
-            print("\nOpção inválida.\nPor favor, escolha uma opção válida.\n")
+            print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
         
         
 def getUsu(id_usu):
