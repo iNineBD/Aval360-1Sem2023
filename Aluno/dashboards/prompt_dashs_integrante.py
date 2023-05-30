@@ -1,8 +1,6 @@
 import os
-# from Aluno.dashboards.dashs_time import dashs_time
-# from Aluno.dashboards.dashs_integrante import dashs_integrante
-from dashs_time import dashs_time
-from dashs_integrante import dashs_integrante
+from Aluno.dashboards.dashs_time import dashs_time
+from Aluno.dashboards.dashs_integrante import dashs_integrante
 
 def ctrl_dashs(id_usuario, id_time):
     print("\033[32;1mVISUALIZAÇÃO DE DASHBOARDS\033[m\n")
@@ -34,5 +32,3 @@ def ctrl_dashs(id_usuario, id_time):
             
         else:
             print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
-
-ctrl_dashs(2, 1)

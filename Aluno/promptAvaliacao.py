@@ -2,6 +2,7 @@ import json
 import os
 import random
 from Aluno.avaliacao.avaliacoes import autoAvaliacao, avaliacao, sprint_atual
+from Aluno.dashboards.prompt_dashs_integrante import ctrl_dashs
 from emoji import emojize
 import shutil
 from time import sleep
@@ -24,17 +25,17 @@ def prompt_avaliacao(id_usu):
     print(f"\033[32;3;1mOlá \033[m\033[36;1m{usu['identificacao']}\033[m 😀. \033[32;3;1mSeja muito bem vindo (a)!\033[m")
 
     while True:
-        entrada_avaliacao = input("\033[36;1m\nESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Iniciar Avaliação\n\033[33;4m0\033[m - Sair\033[m\n\n\033[36;1mO QUE DESEJA FAZER?: \033[m")
+        entrada_avaliacao = input("\033[36;1m\nESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Iniciar Avaliação\n\033[33;4m2\033[m - Dashboards\n\033[33;4m0\033[m - Sair\033[m\n\n\033[36;1mO QUE DESEJA FAZER?: \033[m")
         
         if entrada_avaliacao == '1':
             print("\nOpção 1 selecionada: 'Iniciar Avaliação'")
-            os.system('cls' if os.name == 'nt' else 'clear')
-
             a = sprint_atual(usu['id_usuario'])
             if a is not None:
                 autoAvaliacao(usu['id_usuario'])
                 avaliacao(usu['id_usuario'], usu['id_time'])
-        #Se o usuário escolher a opção "Sair", exibimos uma mensagem de despedida e definimos a variável "y" como False:    
+        elif entrada_avaliacao == '2':
+            os.system('cls' if os.name == 'nt' else 'clear')
+            ctrl_dashs(int(usu['id_usuario']), int(usu['id_time']))
         elif entrada_avaliacao == '0':
             os.system('cls' if os.name == 'nt' else 'clear')
             print("\n\033[36;3mVOCÊ OPTOU POR SAIR DO PROGRAMA\033[m\n\033[32;3;1mOBRIGADO PELA PARTICIPAÇÃO!\033[m")
