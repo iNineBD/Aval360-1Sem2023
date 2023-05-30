@@ -22,8 +22,10 @@ def ctrl_turmas():
             print("\033[32;1mCONTROLE DE TURMAS\033[m\n")
             print('\n\033[3;1mVocê escolheu a opção:\033[m \033[33m"Criar Turma"\033[m\n')
             print(Turmas.createTurmas())
-            
+            os.system('cls' if os.name == 'nt' else 'clear')
+
         elif op == 2:
+            print("\033[32;1mCONTROLE DE TURMAS\033[m\n")
             os.system('cls' if os.name == 'nt' else 'clear')
             print("\033[32;1mCONTROLE DE TURMAS\033[m\n")
             print('\n\033[3;1mVocê escolheu a opção:\033[m \033[33m"Visualizar Turma"\033[m\n')
