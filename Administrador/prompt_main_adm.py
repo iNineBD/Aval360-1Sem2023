@@ -3,7 +3,9 @@ from Administrador.turmas import prompt_turmas
 from Administrador.times import prompt_times
 from Administrador.sprints import prompt_sprints
 from Administrador.usuarios import prompt_usuarios
+from Administrador.dashborads import prompt_dashs
 from time import sleep
+import shutil
 
 def promptMainAdm():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -32,21 +34,25 @@ def promptMainAdm():
             os.system('cls' if os.name == 'nt' else 'clear')
             prompt_times.ctrl_times()
 
-            
+                
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
             prompt_usuarios.ctrl_usuarios()
-            
+                
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-            prompt_sprints.ctrl_sprints()
-            
+            prompt_sprints.ctrl_sprints()          
         
+        elif op == 5:
+            os.system('cls' if os.name == 'nt' else 'clear')
+            prompt_dashs.view_dashs()
+                      
+            
         elif op == 0:
             os.system('cls' if os.name == 'nt' else 'clear')
             break
-            
+                
         else:
             print('\n\033[1;31mOPÇÃO INVÁLIDA!\nTente novamente...\033[m\n')
-        print("----------------------------------------------------")
+            print("----------------------------------------------------")
         
