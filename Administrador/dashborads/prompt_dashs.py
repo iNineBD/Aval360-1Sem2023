@@ -1,6 +1,8 @@
 # from sprints.createSprint import 
 # from sprints.editSprint import 
 
+from Administrador.dashborads.global_grupo_avaliacao import visualizarDashGlobal
+
 
 import os
 
@@ -21,8 +23,10 @@ def view_dashs():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
             
+            if visualizarDashGlobal() == 0:
+                return view_dashs()
+        
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
             pass
