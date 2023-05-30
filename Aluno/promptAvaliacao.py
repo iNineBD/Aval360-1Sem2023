@@ -2,7 +2,7 @@
 import json
 import os
 import random
-from Aluno.avaliacao.avaliacoes import autoAvaliacao, avaliacao
+from Aluno.avaliacao.avaliacoes import autoAvaliacao, avaliacao,sprint_atual
 
 #Limpando a tela do terminal
 
@@ -32,9 +32,11 @@ def prompt_avaliacao(id_usu):
         if entrada_avaliacao == '1':
             print("\nOpção 1 selecionada: 'Responder avaliação'")
             os.system('cls' if os.name == 'nt' else 'clear')
-            
-            autoAvaliacao(usu['id_usuario'])
-            avaliacao(usu['id_usuario'], usu['id_time'])
+
+            a = sprint_atual(usu['id_usuario'])
+            if a is not None:
+                autoAvaliacao(usu['id_usuario'])
+                avaliacao(usu['id_usuario'], usu['id_time'])
         #Se o usuário escolher a opção "Sair", exibimos uma mensagem de despedida e definimos a variável "y" como False:    
         elif entrada_avaliacao == '2':
             print("\nOpção 2 selecionada: 'Sair'\n\nSaindo...\n")

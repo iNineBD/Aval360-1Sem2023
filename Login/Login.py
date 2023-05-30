@@ -42,20 +42,21 @@ class Login:
                 # se n estiver ok, erro
                 raise ValueError
         except ValueError:
-            print('Credenciais inválidas!!! Tente novamente.')
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print('\n\033[31mCREDENCIAIS INVÁLIDAS!\n\033[m\033[3mTente novamente!\033[m') 
             
             
     def setTimeUsu(id_usu, index_usu):
         while True:
             try:
-                cod =  input('digite o código de acesso: ')
+                cod =  input('\033[36;3mDigite o Código de Acesso: \033[m')
                 if not Login.verificaCod(cod):
                     raise ValueError
                 else:
                     id_time = Login.verificaCod(cod)
                     break
             except:
-                print("Código de acesso inválido! Tente novamente!")
+                print('\n\033[31mCÓDIGO DE ACESSO INVÁLIDO!\n\033[m\033[3mTente novamente!\033[m') 
         
         with open(caminho_usuarios, encoding="UTF-8") as usuarios:
             usuarios = json.load(usuarios)

@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime, timedelta
 
 caminho_sprint = "././data/sprint.json"
 caminho_turmas = "././data/turmas.json"
@@ -53,6 +54,7 @@ def createSprints():
     turma_escolhida = read_arqv_turmas[op - 1]
     id_turma = turma_escolhida['id_turma']
     
+
     identificacao_sprint = input("\033[36mEntre com a identificacao da sprint:\033[m ")
     
     while True:
@@ -92,12 +94,12 @@ def createSprints():
                 print('\033[31;1mFormato de data inválida digite somente numeros\033[m\n')
         else: 
             print('\033[31;1mData inválida\033[Data inválida digite conforme dd/mm/aaaa\033[m\n')
-            
-        
 
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
+
         data_final = str(input('\033[36mEntre com a data final (dd/mm/aaaa):\033[m'))
+
         if len(data_final) == 10 and data_final[2] == '/' and data_final[5] == '/':
             dia = (data_final.split('/')[0]) #// 1000000
             mes = (data_final.split('/')[1])#%1000000//10000
@@ -130,15 +132,33 @@ def createSprints():
                     if data_inicio >= data_final:
                         print('\033[31;1mData inicial maior que a data final \nDigite uma data maior que a inicial\033[m\n')
                     else:
+
                         print('\033[32;1mData final Salva\033[m\n')
                         break
             else:
                 print('\033[31;1mFormato de data inválida, digite somente numeros\033[m\n')
         else: 
             print('\033[31;1mData inválida digite conforme dd/mm/aaaa\033[m\n')
-            
-            
 
+    def dataResponderAvaliacao():
+        while True:
+                data = input('\nDigite a data final para responder a avaliação (dd/mm/aaaa) : ')
+                try:
+                    data = datetime.strptime(data, '%d/%m/%Y')
+                    for sprint in sprints:
+                        data_final_sprint = datetime.strptime(data_final, '%d/%m/%Y')
+                        limite_dias = timedelta(days=5)
+                        data_final_resposta = limite_dias + data_final_sprint
+                    if data > data_final_sprint and data <= data_final_resposta:
+                        data_responder_sprint = data.strftime("%d/%m/%Y")
+                        return data_responder_sprint
+                    else:
+                        print("\nData precisa ser no máximo 5 dias após o final da sprint.")
+                except ValueError:
+                    print('\nFormato de data inválido ou data inválida.\n')
+
+    # Aqui solicita a data final para responder a avaliação 
+    data_final_avaliacao = dataResponderAvaliacao()
 
     maior_id_sprint = 0
     for sprint in sprints:
@@ -150,7 +170,8 @@ def createSprints():
         'identificacao': identificacao_sprint,
         'id_turma': id_turma,
         'inicio': data_inicio,
-        'final' : data_final
+        'final' : data_final,
+        'final_avaliacao': data_final_avaliacao
         
     }
     
@@ -159,6 +180,6 @@ def createSprints():
     with open(caminho_sprint, 'w') as f:
         # Escrevendo os dados atualizados no arquivo
         json.dump(sprints, f)
-
     print('\033[32;1mNova sprint criada!\033[m')
+
 
