@@ -1,20 +1,22 @@
 import json
+import os
 
 def visualizarTimes():
         #Visualizar Turmas:
         arqv_turmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
-        print("Turmas:\n")
+        print("\033[36;1mTurmas:\033[m\n")
         x = 1
         for turma in read_arqv_turmas:
-            print(f"{x} - {turma.get('identificacao')}")
+            print(f"\033[33;4m{x}\033[m - {turma.get('identificacao')}")
             x = x+1
         while True:
             try:
-                num_turmas = int(input('\nDigite qual turma deseja visualizar: '))  #deixar apenas número inteiro
+                num_turmas = int(input('\n\033[36;1mDigite qual turma deseja visualizar: \033[m'))#deixar apenas número inteiro
+                os.system('cls' if os.name == 'nt' else 'clear')
                 break
             except ValueError:
-                print('\nOpção inválida! Tente novamente!\n')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
         
         turma_escolhida = read_arqv_turmas[num_turmas - 1]
         id_turma = turma_escolhida['id_turma']
@@ -28,11 +30,11 @@ def visualizarTimes():
                 y = 1
                 for time in read_arqv_times:
                     if time.get('id_turma') == id_turma:
-                        print(f"{y} - {time.get('identificacao')}")
-                        print(f"Código de acesso: {time.get('cod_acesso')}")
-                        print("-----------------------------------")
+                        print(f"\033[33;4m{y}\033[m - {time.get('identificacao')}")
+                        print(f"\033[33;4mCódigo de acesso:\033[m {time.get('cod_acesso')}")
+                        print("\033[33m-----------------------------------\033[m")
                         y = y + 1
                 break   
             else:
-                print('\nValor inválido')
+                print('\n\033[31mValor inválido\033[m')
                 return visualizarTimes()

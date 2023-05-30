@@ -42,6 +42,7 @@ class Login:
                 # se n estiver ok, erro
                 raise ValueError
         except ValueError:
+            os.system('cls' if os.name == 'nt' else 'clear')
             print('\n\033[31mCREDENCIAIS INVÁLIDAS!\n\033[m\033[3mTente novamente!\033[m') 
             
             

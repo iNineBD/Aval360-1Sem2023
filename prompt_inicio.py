@@ -16,7 +16,6 @@ while True:
     espacos = (terminal_width - len(texto)) // 2
 # Imprime o texto centralizado
     print(" " * espacos + texto)
-    sleep (1)
     while True:
         try:
             print("\033[32;3;1mSeja muito bem vindo (a)... para começar:\033[m\n\033[36;1m\nESCOLHA UMA OPÇÃO:\n\033[m \n\033[33;4m1\033[m - Logar\n\033[33;4m2\033[m - Cadastrar\n\033[33;4m0\033[m - Sair\n")
@@ -41,5 +40,5 @@ while True:
         exit()
             
     else:
-        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')   
+        print('\n\033[31mOpção inválida! Tente novamente!\033[m\n') 
     #print("----------------------------------------------------")
