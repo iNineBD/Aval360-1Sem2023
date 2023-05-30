@@ -163,7 +163,7 @@ def visualizarDashTime():
                         print(df.round(2))
                         print('\n-----------------------\n')
                         
-                else:
+                if len(sprint_times) <= 0:
                     print('Sem sprints para esse time')
             except ValueError:
                 print("\nNão existe integrantes nesse time para mostrar um dashboard")
