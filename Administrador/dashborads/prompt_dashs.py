@@ -1,8 +1,6 @@
 # from sprints.createSprint import 
 # from sprints.editSprint import 
 from Administrador.dashborads.dash_time import visualizarDashTime
-
-
 import os
 
 
@@ -30,8 +28,14 @@ def view_dashs():
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            visualizarDashTime()
             
+            
+            if visualizarDashTime() == True:
+                
+                opcao = int(input('\n0 - Voltar\n\nDigite aqui: '))
+                if opcao == 0:
+                    os.system('cls' if os.name == 'nt' else 'clear')
+                    return view_dashs()
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
