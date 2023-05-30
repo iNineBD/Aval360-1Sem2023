@@ -16,7 +16,6 @@ while True:
     espacos = (terminal_width - len(texto)) // 2
 # Imprime o texto centralizado
     print(" " * espacos + texto)
-    sleep (1)
     # texto = 'sistema de avaliação 360º'
     # terminal_width = shutil.get_terminal_size().columns
     # espacos = (terminal_width - len(texto)) 
@@ -46,5 +45,5 @@ while True:
         exit()
             
     else:
-        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')   
+        print('\n\033[31mOpção inválida! Tente novamente!\033[m\n') 
     #print("----------------------------------------------------")
