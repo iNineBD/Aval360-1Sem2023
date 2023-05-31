@@ -1,6 +1,7 @@
-# from sprints.createSprint import 
-# from sprints.editSprint import 
-
+from Administrador.dashborads.global_grupo_avaliacao import visualizarDashGlobal
+from Administrador.dashborads.dash_time import visualizarDashTime
+from Administrador.dashborads.dash_turma import dashturma
+from Administrador.dashborads.dash_integrante import dash_integrante_adm
 
 import os
 
@@ -21,20 +22,21 @@ def view_dashs():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
             
+            if visualizarDashGlobal() == 0:
+                return view_dashs()
+        
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
+            dashturma()
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
-            
+            visualizarDashTime()
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
+            dash_integrante_adm()
         
         elif op == 0:
             break
