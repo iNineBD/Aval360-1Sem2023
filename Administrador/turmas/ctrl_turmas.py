@@ -98,7 +98,7 @@ class Turmas:
         #print("\033[36mDigite o Número da Turma que deseja Editar\033[m: ")
         x = 1
         for turma in turmas:
-            print(f"{x} - {turma['identificacao']}")
+            print(f"\033[33;4m{x}\033[m - {turma['identificacao']}")
             x=x+1
             
         while True:
@@ -117,7 +117,7 @@ class Turmas:
         id_turma = turma_selecionada['id_turma']
         
         #pede ao usuario a nova identificacao da turma
-        new_identificacao = input("\n\033[36mEdite a Turma: \033[m")
+        new_identificacao = input("\n\033[36mEscreva o novo nome da Turma: \033[m")
         
         #gera um dicionario com a os dados da turma ja editados
         new_turma = {'id_turma': id_turma,
@@ -142,7 +142,7 @@ class Turmas:
         print('\n\033[36mQual Turma deseja Exluir?:\033[m\n')
         x = 1
         for turma in turmas:
-            print(f"{x} - {turma['identificacao']}")
+            print(f"\033[33;4m{x}\033[m - {turma['identificacao']}")
             x=x+1
     
         while True:
