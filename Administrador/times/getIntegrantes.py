@@ -39,7 +39,7 @@ def getIntegrantes():
                 print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
         while True:
             try:  
-                entrada_time = int(input(str("\n\033[36;1mDigite qual time deseja visualizar os integrantes: \033[m")))
+                entrada_time = int(input(str("\n\033[36;1mDigite qual time deseja visualizar os integrantes: \033[m\n")))
                 if entrada_time > y-1:
                     print('\n\033[31mTIME INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m\n')
                 else:
@@ -53,5 +53,5 @@ def getIntegrantes():
         a = 1
         for usuario in usuarios:
             if usuario.get ('id_time') == id_time:
-                print(a, "-", usuario.get('identificacao'))
+                print(f"\033[33;4m{a}\033[m - {usuario.get('identificacao')}")
                 a +=1
