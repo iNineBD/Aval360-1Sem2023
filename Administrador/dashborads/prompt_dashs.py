@@ -1,5 +1,6 @@
 from Administrador.dashborads.dash_time import visualizarDashTime
 from Administrador.dashborads.dash_turma import dashturma
+from Administrador.dashborads.dash_integrante import dash_integrante_adm
 
 import os
 
@@ -25,16 +26,14 @@ def view_dashs():
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
             dashturma()
-            pass
             
         elif op == 3:
             os.system('cls' if os.name == 'nt' else 'clear')
-        
             visualizarDashTime()
             
         elif op == 4:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
+            dash_integrante_adm()
         
         elif op == 0:
             break

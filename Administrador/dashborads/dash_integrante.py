@@ -1,6 +1,7 @@
 import os
 import json
 import pandas as pd
+from time import sleep
 
 local_resposta_auto = '././data/respostas_autoAvaliacao.json'
 local_resposta_grupo = '././data/respostas_grupoAvaliacao.json'
