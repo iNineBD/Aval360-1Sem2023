@@ -1,7 +1,9 @@
 import pandas as pd
 import json
+import os
 
 def dashturma():
+    if os.path.exists('././data/respostas_autoAvaliacao.json') and os.path.exists('././data/respostas_grupoAvaliacao.json'):
         print("Dashboard turmas!")
         competencias = ["Comunicacão e Trabalho em Equipe", "Engajamento e Proatividade", "Conhecimento e Aplicabilidade", "Entrega de Resultados com Valor Agregado", "Autogestão de Atividades"]
         arqv_turmas = open('././data/turmas.json')
@@ -84,5 +86,7 @@ def dashturma():
                     else:
                         print('Sem sprints!')
                 break
-    
+    else:
+        print("Não exista avaliação para ser mostrada\n")
+        
 
