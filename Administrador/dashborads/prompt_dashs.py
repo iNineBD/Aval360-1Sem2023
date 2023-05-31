@@ -1,3 +1,4 @@
+from Administrador.dashborads.global_grupo_avaliacao import visualizarDashGlobal
 from Administrador.dashborads.dash_time import visualizarDashTime
 from Administrador.dashborads.dash_turma import dashturma
 from Administrador.dashborads.dash_integrante import dash_integrante_adm
@@ -21,8 +22,10 @@ def view_dashs():
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
-            pass
             
+            if visualizarDashGlobal() == 0:
+                return view_dashs()
+        
         elif op == 2:
             os.system('cls' if os.name == 'nt' else 'clear')
             dashturma()
