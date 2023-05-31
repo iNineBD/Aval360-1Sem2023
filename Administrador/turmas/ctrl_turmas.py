@@ -36,8 +36,8 @@ class Turmas:
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
 
+        os.system('cls' if os.name == 'nt' else 'clear')
         return "\n\n\033[1;32mTURMA CRIADA COM SUCESSO\033[m"
-    os.system('clear')
           
     #método para retornar o id da ultima turma cadastrada
     def getNextIdTurma():
@@ -85,7 +85,7 @@ class Turmas:
         turmas = Turmas.getNameAllTurmas()
         x = 1
         for name in turmas:
-            print(f"{x} - {name}")
+            print(f"\033[33;4m{x}\033[m - {name}")
             x = x+1
         
         
@@ -131,8 +131,8 @@ class Turmas:
         
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
-
-        return "\n\n\033[1;32mTURMA EDITADA COM SUCESSO\033[m"
+        os.system('cls' if os.name == 'nt' else 'clear')
+        return "\n\033[1;32mTURMA EDITADA COM SUCESSO\033[m"
     
     def delTurma():
         #busca os dados de todas as turmas
@@ -161,7 +161,7 @@ class Turmas:
         
         # salvando os dados no json
         Turmas.setDataTurmas(turmas)
-        
+        os.system('cls' if os.name == 'nt' else 'clear')
         return "\n\n\033[1;32mTURMA EXCLUÍDA COM SUCESSO\033[m"
     
     def updateAll(id_turma):

@@ -40,4 +40,4 @@ def excluirusuarios():
             json.dump(read_arqv_usuarios, output)
     output.close()
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("\n\n\033[1;32mINTEGRANTE EXCLUÍDO COM SUCESSO\033[m")
+    print("\n\n\033[1;32mINTEGRANTE EXCLUÍDO COM SUCESSO\033[m\n")
