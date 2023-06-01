@@ -17,7 +17,7 @@ def visualizarDashGlobal():
             else:
                 print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m') 
                 #print("\033[Não exista avaliação para ser mostrada\n")
-                print('------------------------------------------')
+                #print('------------------------------------------')
                 return False
             
     if verificacao() == True:

@@ -47,4 +47,4 @@ def view_dashs():
         else:
             print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
             #print('\nOpção inválida! Tente novamente!')
-        print("")
+        #print("")

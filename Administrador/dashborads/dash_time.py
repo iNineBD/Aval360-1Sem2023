@@ -17,8 +17,9 @@ def visualizarDashTime():
                 return True 
 
             else:
-                print("Não exista avaliação para ser mostrada\n")
-                print('------------------------------------------')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m')
+                #print("Não exista avaliação para ser mostrada\n")
+                #print('------------------------------------------')
                 return False
             
     if verificacao() == True:
@@ -166,7 +167,8 @@ def visualizarDashTime():
                 if len(sprint_times) <= 0:
                     print('Sem sprints para esse time')
             except ValueError:
-                print("\nNão existe integrantes nesse time para mostrar um dashboard")
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mSem dashboard de integrante para exibição!\033[m')
+                #print("\nNão existe integrantes nesse time para mostrar um dashboard")
         
         
         turma = visualizarTurmas()
