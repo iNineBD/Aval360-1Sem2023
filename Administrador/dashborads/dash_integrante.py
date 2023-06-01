@@ -27,7 +27,7 @@ def dash_integrante_adm():
             with open(local_usu) as u:
                 usuarios = json.load(u)
         else:
-            print("As avaliações ainda não começaram! Volte mais tarde!")
+            print("\033[31mAs avaliações ainda não começaram\033[m!\n\033[3mVolte mais tarde\033[m!")
             break
         
         x = 1

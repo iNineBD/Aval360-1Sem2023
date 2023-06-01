@@ -17,7 +17,7 @@ def nextId():
 def setFeedback(id_usu_avaliador, id_usu_avaliado, id_sprint, id_resp, id_pergunta):
     while True:
         try:
-            feedback = input("\n\033[33mExplique o motivo da nota:\033[m")
+            feedback = input("\n\033[33mExplique o motivo da nota: \033[m")
             if feedback == "":
                 raise ValueError
             else:

@@ -7,15 +7,17 @@ import os
 
 
 def view_dashs():
+    print("\033[32;1mVISUALIZAÇÃO DE DASHBOARDS\033[m\n")
     while True:
-        print('')
+        #print('')
         
-        print("Vizualizção de Dashboards")
-        print('')
+        #print("Vizualizção de Dashboards")
+        #print('')
         while True:
             try:
-                print("Escolha um indicador: \n1 - Global\n2 - Turma\n3 - Time\n4 - Integrante\n0 - Voltar\n")
-                op = int(input("Digite aqui: "))
+                print("\033[36;1m\nESCOLHA UM INDICADOR:\n\033[m  \n\033[33;4m1\033[m - Global\n\033[33;4m2\033[m - Turma\n\033[33;4m3\033[m - Time\n\033[33;4m4\033[m - Integrante\n\033[33;4m0\033[m - Voltar\033[m\n")
+                #op = int(input("Digite aqui: "))
+                op = int(input("\033[36;1mO QUE DESEJA FAZER?: \033[m"))
                 break
             except ValueError:
                 print('\nOpção inválida! Tente novamente!\n')
