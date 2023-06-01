@@ -83,7 +83,8 @@ def dashs_time(id_usuario, id_time):
                 print('\n------------------------------------')
                 print("")
             else:
-                print('Sem sprints para esse time!')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mSem sprints para esse Time!\033[m')
+                #print('Sem sprints para esse time!')
                 break
             
         break

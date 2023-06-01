@@ -4,7 +4,8 @@ import os
 
 def dashturma():
     if os.path.exists('././data/respostas_autoAvaliacao.json') and os.path.exists('././data/respostas_grupoAvaliacao.json'):
-        print("Dashboard turmas!")
+        print("\033[32;1mTELA DE DASHBOARD - TURMAS\033[m\n")
+        #print("Dashboard turmas!")
         competencias = ["Comunicacão e Trabalho em Equipe", "Engajamento e Proatividade", "Conhecimento e Aplicabilidade", "Entrega de Resultados com Valor Agregado", "Autogestão de Atividades"]
         arqv_turmas = open('././data/turmas.json')
         turmas = json.load(arqv_turmas) #load() - leitura do arquivo
@@ -25,9 +26,10 @@ def dashturma():
         
             
         while True:
-                entrada_turma = int(input(str("Digite qual turma acima deseja visualizar: ")))
+                entrada_turma = int(input(str("\n\033[36mDigite qual Turma acima deseja visualizar: ")))
                 if entrada_turma > x-1:
-                    print ("Essa turma não existe")
+                    print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não existe!\033[m') 
+                    #print ("Essa turma não existe")
                 else: 
                     turma_escolhida = turmas[entrada_turma - 1]
                     id_turma = turma_escolhida['id_turma']

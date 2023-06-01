@@ -20,7 +20,8 @@ def view_dashs():
                 op = int(input("\033[36;1mO QUE DESEJA FAZER?: \033[m"))
                 break
             except ValueError:
-                print('\nOpção inválida! Tente novamente!\n')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+                #print('\nOpção inválida! Tente novamente!\n')
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -44,5 +45,6 @@ def view_dashs():
             break
             
         else:
-            print('\nOpção inválida! Tente novamente!')
+            print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+            #print('\nOpção inválida! Tente novamente!')
         print("")
