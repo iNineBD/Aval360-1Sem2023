@@ -20,7 +20,7 @@ def ctrl_usuarios():
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
             print("\033[32;1mCONTROLE DE USUÁRIOS\033[m\n")
-            print('\n\033[3;1mVocê escolheu a opção:\033[m \033[33m"Editar Usuário"\033[m\n')
+            print('\033[3;1mVocê escolheu a opção:\033[m \033[33m"Editar Usuário"\033[m\n')
             editusuarios()
             
         elif op == 2:
