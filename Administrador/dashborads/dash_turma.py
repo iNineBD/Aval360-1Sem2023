@@ -92,7 +92,6 @@ def dashturma():
             except ValueError:
                 print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não existe!\033[m') 
     else:
-        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m')
-        #print("Não exista avaliação para ser mostrada\n")
+        print("Não exista avaliação para ser mostrada\n")
         
 
