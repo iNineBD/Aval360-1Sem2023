@@ -26,9 +26,10 @@ def dashturma():
         
             
         while True:
+            try:
                 entrada_turma = int(input(str("\n\033[36mDigite qual Turma acima deseja visualizar: ")))
                 if entrada_turma > x-1:
-                    print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não existe!\033[m') 
+                    raise ValueError
                     #print ("Essa turma não existe")
                 else: 
                     turma_escolhida = turmas[entrada_turma - 1]
@@ -88,6 +89,8 @@ def dashturma():
                     else:
                         print('Sem sprints!')
                 break
+            except ValueError:
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não existe!\033[m') 
     else:
         print("Não exista avaliação para ser mostrada\n")
         
