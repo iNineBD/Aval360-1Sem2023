@@ -84,14 +84,16 @@ def dashturma():
                         df = pd.DataFrame(dados_colunas, index = ['Excelente', 'Muito bom', 'Bom', 'Razoável', 'Ruim'])
                         print(f"\n\033[32;3;1m{comp} (%)\033[m\n")
                         print(df.round(2))
-                        print('\n------------------------------------')
-                        print("")
+                        #print('\n------------------------------------')
+                        #print("")
                     else:
-                        print('Sem sprints!')
+                        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mSem sprints para essa Turma!\033[m')
+                        #print('Sem sprints!')
                 break
             except ValueError:
                 print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não existe!\033[m') 
     else:
-        print("Não exista avaliação para ser mostrada\n")
+        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m')
+        #print("Não exista avaliação para ser mostrada\n")
         
 

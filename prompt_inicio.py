@@ -11,7 +11,7 @@ while True:
 # Obtém o tamanho da largura da janela
     terminal_width = shutil.get_terminal_size().columns
 # Texto a ser centralizado
-    texto = "\033[1;32mSISTEMA DE AVALIAÇÃO 360°\033[m"
+    texto = "\033[1;32;4mSISTEMA DE AVALIAÇÃO 360°\033[m"
 # Calcula o espaçamento antes e depois do texto
     espacos = (terminal_width - len(texto)) // 2
 # Imprime o texto centralizado

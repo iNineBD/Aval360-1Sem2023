@@ -12,6 +12,7 @@ local_turma = '././data/turmas.json'
 competencias = ["Comunicacão e Trabalho em Equipe", "Engajamento e Proatividade", "Conhecimento e Aplicabilidade", "Entrega de Resultados com Valor Agregado", "Autogestão de Atividades"]
 
 def dash_integrante_adm():
+    print("\033[32;1mTELA DE DASHBOARD - INTEGRANTES\033[m\n")
     while True:
         if os.path.exists(local_resposta_auto) and os.path.exists(local_resposta_grupo):
             with open(local_resposta_auto) as auto:
