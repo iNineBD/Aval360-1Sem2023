@@ -74,7 +74,7 @@ def visualizarDashTime():
                 
                 while True:
                     try:
-                        num_time = int(input(str("\n\033[36mDigite qual Time acima deseja visualizar\033[m: ")))
+                        num_time = int(input(str("\n\033[36mDigite qual Time acima deseja visualizar:\033[m ")))
                         #num_time = int(input('\nDigite qual time deseja visualizar: '))  #deixar apenas número inteiro
                         if num_time > x-1:
                             print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEsse Time não existe!\033[m')
