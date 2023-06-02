@@ -12,15 +12,15 @@ def ctrl_sprints():
     while True:
         print('')
         
-        print("Controle de Sprints!!!")
+        print("\033[32;1mCONTROLE DE SPRINTS\033[m")
         print('')
         while True:
             try:
-                print("Escolha uma opção: \n1 - Criar nova Sprint\n2 - Visualizar Sprint\n3 - Editar Sprint\n4 - Excluir Sprint\n0 - Voltar\n")
-                op = int(input("Digite aqui: "))
+                print("\033[36;1mESCOLHA UMA OPÇÃO: \033[m\n\033[33;4m1\033[m - Criar nova Sprint\n\033[33;4m2\033[m - Visualizar Sprint\n\033[33;4m3\033[m - Editar Sprint\n\033[33;4m4\033[m - Excluir Sprint\n\033[33;4m0\033[m - Voltar\n")
+                op = int(input("\033[36;1mO QUE DESEJA FAZER?: \033[m"))
                 break
             except ValueError:
-                print('\nOpção inválida! Tente novamente!\n')
+                print('\n\033[31;1mOpção inválida! Tente novamente!\033[m\n')
                 
         if op == 1:
             os.system('cls' if os.name == 'nt' else 'clear')
@@ -43,5 +43,5 @@ def ctrl_sprints():
             break
             
         else:
-            print('\nOpção inválida! Tente novamente!')
+            print('\n\033[31;1mOpção inválida! Tente novamente!\033[m\n')
         print("")
