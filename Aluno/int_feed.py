@@ -2,6 +2,7 @@ import json
 competencias = ["Comunicacão e Trabalho em Equipe", "Engajamento e Proatividade", "Conhecimento e Aplicabilidade", "Entrega de Resultados com Valor Agregado", "Autogestão de Atividades"]
 
 def feed_integrante(id_usuario):
+        print("\033[32;1mTELA DE FEEDBABCKS\033[m\n")
         arqv_feed = open('././data/feedbacks.json')
         feed = json.load (arqv_feed)
 
@@ -19,9 +20,9 @@ def feed_integrante(id_usuario):
         for sprint in set(sprint_integrantes):
              for x in sp:
                   if x['id_sprint'] == sprint:
-                       print(f"Sprint: {x['identificacao']}")
+                       print(f"\033[36;3mSPRINT:\033[m {x['identificacao']}")
              for comp in competencias:
                   for y in feedbacks_integrante:    
                     if int(y['ip']) == int(competencias.index(comp))+1:
-                        print(f'\tCompetência: {comp}')
-                        print(f"\t\tFeedback: {y['feedback']}")
+                        print(f'\n\t\033[36;1mCompetência:\033[m {comp}')
+                        print(f"\n\t\t\033[36;1;4mFeedback:\033[m \033[3m{y['feedback']}\033[m")
