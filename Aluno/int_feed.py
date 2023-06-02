@@ -23,5 +23,5 @@ def feed_integrante(id_usuario):
              for comp in competencias:
                   for y in feedbacks_integrante:    
                     if int(y['ip']) == int(competencias.index(comp))+1:
-                        print(f'Competência: {comp}')
-                        print(f"\tFeedback: {y['feedback']}")
+                        print(f'\tCompetência: {comp}')
+                        print(f"\t\tFeedback: {y['feedback']}")

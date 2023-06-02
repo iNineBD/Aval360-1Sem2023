@@ -42,4 +42,4 @@ while True:
     else:
         print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m') 
         #print('\n\033[31mOpção inválida! Tente novamente!\033[m\n') 
-    #print("----------------------------------------------------")
+    #print("----------------------------------------------------")1
