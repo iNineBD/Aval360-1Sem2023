@@ -27,7 +27,7 @@ def dashturma():
             
         while True:
             try:
-                entrada_turma = int(input(str("\n\033[36mDigite qual Turma acima deseja visualizar: ")))
+                entrada_turma = int(input(str("\n\033[36mDigite qual Turma acima deseja visualizar: \033[m")))
                 if entrada_turma > x-1:
                     raise ValueError
                     #print ("Essa turma não existe")
