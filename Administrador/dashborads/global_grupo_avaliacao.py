@@ -73,7 +73,7 @@ def visualizarDashGlobal():
                                     sum_comp_5 += 1
                                     
                         for resposta_grupo in resposta_avaliacao:
-                            if resposta_grupo.get('id_usuario_respondeu') in id_sprints and resposta_grupo.get('ip') == str(num_comp):
+                            if resposta_grupo.get('id_sprint') in id_sprints and resposta_grupo.get('ip') == str(num_comp):
                                 if resposta_grupo.get('resp') == '1':
                                     sum_comp_1 += 1
                                 elif resposta_grupo.get('resp') == '2':
