@@ -6,9 +6,9 @@ def visualizarSprint():
         arqvturmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqvturmas) #load() - leitura do arquivo
         turmas = read_arqv_turmas
-
+        print("\033[32;1mCONTROLE DE SPRINTS\033[m\n")
         print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Vizualizar Sprint"\033[m\n')
-        print("\n\033[32;1mTurmas:\033[m\n")
+        print("\n\033[36;1mTurmas:\033[m\n")
         x = 1
         for name in turmas:
             print(f"\033[33;4m{x}\033[m - {name['identificacao']}")
@@ -17,7 +17,7 @@ def visualizarSprint():
         
         while True:
             try:
-                num_turmas = int(input('\n\033[36mDigite qual turma deseja visualizar: \033[m'))  #deixar apenas número inteiro
+                num_turmas = int(input('\n\033[36;1mDigite qual turma deseja visualizar: \033[m'))  #deixar apenas número inteiro
                 if num_turmas > x-1:
                     print('\n\033[31mEssa turma não existe\033[m')
                 elif num_turmas == 0:
@@ -35,7 +35,7 @@ def visualizarSprint():
         
         #Visualizar Sprints:
         cond = True
-        print("\n\033[32;1mSprints:\033[m")
+        print("\n\033[36;1mSprints:\033[m\n")
         while cond:
             if num_turmas < x:
                 #Visualizar Sprints:
@@ -56,7 +56,7 @@ def visualizarSprint():
                 print('\033[33;4m0\033[m - Voltar')
                 while True:
                     try:
-                        num_sprint = int(input('\n\033[32mDigite qual sprint deseja visualizar: \033[m'))  #deixar apenas número inteiro
+                        num_sprint = int(input('\n\033[36;1mDigite qual sprint deseja visualizar: \033[m'))  #deixar apenas número inteiro
                         if num_sprint > y-1:
                             print ("\033[31m\nEssa sprint não existe\033[m")
                         elif num_sprint == 0:
@@ -69,13 +69,13 @@ def visualizarSprint():
                             identificacao_sprint = sprint_escolhida['identificacao']
                             inicio_sprint = sprint_escolhida['inicio']
                             fim_sprint = sprint_escolhida['final']
-                            print(f'\n{identificacao_sprint}')
-                            print(f'Data de início: {inicio_sprint}\nData final: {fim_sprint}')
-                            print('\n--------------------------')
+                            print(f'\n\033[33;4m{identificacao_sprint}\033[m')
+                            print(f'\033[33;4mData de início\033[m {inicio_sprint}\n\033[33;4mData final:\033[m {fim_sprint}')
+                            print('\n\033[33m--------------------------\033[m')
                             return 
 
                             
                     except ValueError:
-                        print('\033[31m\nOpção inválida! Tente novamente!\033[m')
+                        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
             else:
-                print('\033[31m\nValor inválido\033[m')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')

@@ -18,7 +18,7 @@ class Turmas:
         
         
         #pede ao usuário a identificacao da nova turma
-        identificacao = input("\033[36mDigite o Nome da Turma\033[m: ")
+        identificacao = input("\033[36;1mDigite o Nome da Turma\033[m: ")
 
         # busca os dados das turmas ja existentes
         turmas = Turmas.getDataTurmas() 
@@ -37,8 +37,8 @@ class Turmas:
         Turmas.setDataTurmas(turmas)
 
         os.system('cls' if os.name == 'nt' else 'clear')
-        return "\n\n\033[1;32mTURMA CRIADA COM SUCESSO\033[m"
-          
+        return print("\n\n\033[1;32mTURMA CRIADA COM SUCESSO\033[m")
+    
     #método para retornar o id da ultima turma cadastrada
     def getNextIdTurma():
         turmas = Turmas.getDataTurmas()
@@ -117,7 +117,7 @@ class Turmas:
         id_turma = turma_selecionada['id_turma']
         
         #pede ao usuario a nova identificacao da turma
-        new_identificacao = input("\n\033[36mEscreva o novo nome da Turma: \033[m")
+        new_identificacao = input("\n\033[36;1mEscreva o novo nome da Turma: \033[m")
         
         #gera um dicionario com a os dados da turma ja editados
         new_turma = {'id_turma': id_turma,
@@ -139,7 +139,7 @@ class Turmas:
         turmas = Turmas.getDataTurmas()
         
         #pede ao usuário que entre com a turma que ele deseja excluir
-        print('\n\033[36mQual Turma deseja Exluir?:\033[m\n')
+        print('\n\033[36;1mQual Turma deseja Exluir?:\033[m\n')
         x = 1
         for turma in turmas:
             print(f"\033[33;4m{x}\033[m - {turma['identificacao']}")
@@ -147,7 +147,7 @@ class Turmas:
     
         while True:
             try:
-                op = int(input("\n\033[36mDigite o Número da Turma que deseja Excluir\033[m: "))
+                op = int(input("\n\033[36;1mDigite o Número da Turma que deseja Excluir\033[m: "))
                 if op > x or op == 0:
                     raise ValueError
                 break

@@ -1,5 +1,3 @@
-# from sprints.createSprint import 
-# from sprints.editSprint import 
 
 from Administrador.sprints.delSprint import delSprint
 from Administrador.sprints.createSprints import createSprints
@@ -12,12 +10,12 @@ def ctrl_sprints():
     while True:
         print('')
         
-        print("\033[32;1mControle de Sprints!!!\033[m")
+        print("\033[32;1mCONTROLE DE SPRINTS\033[m")
         print('')
         while True:
             try:
-                print("Escolha uma opção: \n\033[33;4m1\033[m - Criar nova Sprint\n\033[33;4m2\033[m - Visualizar Sprint\n\033[33;4m3\033[m - Editar Sprint\n\033[33;4m4\033[m - Excluir Sprint\n\033[33;4m0\033[m - Voltar\n")
-                op = int(input("\033[36mDigite aqui:\033[m "))
+                print("\033[36;1mESCOLHA UMA OPÇÃO:\033[m\n\n\033[33;4m1\033[m - Criar nova Sprint\n\033[33;4m2\033[m - Visualizar Sprint\n\033[33;4m3\033[m - Editar Sprint\n\033[33;4m4\033[m - Excluir Sprint\n\033[33;4m0\033[m - Voltar\n")
+                op = int(input("\033[36;1mDigite aqui:\033[m "))
                 break
             except ValueError:
                 print('\n\033[31;1mOpção inválida! Tente novamente!\033[m\n')

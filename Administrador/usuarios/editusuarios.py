@@ -154,7 +154,7 @@ def editusuarios():
             if valida_nome(nome):
                 break
             else:
-                print('\n\033[31mNOME INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+                print('\n\033[31;1mNOME INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
                 #print("\033[36;1mNome inválido - Tente novamente!\033[m")
         
         while True:
