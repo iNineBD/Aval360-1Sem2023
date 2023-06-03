@@ -1,13 +1,21 @@
 import json
+import os
 competencias = ["Comunicacão e Trabalho em Equipe", "Engajamento e Proatividade", "Conhecimento e Aplicabilidade", "Entrega de Resultados com Valor Agregado", "Autogestão de Atividades"]
 
 def feed_integrante(id_usuario):
         print("\033[32;1mTELA DE FEEDBABCKS\033[m\n")
-        arqv_feed = open('././data/feedbacks.json')
-        feed = json.load (arqv_feed)
+        if os.path.exists('././data/feedbacks.json'):
+          arqv_feed = open('././data/feedbacks.json')
+          feed = json.load (arqv_feed)
+        else:
+               return print('\n\033[31mOPA!\033[m\n\033[3mAinda não há feedbacks!\033[m')
 
-        arqv_sprint = open('././data/sprint.json')
-        sp = json.load(arqv_sprint)
+
+        if os.path.exists('././data/sprint.json'):
+          arqv_sprint = open('././data/sprint.json')
+          sp = json.load(arqv_sprint)
+        else:
+               return print('\n\033[31mOPA!\033[m\n\033[3mAinda não há sprints!\033[m')
   
         sprint_integrantes = []
         feedbacks_integrante = []

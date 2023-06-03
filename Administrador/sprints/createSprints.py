@@ -145,10 +145,9 @@ def createSprints():
                 data = input('\nDigite a data final para responder a avaliação (dd/mm/aaaa) : ')
                 try:
                     data = datetime.strptime(data, '%d/%m/%Y')
-                    for sprint in sprints:
-                        data_final_sprint = datetime.strptime(data_final, '%d/%m/%Y')
-                        limite_dias = timedelta(days=5)
-                        data_final_resposta = limite_dias + data_final_sprint
+                    data_final_sprint = datetime.strptime(data_final, '%d/%m/%Y')
+                    limite_dias = timedelta(days=5)
+                    data_final_resposta = limite_dias + data_final_sprint
                     if data > data_final_sprint and data <= data_final_resposta:
                         data_responder_sprint = data.strftime("%d/%m/%Y")
                         return data_responder_sprint

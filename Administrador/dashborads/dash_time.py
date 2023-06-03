@@ -63,13 +63,15 @@ def visualizarDashTime():
             
             with open(local_times) as arquivo_time:
                 times = json.load(arquivo_time)
-                
+                times_turma = []
+                for t in times:
+                    if t.get('id_turma') == id_turma:
+                        times_turma.append(t)
                 #print("\nVisualizar Times:")
                 x = 1
-                for name in times:
-                    if name.get('id_turma') == id_turma:
-                        print(f"{x} - {name['identificacao']}")
-                        x = x+1
+                for name in times_turma:
+                    print(f"{x} - {name['identificacao']}")
+                    x = x+1
                 print('0 - Voltar')
                 
                 while True:
@@ -89,7 +91,7 @@ def visualizarDashTime():
                         #print('\nOpção inválida! Tente novamente!')
 
                 os.system('cls' if os.name == 'nt' else 'clear')
-                time_escolhido = times[num_time]
+                time_escolhido = times_turma[num_time-1]
                 return time_escolhido
 
         def visualizarSprint(turma):
