@@ -28,9 +28,10 @@ def feed_integrante(id_usuario):
         for sprint in set(sprint_integrantes):
              for x in sp:
                   if x['id_sprint'] == sprint:
-                       print(f"\033[36;3mSPRINT:\033[m {x['identificacao']}")
+                      id_sprint = x['id_sprint']
+                      print(f"\033[36;3mSPRINT:\033[m {x['identificacao']}")
              for comp in competencias:
                   for y in feedbacks_integrante:    
-                    if int(y['ip']) == int(competencias.index(comp))+1:
+                    if int(y['ip']) == int(competencias.index(comp))+1 and y['id_sprint'] == id_sprint:
                         print(f'\n\t\033[36;1mCompetência:\033[m {comp}')
                         print(f"\n\t\t\033[36;1;4mFeedback:\033[m \033[3m{y['feedback']}\033[m")
