@@ -82,7 +82,7 @@ Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b
 <span id="burndown">
     
 ##  :white_medium_square: 🔥Burndown
-    
+
 Acesse nossa [Planilha](https://fatecspgov-my.sharepoint.com/:x:/g/personal/beatriz_bonatto_fatec_sp_gov_br/EaezHCUo_j5MjXARM8QbqoIBOntSoFRgs67YHuMpetWnKQ?e=HMMnbZ) para mais informações.
 
 ![image](https://github.com/iNineBD/1Sem2023/assets/117841950/f5d33d19-d018-46fd-b254-a20e2bd0e6cf)

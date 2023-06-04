@@ -28,6 +28,7 @@ def createSprints():
     else:
         # Se não existir, cria uma lista vazia
         read_arqv_turmas = []
+
     print("\033[32;1mCONTROLE DE SPRINTS\033[m")
     print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Criar Sprint"\033[m\n')
     print("\033[32;1mTurmas:\033[m\n")
@@ -39,7 +40,9 @@ def createSprints():
 
     while True:
         try:
+
             op = int(input('\n\033[36;1mDigite qual turma deseja inserir uma sprint:\033[m'))  # deixar apenas número inteiro
+
             if op in range(1, x):
                 break
             else:
@@ -48,17 +51,16 @@ def createSprints():
                     return
                 raise ValueError
         except ValueError:
-            os.system('cls' if os.name == 'nt' else 'clear')
-            print('\n\033[31;1mOpção inválida! Tente novamente!\033[m\n')
+            print('\033[31;1mOPÇÃO INVÁLIDA!\033[m\n\033[31;1mTente novamente!\033[m\n')
 
     turma_escolhida = read_arqv_turmas[op - 1]
     id_turma = turma_escolhida['id_turma']
     
-
     identificacao_sprint = input("\033[36;1mEntre com a identificacao da sprint:\033[m ")
     
     while True:
         data_inicio = str(input('\033[36;1mEntre com a data inicial (dd/mm/aaaa):\033[m'))
+
         if len(data_inicio) == 10 and data_inicio[2] == '/' and data_inicio[5] == '/':
             dia = (data_inicio.split('/')[0]) #// 1000000 
             mes = (data_inicio.split('/')[1])#%1000000//10000
@@ -86,17 +88,20 @@ def createSprints():
                 else:
                     vd = 0
                 if vd == 0:
-                    print('\033[31;1mData inválida\033[m\n')
+                    print('\033[31;1mDATA INVÁLIDA!\033[m\n')
                 else:
+
                     print('\033[32;1mData inicial salva\033[m')
                 break
             else:
                 print('\033[31;1mFormato de data inválida digite somente números\033[m\n')
+
         else: 
-            print('\033[31;1mData inválida\033[Data inválida digite conforme dd/mm/aaaa\033[m\n')
+            print('\033[31;1mDATA INVÁLIDA!\033[\033[31;1mData inválida digite conforme dd/mm/aaaa\033[m\n')
 
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
+
 
         data_final = str(input('\033[36;1mEntre com a data final (dd/mm/aaaa):\033[m'))
 
@@ -127,22 +132,26 @@ def createSprints():
                 else:
                     vd = 0
                 if vd == 0:
-                    print('\033[31;1mData inválida\033[m\n')
+                    print('\033[31;1mDATA INVÁLIDA!a\033[m\n')
                 else:
                     if data_inicio >= data_final:
-                        print('\033[31;1mData inicial maior que a data final \nDigite uma data maior que a inicial\033[m\n')
+                        print('\033[31;1mData inicial maior que a data final\033[m \n\033[31;1mDigite uma data maior que a inicial\033[m\n')
                     else:
 
+
                         print('\033[32;1mData final Salva\033[m')
+
                         break
             else:
-                print('\033[31;1mFormato de data inválida, digite somente numeros\033[m\n')
+                print('\033[31;1mFORMATO DE DATA INVÁLIDA!\033[m\n 033[31;1mDigite somente numeros\033[m\n')
         else: 
-            print('\033[31;1mData inválida digite conforme dd/mm/aaaa\033[m\n')
+            print('\033[31;1mDATA INVÁLIDA!\033[m\n\033[31;1mDigite conforme dd/mm/aaaa\033[m\n')
 
     def dataResponderAvaliacao():
         while True:
+
                 data = input('\n\033[36;1mDigite a data final para responder a avaliação(dd/mm/aaaa): \033[m')
+
                 try:
                     data = datetime.strptime(data, '%d/%m/%Y')
                     data_final_sprint = datetime.strptime(data_final, '%d/%m/%Y')
@@ -152,9 +161,11 @@ def createSprints():
                         data_responder_sprint = data.strftime("%d/%m/%Y")
                         return data_responder_sprint
                     else:
+
                         print("\n\033[31;1mData precisa ser no máximo 5 dias após o final da sprint.\033[m")
                 except ValueError:
                     print('\n\033[31;1mFormato de data inválido ou data inválida.\033[m\n')
+
 
     # Aqui solicita a data final para responder a avaliação 
     data_final_avaliacao = dataResponderAvaliacao()
@@ -180,6 +191,8 @@ def createSprints():
         # Escrevendo os dados atualizados no arquivo
         json.dump(sprints, f)
     os.system('cls' if os.name == 'nt' else 'clear')
+
     print('\033[32;1mNOVA SPRINT CRIADA\033[m')
+
 
 

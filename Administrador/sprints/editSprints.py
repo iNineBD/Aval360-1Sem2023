@@ -15,11 +15,13 @@ def editSprints():
     for turma in turmas:
         print(f'\033[33;4m{x}\033[m - {turma["identificacao"]}')
         x +=1
+
     print("\033[33;4m0\033[m - Voltar")
 
     while True:
         try:
             indice_turma_escolhida = int(input('\033[36;1m\nDigite a turma referente a sprint desejada: \033[m')) - 1
+
             if indice_turma_escolhida >= (x - 1):
                 raise ValueError
             else:
@@ -28,7 +30,9 @@ def editSprints():
                     return
                 break
         except ValueError:
+
             print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+
     
     
     id_turma = str(turmas[indice_turma_escolhida]["id_turma"])
@@ -60,8 +64,8 @@ def editSprints():
                     return
                 break
         except ValueError:
+
             print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
-    
     
     
     id_sprint = sprints_turmas[a]["id_sprint"]
@@ -99,11 +103,12 @@ def editSprints():
                 else:
                     vd = 0
                 if vd == 0:
-                    print('\033[31mData inválida\033[m')
+                    print('\033[31;1mData inválida\033[m')
                 else:
                     print('\033[32;1mData inicial salva\033[m')
                 break
             else:
+
                 print('\033[31;1mFormato de data inválida digite somente números\033[m')
         else: 
             print('\033[31mData inválida, digite conforme (dd/mm/aaaa) \033[m')
@@ -111,6 +116,7 @@ def editSprints():
     # Solicitar a data final até que seja maior que a data de inicio
     while True:
         data_final = str(input('\033[36;1mEntre com a data final (dd/mm/aaaa): \033[m'))
+
         if len(data_final) == 10 and data_final[2] == '/' and data_final[5] == '/':
             dia = (data_final.split('/')[0]) #// 1000000
             mes = (data_final.split('/')[1])#%1000000//10000
@@ -141,14 +147,16 @@ def editSprints():
                     print('\033[31;1mData inválida\033[m')
                 else:
                     if data_inicio >= data_final:
-                        print('\033[31mData inicial maior que a data final \nDigite uma data maior que a inicial\033[m')
+                        print('\033[31;1mData inicial maior que a data final \nDigite uma data maior que a inicial\033[m')
                     else:
+
                         print('\n\033[32;1mData final Salva\033[m')
                         break
             else:
                 print('\033[31mFormato de data inválida, digite somente números\033[m')
         else: 
             print('\033[31;1mData inválida, digite conforme (dd/mm/aaaa) \033[m')
+
             
     nova_sprint = {
         'id_sprint': id_sprint,
