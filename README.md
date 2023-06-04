@@ -83,7 +83,7 @@ Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b
     
 ##  :white_medium_square: 🔥Burndown
     
-Acesse nossa [Planilha](https://fatecspgov-my.sharepoint.com/:x:/g/personal/beatriz_bonatto_fatec_sp_gov_br/EQwtB4cwIA1BobTzXMok4j4BfE_AlyZDU2InDezjf8TiBw?e=Au4gDH ) para mais informações.
+Acesse nossa [Planilha](https://fatecspgov.sharepoint.com/:x:/r/sites/API-1semestre/Shared%20Documents/General/Controle/Burndown%20-%20iNine.xlsx?d=w384dbeb48e7f4130bf8b069653f09751&csf=1&web=1&e=XE3g2R) para mais informações.
     
 ![Captura de tela 2023-05-13 191339](https://github.com/iNineBD/1Sem2023/assets/117841950/51f50f81-c00a-4e7a-817a-1fe7bb835bb3)
 
