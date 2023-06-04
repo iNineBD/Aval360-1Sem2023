@@ -25,7 +25,7 @@
 
 Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b2cf?r=use1) para mais informaçoes!
 
-|  **ÉPICO**  | **USER STORE** | **PRIORIDADE** | **SPRINT** | **STATUS** |
+|  **ÉPICO**  | **USER STORY** | **PRIORIDADE** | **SPRINT** | **STATUS** |
 |-------------------------|---------------------|----------------|-------------------------|------------------------|
 | Avaliação 360° | O sistema deve realizar uma avaliação dos integrantes do time e uma autoavaliação para analisar o desempenho como equipe | Alta | 2 | **Realizado** |
 | Avaliação 360° | A avaliação deve ter respostas baseadas em uma escala Likert (5 valores), seguindo fatores fixos a serem avaliados | Alta | 2 | **Realizado** |
@@ -34,9 +34,9 @@ Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b
 | Controle de Turmas | Ter um controle para turmas que possibilite e permita que o administrador consiga gerir os times dentro de uma turma  | Média | 2 | **Realizado** |
 | Controle de Times | Ter um controle para times que possibilite gestão de usuários dentro do time (sendo que está dentro de uma turma)| Média | 2 | **Realizado** |
 | Controle de Sprints | Um controle sprint onde o administrador fazer a gestão de todas as informações da sprint | Média | 3 | **Realizado** |
-| Dashboards | Dashboards a partir de dados de avaliações respondidas no decorrer das sprints para que o cliente tenha melhor análise dos resultados de desempenho | Alta | 4 | **A Realizar** | 
+| Dashboards | Dashboards a partir de dados de avaliações respondidas no decorrer das sprints para que o cliente tenha melhor análise dos resultados de desempenho | Alta | 4 | **Realizado** | 
 | Backlog | O projeto precisa ser estruturado de acordo com a metodologia ágil, contendo todos os tópicos exigidos pelo cliente | Alta | 1,2,3 | **Realizado** |
-| Design | Aprimorar a visualização do sistema no console, de forma organizada e com cores de maior destaque | Alta | 4 | **A realizar** |
+| Design | Aprimorar a visualização do sistema no console, de forma organizada e com cores de maior destaque | Alta | 4 | **Realizado** |
 | Fluxograma | Um protótipo que permite uma visualização ramificada do sistema | Baixa | 1 | **Realizado** |
 
 
@@ -50,7 +50,7 @@ Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b
 | [Sprint 1](https://github.com/iNineBD/1Sem2023/wiki/Sprint-1-iNine) | 13/03/23 a 02/04/23 | Planejamento do Projeto | **REALIZADO** |
 | [Sprint 2](https://github.com/iNineBD/1Sem2023/wiki/Sprint-2-iNine) | 03/04/23 a 23/04/23 | Controle Turmas/Times e Avaliação 360° | **REALIZADO** |
 | [Sprint 3](https://github.com/iNineBD/1Sem2023/wiki/Sprint-3-iNine) | 24/04/23 a 14/05/23 | Controle de Perfil/Controle de Usuários/Controle de Sprints | **REALIZADO** |
-| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos/Design | **EM ANDAMENTO** |
+| [Sprint 4](https://github.com/iNineBD/1Sem2023/wiki/Sprint-4-iNine) | 15/05/23 a 04/06/23 | Dashboard's avaliativos/Design | **REALIZADO** |
     
 <span id="equipe">
 
@@ -82,11 +82,10 @@ Acesse [Monday](https://view.monday.com/4445634545-a8f987a7532e3c21e8409745cf06b
 <span id="burndown">
     
 ##  :white_medium_square: 🔥Burndown
-    
-Acesse nossa [Planilha](https://fatecspgov.sharepoint.com/:x:/r/sites/API-1semestre/Shared%20Documents/General/Controle/Burndown%20-%20iNine.xlsx?d=w384dbeb48e7f4130bf8b069653f09751&csf=1&web=1&e=XE3g2R) para mais informações.
-    
-![Captura de tela 2023-05-13 191339](https://github.com/iNineBD/1Sem2023/assets/117841950/51f50f81-c00a-4e7a-817a-1fe7bb835bb3)
 
+Acesse nossa [Planilha](https://fatecspgov-my.sharepoint.com/:x:/g/personal/beatriz_bonatto_fatec_sp_gov_br/EaezHCUo_j5MjXARM8QbqoIBOntSoFRgs67YHuMpetWnKQ?e=HMMnbZ) para mais informações.
+
+![image](https://github.com/iNineBD/1Sem2023/assets/117841950/f5d33d19-d018-46fd-b254-a20e2bd0e6cf)
 
 
 

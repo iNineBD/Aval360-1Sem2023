@@ -14,11 +14,13 @@ def visualizarDashTime():
     def verificacao():
         while True:
             if os.path.exists(local_resposta_avaliacao):
+                print("\033[32;1mTELA DE DASHBOARD - TIMES\033[m\n")
                 return True 
 
             else:
-                print("Não exista avaliação para ser mostrada\n")
-                print('------------------------------------------')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m') 
+                #print("Não exista avaliação para ser mostrada\n")
+                #print('------------------------------------------')
                 return False
             
     if verificacao() == True:
@@ -28,7 +30,7 @@ def visualizarDashTime():
             with open (local_turmas,'r') as arquivo_turmas:
                 turmas = json.load(arquivo_turmas)
 
-            print("\nVisualizar Turmas:")
+            #print("\nVisualizar Turmas:")
             x = 1
             for name in turmas:
                 print(f"{x} - {name['identificacao']}")
@@ -37,16 +39,19 @@ def visualizarDashTime():
             
             while True:
                 try:
-                    num_turmas = int(input('\nDigite qual turma deseja visualizar: '))  #deixar apenas número inteiro
+                    num_turmas = int(input(str("\n\033[36mDigite qual Turma acima deseja visualizar\033[m: ")))
+                    #num_turmas = int(input('\nDigite qual turma deseja visualizar: '))  #deixar apenas número inteiro
                     if num_turmas > x-1:
-                        print('\nEssa turma não existe')
+                        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não existe!\033[m')
+                        #print('\nEssa turma não existe')
                     elif num_turmas == 0:
                         os.system('cls' if os.name == 'nt' else 'clear')
                         return num_turmas
                     else:
                         break    
                 except ValueError:
-                    print('\nOpção inválida! Tente novamente!')
+                    print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+                    #print('\nOpção inválida! Tente novamente!')
 
             os.system('cls' if os.name == 'nt' else 'clear')
             turma_escolhida = turmas[num_turmas - 1]
@@ -54,33 +59,39 @@ def visualizarDashTime():
             return id_turma
             
         def visualizarTimes(id_turma):
+            print("\033[32;1mTELA DE DASHBOARD - TIMES\033[m\n")
             
             with open(local_times) as arquivo_time:
                 times = json.load(arquivo_time)
-                
-                print("\nVisualizar Times:")
+                times_turma = []
+                for t in times:
+                    if t.get('id_turma') == id_turma:
+                        times_turma.append(t)
+                #print("\nVisualizar Times:")
                 x = 1
-                for name in times:
-                    if name.get('id_turma') == id_turma:
-                        print(f"{x} - {name['identificacao']}")
-                        x = x+1
+                for name in times_turma:
+                    print(f"{x} - {name['identificacao']}")
+                    x = x+1
                 print('0 - Voltar')
                 
                 while True:
                     try:
-                        num_time = int(input('\nDigite qual time deseja visualizar: '))  #deixar apenas número inteiro
+                        num_time = int(input(str("\n\033[36mDigite qual Time acima deseja visualizar:\033[m ")))
+                        #num_time = int(input('\nDigite qual time deseja visualizar: '))  #deixar apenas número inteiro
                         if num_time > x-1:
-                            print('\nEsse time não existe')
+                            print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEsse Time não existe!\033[m')
+                            #print('\nEsse time não existe')
                         elif num_time == 0:
                             os.system('cls' if os.name == 'nt' else 'clear')
                             return False
                         else:
                             break    
                     except ValueError:
-                        print('\nOpção inválida! Tente novamente!')
+                        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+                        #print('\nOpção inválida! Tente novamente!')
 
                 os.system('cls' if os.name == 'nt' else 'clear')
-                time_escolhido = times[num_time]
+                time_escolhido = times_turma[num_time-1]
                 return time_escolhido
 
         def visualizarSprint(turma):
@@ -159,14 +170,17 @@ def visualizarDashTime():
                         
                         num_comp +=1
                         df = pandas.DataFrame(dados_coluna, index = ['Excelente', 'Muito bom', 'Bom', 'Razoável', 'Ruim'])
-                        print(f"\n{comp} (%)\n")
+                        print(f"\n\033[32;3;1m{comp} (%)\033[m\n")
+                        #print(f"\n{comp} (%)\n")
                         print(df.round(2))
-                        print('\n-----------------------\n')
+                        #print('\n-----------------------\n')
                         
                 if len(sprint_times) <= 0:
-                    print('Sem sprints para esse time')
+                    print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mSem sprints para este Time!\033[m')
+                    #print('Sem sprints para esse time')
             except ValueError:
-                print("\nNão existe integrantes nesse time para mostrar um dashboard")
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m')
+                #print("\nNão existe integrantes nesse time para mostrar um dashboard")
         
         
         turma = visualizarTurmas()

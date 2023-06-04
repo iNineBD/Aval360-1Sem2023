@@ -8,8 +8,9 @@ def delSprint():
     #Visualizar Turma
     arqv_turmas = open(caminho_turma)
     read_arqv_turmas = json.load(arqv_turmas)
-    
-    print('\n\033[3;1mVocê escolheu a opção:\033[m \033[33m"Deletar Sprint"\033[m\n')
+
+    print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Deletar Sprint"\033[m\n')
+
     print("\n\033[36;1mTurmas:\033[m\n")
     y = 1
     for turma in read_arqv_turmas:
@@ -19,7 +20,9 @@ def delSprint():
 
     while True:
         try:
-            num_turma = int(input('\n\033[36;1mDigite de qual turma deseja vizualizar as sprints: \033[m'))
+
+            num_turma = int(input('\n\033[36;1mDigite de qual turma deseja vizualizar as sprints:\033[m'))
+
             if num_turma > y - 1:
                 raise ValueError
             else:
@@ -28,7 +31,9 @@ def delSprint():
                     return
                 break
         except ValueError:
-            print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+
+            print('\n\033[31;1mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+
             
     turma_escolhida = read_arqv_turmas[num_turma-1]
     id_turma = turma_escolhida['id_turma']
@@ -37,7 +42,10 @@ def delSprint():
     arqv_sprints = open(caminho_sprint)
     read_arqv_sprint = json.load(arqv_sprints)
 
-    print("\n\033[36;1mQual Sprint deseja deletar: \033[m\n")
+    
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n\033[36;1mQual Sprint deseja deletar:\033[m\n")
+
     sprints_turma = []
     for sprint in read_arqv_sprint:
         if sprint.get('id_turma') == id_turma:
@@ -47,7 +55,7 @@ def delSprint():
     for sprint in sprints_turma:
         print(f"\033[33;4m{x}\033[m - {sprint.get('identificacao')}")
         x += 1
-    print("\033[33;4m0\033[m - Voltar\n")
+    print("\033[33;4m0\033[m - Voltar")
 
     while True:
         try:
@@ -60,7 +68,9 @@ def delSprint():
                     return
                 break
         except ValueError:
-            print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m\n')
+
+            print('\n\033[31;1mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+
         
     sprint_del = sprints_turma[num_sprint - 1]
     read_arqv_sprint.remove(sprint_del)
@@ -69,6 +79,8 @@ def delSprint():
         json.dump(read_arqv_sprint, output)
     output.close()
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('\033[32;1m\nSPRINT EXCLUÍDA COM SUCESSO!\033[m')
+
+    print('\033[32;1m\nSPRINT EXCLUÍDA COM SUCESSO\033[m')
+
     
 

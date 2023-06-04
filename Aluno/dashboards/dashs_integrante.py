@@ -21,6 +21,7 @@ def dashs_integrante(id_usuario, id_time):
             with open(local_time) as tm:
                 times = json.load(tm)
         else:
+            
             print("As avaliações ainda não começaram! Volte mais tarde!")
             break
         # pegandp o id da turma do usuario

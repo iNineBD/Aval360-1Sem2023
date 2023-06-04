@@ -4,7 +4,8 @@ import os
 
 def dashturma():
     if os.path.exists('././data/respostas_autoAvaliacao.json') and os.path.exists('././data/respostas_grupoAvaliacao.json'):
-        print("Dashboard turmas!")
+        print("\033[32;1mTELA DE DASHBOARD - TURMAS\033[m\n")
+        #print("Dashboard turmas!")
         competencias = ["Comunicacão e Trabalho em Equipe", "Engajamento e Proatividade", "Conhecimento e Aplicabilidade", "Entrega de Resultados com Valor Agregado", "Autogestão de Atividades"]
         arqv_turmas = open('././data/turmas.json')
         turmas = json.load(arqv_turmas) #load() - leitura do arquivo
@@ -25,9 +26,11 @@ def dashturma():
         
             
         while True:
-                entrada_turma = int(input(str("Digite qual turma acima deseja visualizar: ")))
+            try:
+                entrada_turma = int(input(str("\n\033[36mDigite qual Turma acima deseja visualizar: \033[m")))
                 if entrada_turma > x-1:
-                    print ("Essa turma não existe")
+                    raise ValueError
+                    #print ("Essa turma não existe")
                 else: 
                     turma_escolhida = turmas[entrada_turma - 1]
                     id_turma = turma_escolhida['id_turma']
@@ -81,12 +84,16 @@ def dashturma():
                         df = pd.DataFrame(dados_colunas, index = ['Excelente', 'Muito bom', 'Bom', 'Razoável', 'Ruim'])
                         print(f"\n\033[32;3;1m{comp} (%)\033[m\n")
                         print(df.round(2))
-                        print('\n------------------------------------')
-                        print("")
+                        #print('\n------------------------------------')
+                        #print("")
                     else:
-                        print('Sem sprints!')
+                        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mSem sprints para essa Turma!\033[m')
+                        #print('Sem sprints!')
                 break
+            except ValueError:
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mEssa Turma não existe!\033[m') 
     else:
-        print("Não exista avaliação para ser mostrada\n")
+        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m')
+        #print("Não exista avaliação para ser mostrada\n")
         
 

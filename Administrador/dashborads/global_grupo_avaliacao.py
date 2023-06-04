@@ -15,8 +15,9 @@ def visualizarDashGlobal():
                 return True 
 
             else:
-                print("Não exista avaliação para ser mostrada\n")
-                print('------------------------------------------')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe avaliação para ser exibida!\033[m') 
+                #print("\033[Não exista avaliação para ser mostrada\n")
+                #print('------------------------------------------')
                 return False
             
     if verificacao() == True:
@@ -72,7 +73,7 @@ def visualizarDashGlobal():
                                     sum_comp_5 += 1
                                     
                         for resposta_grupo in resposta_avaliacao:
-                            if resposta_grupo.get('id_usuario_respondeu') in id_sprints and resposta_grupo.get('ip') == str(num_comp):
+                            if resposta_grupo.get('id_sprint') in id_sprints and resposta_grupo.get('ip') == str(num_comp):
                                 if resposta_grupo.get('resp') == '1':
                                     sum_comp_1 += 1
                                 elif resposta_grupo.get('resp') == '2':
@@ -89,18 +90,21 @@ def visualizarDashGlobal():
                         
                         if total != 0:
                             coluna = [(sum_comp_5/total)*100, (sum_comp_4/total)*100, (sum_comp_3/total)*100, (sum_comp_2/total)*100, (sum_comp_1/total)*100]
-                        dados_coluna['Sprints'] = coluna
+                        dados_coluna['\033[36;1mSprints\033[m'] = coluna
                     
                     num_comp +=1
                     df = pandas.DataFrame(dados_coluna, index = ['Excelente', 'Muito bom', 'Bom', 'Razoável', 'Ruim'])
-                    print(f"\n{comp} (%)\n")
+                    print(f"\n\033[32;3;1m{comp} (%)\033[m\n")
+                    #print(f"\n{comp} (%)\n")
                     print(df.round(2))
-                    print('\n-----------------------\n')
+                    #print('\n-----------------------\n')
                             
                 if len(id_sprints) <= 0:
-                    print('Sem sprints para essa turma')
+                    print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mSem sprints para essa Turma!\033[m')
+                    #print('Sem sprints para essa turma')
             except ValueError:
-                print("\nNão existe time nessa turma para mostrar um dashboard")
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mNão existe Time nessa Turma para exibição de Dashboard\033[m')
+                #print("\nNão existe time nessa turma para mostrar um dashboard")
                                         
         dashGlobal()
 

@@ -13,7 +13,9 @@ competencias = ["Comunicacão e Trabalho em Equipe", "Engajamento e Proatividade
 
 def dash_integrante_adm():
     while True:
+        print("\033[32;1mTELA DE DASHBOARD - INTEGRANTES\033[m\n")
         if os.path.exists(local_resposta_auto) and os.path.exists(local_resposta_grupo):
+            #print("\033[32;1mTELA DE DASHBOARD - INTEGRANTES\033[m\n")
             with open(local_resposta_auto) as auto:
                 resp_auto = json.load(auto)
             with open(local_resposta_grupo) as grupo:
@@ -27,7 +29,7 @@ def dash_integrante_adm():
             with open(local_usu) as u:
                 usuarios = json.load(u)
         else:
-            print("As avaliações ainda não começaram! Volte mais tarde!")
+            print("\033[31mAs avaliações ainda não começaram\033[m!\n\033[3mVolte mais tarde\033[m!")
             break
         
         x = 1
@@ -38,7 +40,7 @@ def dash_integrante_adm():
         
         while True:
             try:
-                op_turma = int(input('Escolha uma turma: '))
+                op_turma = int(input("\n\033[36mDigite qual Turma acima deseja visualizar\033[m: "))
                 if op_turma >= x:
                     raise ValueError
                 elif op_turma == 0:
@@ -46,7 +48,8 @@ def dash_integrante_adm():
                 else:
                     break
             except:
-                print('Opção inválida, tente novamente!')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+                #print('Opção inválida, tente novamente!')
                 
         turma_escolhida = turmas[op_turma-1]
         id_turma = turma_escolhida['id_turma']
@@ -65,7 +68,7 @@ def dash_integrante_adm():
         
         while True:
             try:
-                op_time = int(input('Escolha um time: '))
+                op_time = int(input("\n\033[36mDigite qual Time acima deseja visualizar:\033[m "))
                 if op_time >= y:
                     raise ValueError
                 elif op_time == 0:
@@ -73,7 +76,8 @@ def dash_integrante_adm():
                 else:
                     break
             except:
-                print('Opção inválida, tente novamente!')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+                #print('Opção inválida, tente novamente!')
         
         print('')
         time_escolhido = time_turma[op_time-1]
@@ -85,13 +89,13 @@ def dash_integrante_adm():
         
         z = 1
         for usu in usu_time:
-            print(f"{z} - {usu['identificacao']} \tCPF: {usu['cpf']}")
+            print(f"{z} - \033[32m{usu['identificacao']}\033[m \t\033[32;1mCPF:\033[m {usu['cpf']}")
             z +=1 
         print('0 - Voltar')
         
         while True:
             try:
-                op_usu = int(input('Escolha um usuário: '))
+                op_usu = int(input("\n\033[36mDigite qual Usuário acima deseja visualizar:\033[m "))
                 if op_usu >= z:
                     raise ValueError
                 elif op_usu == 0:
@@ -99,7 +103,8 @@ def dash_integrante_adm():
                 else:
                     break
             except:
-                print('Opção inválida, tente novamente!')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
+                #print('Opção inválida, tente novamente!')
         usu_escolhido = usu_time[op_usu - 1]
         id_usuario = usu_escolhido['id_usuario']
 
@@ -157,9 +162,10 @@ def dash_integrante_adm():
                 df = pd.DataFrame(dados_colunas, index = ['Excelente', 'Muito bom', 'Bom', 'Razoável', 'Ruim'])
                 print(f"\n\033[32;3;1m{comp} (%)\033[m\n")
                 print(df.round(2))
-                print('\n------------------------------------')
+                #print('\n------------------------------------')
                 print("")
             else:
-                print('Sem sprints para esse integrante!')
+                print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mSem sprints para esse Integrante!\033[m')
+                #print('Sem sprints para esse integrante!')
                 break
         break

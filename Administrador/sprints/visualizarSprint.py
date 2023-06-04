@@ -7,7 +7,9 @@ def visualizarSprint():
         read_arqv_turmas = json.load(arqvturmas) #load() - leitura do arquivo
         turmas = read_arqv_turmas
 
-        print('\n\033[3;1mVocê escolheu a opção:\033[m \033[33m"Vizualizar Sprint"\033[m\n')
+        print("\033[32;1mCONTROLE DE SPRINTS\033[m\n")
+        print('\n\033[3;1mVocê escolheu a opção:\033[m \033[4;33m"Vizualizar Sprint"\033[m\n')
+
         print("\n\033[36;1mTurmas:\033[m\n")
         x = 1
         for name in turmas:
@@ -70,12 +72,15 @@ def visualizarSprint():
                             inicio_sprint = sprint_escolhida['inicio']
                             fim_sprint = sprint_escolhida['final']
                             print(f'\n\033[33;4m{identificacao_sprint}\033[m')
-                            print(f'\033[33;4mData de início:\033[m {inicio_sprint}\n\033[33;4mData final:\033[m {fim_sprint}')
-                            print("\033[33m-----------------------------------\033[m")
+
+                            print(f'\033[33;4mData de início\033[m {inicio_sprint}\n\033[33;4mData final:\033[m {fim_sprint}')
+                            print('\n\033[33m--------------------------\033[m')
+
                             return 
 
                             
                     except ValueError:
-                        print('\033[31;1mOPÇÃO INVÁLIDA!\n\033[3mTente novamente!\033[m')
+                        print('\n\033[31mOPÇÃO INVÁLIDA!\033[m\n\033[3mTente novamente!\033[m')
             else:
-                print('\033[31;1m\nVALOR INVÁLIDO\033[m')
+                print('\n\033[31mVALOR INVÁLIDO!\033[m\n\033[3mTente novamente!\033[m')
+
