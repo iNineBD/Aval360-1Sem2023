@@ -12,6 +12,10 @@ def createTime():
          #Visualizar Turmas:
         arqv_turmas = open('././data/turmas.json')
         read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
+        
+        if read_arqv_turmas == []:
+                return print('\n\033[31mSEM TURMAS!\033[m\n\033[3mTente novamente!\033[m')
+            
         print("\n\033[36;1mTurmas:\033[m\n")
         x = 1
         for turma in read_arqv_turmas:

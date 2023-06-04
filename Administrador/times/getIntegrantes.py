@@ -15,6 +15,9 @@ def getIntegrantes():
         for turma in turmas:
             print(f"\033[33;4m{x}\033[m - {turma.get('identificacao')}")
             x += 1
+        
+        if turmas == []:
+                return print('\n\033[31mSEM TURMAS!\033[m\n\033[3mTente novamente!\033[m')
             
         while True:
             try:

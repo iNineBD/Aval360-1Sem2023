@@ -5,6 +5,9 @@ import os
 def editTime():
     arqv_turmas = open("././data/turmas.json", encoding="UTF-8")
     ler_arqv_turmas = json.load(arqv_turmas)
+    
+    if ler_arqv_turmas == []:
+                return print('\n\033[31mSEM TURMAS!\033[m\n\033[3mTente novamente!\033[m')
 
     print("\n\033[36;1mTurmas:\033[m\n")
     indice_vs_turma_id = {}

@@ -4,7 +4,11 @@ import os
 def visualizarTimes():
         #Visualizar Turmas:
         arqv_turmas = open('././data/turmas.json')
-        read_arqv_turmas = json.load(arqv_turmas) #load() - leitura do arquivo
+        read_arqv_turmas = json.load(arqv_turmas)
+        
+        if read_arqv_turmas == []:
+                return print('\n\033[31mSEM TURMAS!\033[m\n\033[3mTente novamente!\033[m')
+                
         print("\033[36;1mTurmas:\033[m\n")
         x = 1
         for turma in read_arqv_turmas:
@@ -37,4 +41,3 @@ def visualizarTimes():
                 break   
             else:
                 print('\n\033[31mValor inválido\033[m')
-                return visualizarTimes()

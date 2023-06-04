@@ -9,6 +9,10 @@ def delTime():
         #Visualizar Turmas:
         arqvturmas = open(caminho_turma)
         read_arqv_turmas = json.load(arqvturmas) #load() - leitura do arquivo
+        
+        if read_arqv_turmas == []:
+                return print('\n\033[31mSEM TURMAS!\033[m\n\033[3mTente novamente!\033[m')
+            
         print("\n\033[36;1mVisualizar Turmas:\033[m")
         x = 1
         for turma in read_arqv_turmas:
@@ -31,12 +35,14 @@ def delTime():
         arqvtimes = open(caminho_time)
         read_arqv_times = json.load(arqvtimes)
 
-        print("\n\033[36;1mVisualizar Times:\033[m\n")
         times_turma = []
         for time in read_arqv_times:
             if time.get('id_turma') == id_turma:
                 times_turma.append(time)
 
+        if times_turma == []:
+                return print('\n\033[31mSEM TIMES!\033[m\n\033[3mTente novamente!\033[m')
+        print("\n\033[36;1mVisualizar Times:\033[m\n")
         y = 1
         for time in times_turma:
             print(f"\033[33;4m{y}\033[m - {time['identificacao']}")

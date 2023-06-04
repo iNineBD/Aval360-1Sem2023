@@ -94,6 +94,9 @@ class Turmas:
         #busca os dados de todas as turmas
         turmas = Turmas.getDataTurmas()
         
+        if turmas == []:
+                return print('\n\033[31mSEM TURMAS!\033[m\n\033[3mTente novamente!\033[m')
+        
         #pede ao usuário que entre com a turma que ele deseja editar
         #print("\033[36mDigite o Número da Turma que deseja Editar\033[m: ")
         x = 1
@@ -137,6 +140,9 @@ class Turmas:
     def delTurma():
         #busca os dados de todas as turmas
         turmas = Turmas.getDataTurmas()
+        
+        if turmas == []:
+                return print('\n\033[31mSEM TURMAS!\033[m\n\033[3mTente novamente!\033[m')
         
         #pede ao usuário que entre com a turma que ele deseja excluir
         print('\n\033[36;1mQual Turma deseja Exluir?:\033[m\n')
