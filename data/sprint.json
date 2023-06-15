@@ -1,18 +1,1 @@
-[
-    {
-        "id_sprint": 1,
-        "identificacao": "Sprint 1",
-        "id_turma": "0",
-        "inicio": "05/05/2025",
-        "final": "31/05/2025",
-        "final_avaliacao": "05/06/2025"
-    },
-    {
-        "id_sprint": 2,
-        "identificacao": "Sprint 2",
-        "id_turma": "0",
-        "inicio": "05/05/2023",
-        "final": "31/05/2023",
-        "final_avaliacao": "14/06/2023"
-    }
-]
+[{"id_sprint": 1, "identificacao": "Sprint 1", "id_turma": "0", "inicio": "05/05/2025", "final": "31/05/2025", "final_avaliacao": "05/06/2025"}, {"id_sprint": 2, "identificacao": "Sprint 2", "id_turma": "0", "inicio": "05/05/2023", "final": "31/05/2023", "final_avaliacao": "14/06/2023"}, {"id_sprint": 3, "identificacao": "sprint teste", "id_turma": "0", "inicio": "01/02/2023", "final": "13/06/2023", "final_avaliacao": "18/06/2023"}]
